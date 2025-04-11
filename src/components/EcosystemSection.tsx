@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dna, Coins, Wifi, Flask, Database, Shield, Leaf, Building, Share2, Landmark } from 'lucide-react';
+import { Dna, Coins, Wifi, Beaker, Database, Shield, Leaf, Building, Share2, Landmark } from 'lucide-react';
 
 const ecosystems = [
   {
@@ -26,7 +26,7 @@ const ecosystems = [
     id: 'desci',
     title: 'DeSci',
     description: 'Decentralized science research and funding.',
-    icon: <Flask className="h-8 w-8 text-alien-gold" />,
+    icon: <Beaker className="h-8 w-8 text-alien-gold" />,
   },
   {
     id: 'ipfs',

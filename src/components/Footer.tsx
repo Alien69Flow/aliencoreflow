@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Twitter, Github, Discord, Linkedin } from 'lucide-react';
+import { Twitter, Github, MessageSquare, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -25,7 +25,7 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <Discord size={20} />
+                <MessageSquare size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Github size={20} />
