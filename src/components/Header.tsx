@@ -45,14 +45,14 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-8 font-[Exo]">
-            <Link to="/" className="text-gray-300 hover:text-alien-gold transition-colors">Home</Link>
-            <Link to="/about" className="text-gray-300 hover:text-alien-gold transition-colors">About</Link>
-            <Link to="/alien-trip" className="text-gray-300 hover:text-alien-gold transition-colors">AlienTrip</Link>
-            <Link to="/contact" className="text-gray-300 hover:text-alien-gold transition-colors">Contact</Link>
-            <Link to="/academy" className="text-gray-300 hover:text-alien-gold transition-colors">Academy</Link>
-            <Link to="/clubs" className="text-gray-300 hover:text-alien-gold transition-colors">Clubs</Link>
-            <Link to="/conetworking" className="text-gray-300 hover:text-alien-gold transition-colors">CoNetWorKing</Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Home</Link>
+            <Link to="/about" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">About</Link>
+            <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">AlienTrip</Link>
+            <Link to="/contact" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Contact</Link>
+            <Link to="/academy" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Academy</Link>
+            <Link to="/clubs" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Clubs</Link>
+            <Link to="/conetworking" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">CoNetWorKing</Link>
           </nav>
         )}
         
@@ -85,52 +85,52 @@ const Header = () => {
             className="bg-alien-space-dark/95 backdrop-blur-lg"
           >
             <div className="container mx-auto px-4 py-6">
-              <nav className="flex flex-col space-y-4 font-[Exo]">
+              <nav className="flex flex-col space-y-4">
                 <Link 
                   to="/" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   to="/about" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link 
                   to="/alien-trip" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   AlienTrip
                 </Link>
                 <Link 
                   to="/contact" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link 
                   to="/academy" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Academy
                 </Link>
                 <Link 
                   to="/clubs" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Clubs
                 </Link>
                 <Link 
                   to="/conetworking" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   CoNetWorKing

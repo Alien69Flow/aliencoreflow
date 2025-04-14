@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Twitter, Github, MessageSquare, Linkedin } from 'lucide-react';
+import { X, Facebook, MessageSquare, Instagram, Mail, Disc, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="bg-alien-space-dark py-16 border-t border-alien-gold/10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and description */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -23,16 +23,22 @@ const Footer = () => {
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <MessageSquare size={20} />
+                <Facebook size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <Github size={20} />
+                <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <Linkedin size={20} />
+                <Disc size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+                <Mail size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+                <Send size={20} />
               </a>
             </div>
           </div>
@@ -51,18 +57,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Resources */}
-          <div>
-            <h4 className="text-alien-gold font-semibold mb-4 font-[Atomic Age, Star Wars]">Resources</h4>
-            <ul className="space-y-3 text-gray-400 font-[Exo]">
-              <li><a href="#" className="hover:text-alien-green transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Whitepaper</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">GitHub</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Forum</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Support</a></li>
-            </ul>
-          </div>
-          
           {/* Legal */}
           <div>
             <h4 className="text-alien-gold font-semibold mb-4 font-[Atomic Age, Star Wars]">Legal</h4>
@@ -70,7 +64,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-alien-green transition-colors">Terms of Service</a></li>
               <li><a href="#" className="hover:text-alien-green transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="hover:text-alien-green transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Risk Disclosures</a></li>
             </ul>
           </div>
         </div>
