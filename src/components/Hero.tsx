@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -54,7 +53,8 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             Uniting BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi 
-            under one cosmic ecosystem.
+            under one cosmic ecosystem. Access & Explore the DAO: with Innovative Solutions, 
+            Unlock Energy Efficiency & Environmental Sustainability
           </motion.p>
         </motion.div>
         
