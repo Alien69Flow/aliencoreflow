@@ -39,27 +39,27 @@ const Header = () => {
             />
           </Link>
           <Link to="/">
-            <span className="font-bold text-xl text-alien-gold">Alien<span className="text-alien-green">Flow</span></span>
+            <span className="font-bold text-xl text-alien-gold font-[Atomic Age, Star Wars]">Alien<span className="text-alien-green">Flow</span></span>
           </Link>
         </div>
         
         {/* Desktop Navigation */}
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 font-[Exo]">
             <Link to="/" className="text-gray-300 hover:text-alien-gold transition-colors">Home</Link>
             <Link to="/about" className="text-gray-300 hover:text-alien-gold transition-colors">About</Link>
+            <Link to="/alien-trip" className="text-gray-300 hover:text-alien-gold transition-colors">AlienTrip</Link>
+            <Link to="/contact" className="text-gray-300 hover:text-alien-gold transition-colors">Contact</Link>
             <Link to="/academy" className="text-gray-300 hover:text-alien-gold transition-colors">Academy</Link>
             <Link to="/clubs" className="text-gray-300 hover:text-alien-gold transition-colors">Clubs</Link>
             <Link to="/conetworking" className="text-gray-300 hover:text-alien-gold transition-colors">CoNetWorKing</Link>
-            <Link to="/alien-trip" className="text-gray-300 hover:text-alien-gold transition-colors">AlienTrip</Link>
-            <Link to="/contact" className="text-gray-300 hover:text-alien-gold transition-colors">Contact</Link>
           </nav>
         )}
         
         {/* Connect Button / Mobile Menu Button */}
         <div className="flex items-center">
           {!isMobile && (
-            <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-medium rounded-full">
+            <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium rounded-full font-[Exo]">
               Connect Portal
             </Button>
           )}
@@ -85,7 +85,7 @@ const Header = () => {
             className="bg-alien-space-dark/95 backdrop-blur-lg"
           >
             <div className="container mx-auto px-4 py-6">
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-4 font-[Exo]">
                 <Link 
                   to="/" 
                   className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
@@ -99,6 +99,20 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
+                </Link>
+                <Link 
+                  to="/alien-trip" 
+                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  AlienTrip
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
                 </Link>
                 <Link 
                   to="/academy" 
@@ -121,21 +135,7 @@ const Header = () => {
                 >
                   CoNetWorKing
                 </Link>
-                <Link 
-                  to="/alien-trip" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AlienTrip
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-300 py-2 px-4 hover:bg-alien-space-light rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-                <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-medium rounded-full mt-4">
+                <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium rounded-full mt-4">
                   Connect Portal
                 </Button>
               </nav>

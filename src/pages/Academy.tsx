@@ -3,7 +3,7 @@ import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Book, BookOpen, Video, Certificate, Users } from 'lucide-react';
+import { Book, BookOpen, Video, Award, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Academy: React.FC = () => {
@@ -27,7 +27,7 @@ const Academy: React.FC = () => {
     {
       title: "Advanced Smart Contracts",
       description: "Master the art of creating and auditing secure smart contracts.",
-      icon: <Certificate className="h-8 w-8 text-alien-green" />,
+      icon: <Award className="h-8 w-8 text-alien-green" />,
       level: "Advanced",
       modules: 10,
       duration: "6 weeks"

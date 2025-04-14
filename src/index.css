@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Exo:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,6 +44,14 @@
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 240 20% 16%;
     --sidebar-ring: 48 83% 72%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Atomic Age', system-ui, sans-serif;
+  }
+
+  body, p, span, div, a, button {
+    font-family: 'Exo', system-ui, sans-serif;
   }
 }
 
@@ -148,4 +157,28 @@
     linear-gradient(rgba(240, 216, 130, 0.05) 1px, transparent 1px),
     linear-gradient(to right, rgba(240, 216, 130, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* Star Wars scrolling text effect */
+.star-wars-crawl {
+  perspective: 400px;
+}
+
+.star-wars-crawl div {
+  transform-style: preserve-3d;
+  transform: rotateX(25deg);
+  animation: star-wars-scroll 30s linear infinite;
+}
+
+@keyframes star-wars-scroll {
+  0% { transform: rotateX(25deg) translateY(100vh); }
+  100% { transform: rotateX(25deg) translateY(-200vh); }
+}
+
+/* Parallax effect for stars */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
