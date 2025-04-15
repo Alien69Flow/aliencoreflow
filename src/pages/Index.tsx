@@ -17,15 +17,27 @@ const Index: React.FC = () => {
     images.forEach(img => {
       const src = img.src;
       img.src = '';
-      img.src = src;
+      setTimeout(() => {
+        img.src = src;
+      }, 50);
     });
   }, []);
 
   return (
     <div className="min-h-screen bg-alien-space">
+      <div 
+        className="fixed inset-0 z-0" 
+        style={{
+          backgroundImage: `url('/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png')`,
+          backgroundSize: '100% auto',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2,
+        }}
+      ></div>
       <StarBackground />
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 relative z-10">
         <Hero />
         <EcosystemSection />
         <FeaturesSection />

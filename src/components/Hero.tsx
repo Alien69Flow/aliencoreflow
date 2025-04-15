@@ -11,6 +11,26 @@ const Hero = () => {
       <div className="absolute inset-0 bg-glow-radial opacity-70 z-0 parallax"></div>
       <div className="absolute inset-0 bg-stars opacity-50 z-0 parallax"></div>
       
+      {/* Wallet image background */}
+      <motion.div 
+        className="absolute inset-0 z-0 flex items-center justify-center opacity-30"
+        animate={{ 
+          scale: [1, 1.05, 1],
+          opacity: [0.2, 0.3, 0.2] 
+        }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity,
+          repeatType: "reverse" 
+        }}
+      >
+        <img 
+          src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
+          alt="Wallet Background" 
+          className="max-w-sm wallet-glow"
+        />
+      </motion.div>
+      
       {/* Hero Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div
@@ -23,14 +43,22 @@ const Hero = () => {
             <motion.img 
               src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
               alt="AlienFlowSpace Logo" 
-              className="h-48 gold-glow animate-float"
+              className="h-48 gold-glow"
               initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
+              animate={{ 
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+                y: [0, -10, 0]
+              }}
+              transition={{ 
+                duration: 6,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
             />
           </div>
           
-          {/* Title and subtitle with Star Wars effect */}
+          {/* Title and subtitle con efecto Star Wars */}
           <div className="star-wars-crawl">
             <div className="star-wars-content">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
