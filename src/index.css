@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Exo:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -159,20 +160,35 @@
   background-size: 40px 40px;
 }
 
-/* Star Wars scrolling text effect */
+/* Star Wars scrolling text effect - updated properly */
 .star-wars-crawl {
   perspective: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.star-wars-crawl div {
-  transform-style: preserve-3d;
-  transform: rotateX(25deg);
-  animation: star-wars-scroll 30s linear infinite;
+.star-wars-content {
+  transform: rotateX(20deg);
+  transform-origin: center top;
+  animation: star-wars-float 4s ease-out forwards;
+  width: 100%;
+  padding: 2rem;
 }
 
-@keyframes star-wars-scroll {
-  0% { transform: rotateX(25deg) translateY(100vh); }
-  100% { transform: rotateX(25deg) translateY(-200vh); }
+@keyframes star-wars-float {
+  0% {
+    transform: rotateX(20deg) translateY(100px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(20deg) translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Parallax effect for stars */
