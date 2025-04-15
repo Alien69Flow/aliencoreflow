@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link } from 'react-router-dom';
 
@@ -39,27 +39,30 @@ const Header = () => {
             />
           </Link>
           <Link to="/">
-            <span className="font-bold text-xl text-alien-gold font-[Atomic Age, Star Wars]">Alien<span className="text-alien-green">Flow</span></span>
+            <span className="font-bold text-xl text-alien-gold font-[Atomic Age]">Alien<span className="text-alien-green">Flow</span></span>
           </Link>
         </div>
         
         {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Home</Link>
-            <Link to="/about" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">About</Link>
-            <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">AlienTrip</Link>
-            <Link to="/contact" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Contact</Link>
-            <Link to="/academy" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Academy</Link>
-            <Link to="/clubs" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">Clubs</Link>
-            <Link to="/conetworking" className="text-alien-gold hover:text-alien-green transition-colors font-[Exo]">CoNetWorKing</Link>
+            <Link to="/" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">Home</Link>
+            <Link to="/about" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">About</Link>
+            <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">AlienTrip</Link>
+            <Link to="/contact" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">Contact</Link>
+            <Link to="/academy" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">Academy</Link>
+            <Link to="/clubs" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">Clubs</Link>
+            <Link to="/conetworking" className="text-alien-gold hover:text-alien-green transition-colors font-[Atomic Age]">CoNetWorKing</Link>
+            <button className="flex items-center text-alien-gold hover:text-alien-green transition-colors">
+              <Globe className="h-5 w-5" />
+            </button>
           </nav>
         )}
         
         {/* Connect Button / Mobile Menu Button */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           {!isMobile && (
-            <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium rounded-full font-[Exo]">
+            <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-medium rounded-full font-[Atomic Age]">
               Connect Portal
             </Button>
           )}
@@ -88,54 +91,57 @@ const Header = () => {
               <nav className="flex flex-col space-y-4">
                 <Link 
                   to="/" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   to="/about" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link 
                   to="/alien-trip" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   AlienTrip
                 </Link>
                 <Link 
                   to="/contact" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link 
                   to="/academy" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Academy
                 </Link>
                 <Link 
                   to="/clubs" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Clubs
                 </Link>
                 <Link 
                   to="/conetworking" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Exo]"
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   CoNetWorKing
                 </Link>
-                <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium rounded-full mt-4">
+                <div className="flex items-center gap-2 mt-2 ml-4">
+                  <Globe size={20} className="text-alien-gold" />
+                </div>
+                <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-medium rounded-full mt-4 font-[Atomic Age]">
                   Connect Portal
                 </Button>
               </nav>

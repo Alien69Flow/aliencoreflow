@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -9,19 +10,6 @@ const Hero = () => {
       {/* Background effect with parallax */}
       <div className="absolute inset-0 bg-glow-radial opacity-70 z-0 parallax"></div>
       <div className="absolute inset-0 bg-stars opacity-50 z-0 parallax"></div>
-      
-      {/* Star Wars Text Effect */}
-      <div className="star-wars-crawl absolute w-full h-full overflow-hidden z-0">
-        <div className="text-center text-alien-gold opacity-20 px-20">
-          <h2 className="text-4xl mb-8 font-[Atomic Age]">EPISODE I</h2>
-          <h3 className="text-3xl mb-10 font-[Atomic Age]">THE BLOCKCHAIN AWAKENS</h3>
-          <p className="text-xl leading-loose max-w-3xl mx-auto font-[Exo]">
-            In a digital galaxy not so far away, diverse blockchain ecosystems exist in isolation.
-            The AlienFlowSpace DAO arises to unite these worlds under one cosmic governance structure,
-            enabling collaboration between different domains and propelling the evolution of the decentralized web...
-          </p>
-        </div>
-      </div>
       
       {/* Hero Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
@@ -42,20 +30,21 @@ const Hero = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
-            AlienFlow<span className="text-alien-green">Space</span> DAO
-          </h1>
-          
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Uniting BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi 
-            under one cosmic ecosystem. Access & Explore the DAO: with Innovative Solutions, 
-            Unlock Energy Efficiency & Environmental Sustainability
-          </motion.p>
+          {/* Title with Star Wars effect */}
+          <div className="star-wars-crawl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
+              AlienFlow<span className="text-alien-green">Space</span> DAO
+            </h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+            </motion.p>
+          </div>
         </motion.div>
         
         {/* CTA Buttons */}
