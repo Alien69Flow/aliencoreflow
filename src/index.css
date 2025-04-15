@@ -160,13 +160,14 @@
   background-size: 40px 40px;
 }
 
-/* Star Wars scrolling text effect - updated properly */
+/* Star Wars scrolling text effect - mejorado */
 .star-wars-crawl {
   perspective: 400px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .star-wars-content {

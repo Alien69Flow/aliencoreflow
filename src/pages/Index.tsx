@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -11,6 +11,16 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const Index: React.FC = () => {
+  useEffect(() => {
+    // Forzar recarga de assets para asegurar que se muestren correctamente
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      const src = img.src;
+      img.src = '';
+      img.src = src;
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-alien-space">
       <StarBackground />
