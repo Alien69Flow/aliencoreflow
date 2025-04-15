@@ -8,7 +8,6 @@ import FeaturesSection from '@/components/FeaturesSection';
 import ParticipationSection from '@/components/ParticipationSection';
 import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -28,11 +27,11 @@ const Index: React.FC = () => {
       <div 
         className="fixed inset-0 z-0" 
         style={{
-          backgroundImage: `url('/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png')`,
-          backgroundSize: '100% auto',
+          backgroundImage: `url('/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png')`,
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.2,
+          opacity: 0.3,
         }}
       ></div>
       <StarBackground />
