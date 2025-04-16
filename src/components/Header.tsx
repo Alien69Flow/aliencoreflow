@@ -13,7 +13,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+import PriceTicker from './PriceTicker';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,10 +53,11 @@ const Header = () => {
           </Link>
         </div>
         
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Alphabetically ordered */}
         {!isMobile && (
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-1">
+              {/* Home first, then alphabetically */}
               <NavigationMenuItem>
                 <Link to="/">
                   <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
@@ -71,37 +73,9 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]">
-                  Explore
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg">
-                  <ul className="grid gap-3 p-4 w-[400px] grid-cols-2">
-                    <li>
-                      <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
-                        <div className="text-alien-gold font-[Atomic Age] mb-1">Academy</div>
-                        <p className="text-sm text-gray-400">Learn from the stars</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/alien-trip" className="block p-3 rounded-md hover:bg-alien-space-light">
-                        <div className="text-alien-gold font-[Atomic Age] mb-1">AlienTrip</div>
-                        <p className="text-sm text-gray-400">Explore the cosmic journey</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/clubs">
+                <Link to="/alien-trip">
                   <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
-                    Clubs
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/conetworking">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
-                    CoNetWorKing
+                    AlienTrip
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -112,18 +86,73 @@ const Header = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]">
+                  Explore Spaces
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg">
+                  <ul className="grid gap-3 p-4 w-[400px] grid-cols-1">
+                    <li>
+                      <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
+                        <div className="text-alien-gold font-[Atomic Age] mb-1">Academy</div>
+                        <p className="text-sm text-gray-400">Learn from the stars</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/clubs" className="block p-3 rounded-md hover:bg-alien-space-light">
+                        <div className="text-alien-gold font-[Atomic Age] mb-1">Clubs</div>
+                        <p className="text-sm text-gray-400">Join planetary communities</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/conetworking" className="block p-3 rounded-md hover:bg-alien-space-light">
+                        <div className="text-alien-gold font-[Atomic Age] mb-1">CoNetWorKing</div>
+                        <p className="text-sm text-gray-400">Connect across the cosmos</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               
-              {/* Language Selector with Globe Icon */}
+              {/* Language Selector with Earth Icon */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
-                  <Globe size={18} className="mr-1" />
+                  <img 
+                    src="/lovable-uploads/f24cdac2-e03e-4a29-981a-abd1cf8a130b.png" 
+                    alt="Earth" 
+                    className="w-5 h-5 rounded-full mr-1" 
+                  />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg">
-                  <ul className="grid w-[150px]">
-                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer">English</li>
-                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer">Español</li>
-                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer">Français</li>
-                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer">中文</li>
+                  <ul className="grid w-[180px]">
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-auto mr-2" />
+                      English
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-auto mr-2" />
+                      Español
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-auto mr-2" />
+                      Français
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-auto mr-2" />
+                      汉语 (Hànyǔ)
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-auto mr-2" />
+                      हिन्दी (Hindī)
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/br.png" alt="Português" className="w-5 h-auto mr-2" />
+                      Português
+                    </li>
+                    <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
+                      <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-auto mr-2" />
+                      日本語 (Nihongo)
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -181,32 +210,11 @@ const Header = () => {
                   About
                 </Link>
                 <Link 
-                  to="/academy" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Academy
-                </Link>
-                <Link 
                   to="/alien-trip" 
                   className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   AlienTrip
-                </Link>
-                <Link 
-                  to="/clubs" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Clubs
-                </Link>
-                <Link 
-                  to="/conetworking" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  CoNetWorKing
                 </Link>
                 <Link 
                   to="/contact" 
@@ -215,10 +223,40 @@ const Header = () => {
                 >
                   Contact
                 </Link>
+                <div className="text-alien-gold py-2 px-4 font-[Atomic Age]">
+                  Explore Spaces:
+                </div>
+                <Link 
+                  to="/academy" 
+                  className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Academy
+                </Link>
+                <Link 
+                  to="/clubs" 
+                  className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Clubs
+                </Link>
+                <Link 
+                  to="/conetworking" 
+                  className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  CoNetWorKing
+                </Link>
+                
                 <div className="flex items-center gap-2 mt-2 ml-4">
-                  <Globe size={18} className="text-alien-gold" />
+                  <img 
+                    src="/lovable-uploads/f24cdac2-e03e-4a29-981a-abd1cf8a130b.png" 
+                    alt="Earth" 
+                    className="w-5 h-5 rounded-full" 
+                  />
                   <span className="text-alien-gold">English</span>
                 </div>
+                
                 <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-[Atomic Age] rounded-full mt-4 flex items-center gap-2">
                   <img 
                     src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
@@ -232,6 +270,9 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Price Ticker */}
+      <PriceTicker />
     </header>
   );
 };

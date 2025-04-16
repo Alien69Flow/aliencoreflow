@@ -8,6 +8,8 @@ import FeaturesSection from '@/components/FeaturesSection';
 import ParticipationSection from '@/components/ParticipationSection';
 import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
+import FinancialFreedomSection from '@/components/FinancialFreedomSection';
+import ExploreSpacesSection from '@/components/ExploreSpacesSection';
 
 const Index: React.FC = () => {
   return (
@@ -27,6 +29,8 @@ const Index: React.FC = () => {
       <main className="pt-16 relative z-10">
         <Hero />
         <EcosystemSection />
+        <FinancialFreedomSection />
+        <ExploreSpacesSection />
         <FeaturesSection />
         <ParticipationSection />
         <StatsSection />
