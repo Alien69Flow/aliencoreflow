@@ -77,15 +77,15 @@ const Header = () => {
                 <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg">
                   <ul className="grid gap-3 p-4 w-[400px] grid-cols-2">
                     <li>
-                      <Link to="/alien-trip" className="block p-3 rounded-md hover:bg-alien-space-light">
-                        <div className="text-alien-gold font-[Atomic Age] mb-1">AlienTrip</div>
-                        <p className="text-sm text-gray-400">Explore the cosmic journey</p>
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
                         <div className="text-alien-gold font-[Atomic Age] mb-1">Academy</div>
                         <p className="text-sm text-gray-400">Learn from the stars</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/alien-trip" className="block p-3 rounded-md hover:bg-alien-space-light">
+                        <div className="text-alien-gold font-[Atomic Age] mb-1">AlienTrip</div>
+                        <p className="text-sm text-gray-400">Explore the cosmic journey</p>
                       </Link>
                     </li>
                     <li>
@@ -111,10 +111,10 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
               
-              {/* Language Selector */}
+              {/* Language Selector with Planet Icon */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
-                  <img src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" alt="Language" className="h-5 w-5 mr-1 rounded-full" />
+                  <img src="/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" alt="Language" className="h-5 w-5 mr-1 rounded-full" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg">
                   <ul className="grid w-[150px]">
@@ -179,25 +179,18 @@ const Header = () => {
                   About
                 </Link>
                 <Link 
-                  to="/alien-trip" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AlienTrip
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-                <Link 
                   to="/academy" 
                   className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Academy
+                </Link>
+                <Link 
+                  to="/alien-trip" 
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  AlienTrip
                 </Link>
                 <Link 
                   to="/clubs" 
@@ -213,8 +206,15 @@ const Header = () => {
                 >
                   CoNetWorKing
                 </Link>
+                <Link 
+                  to="/contact" 
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
                 <div className="flex items-center gap-2 mt-2 ml-4">
-                  <img src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" alt="Language" className="h-5 w-5 rounded-full" />
+                  <img src="/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" alt="Language" className="h-5 w-5 rounded-full" />
                   <span className="text-alien-gold">English</span>
                 </div>
                 <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-[Atomic Age] rounded-full mt-4 flex items-center gap-2">

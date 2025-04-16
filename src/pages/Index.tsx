@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -10,18 +10,6 @@ import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
-  useEffect(() => {
-    // Forzar recarga de assets para asegurar que se muestren correctamente
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      const src = img.src;
-      img.src = '';
-      setTimeout(() => {
-        img.src = src;
-      }, 50);
-    });
-  }, []);
-
   return (
     <div className="min-h-screen bg-alien-space">
       <div 

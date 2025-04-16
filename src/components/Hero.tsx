@@ -9,27 +9,6 @@ const Hero = () => {
     <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-16 overflow-hidden">
       {/* Background effect with parallax */}
       <div className="absolute inset-0 bg-glow-radial opacity-70 z-0 parallax"></div>
-      <div className="absolute inset-0 bg-stars opacity-50 z-0 parallax"></div>
-      
-      {/* Wallet image background */}
-      <motion.div 
-        className="absolute inset-0 z-0 flex items-center justify-center opacity-30"
-        animate={{ 
-          scale: [1, 1.05, 1],
-          opacity: [0.2, 0.3, 0.2] 
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          repeatType: "reverse" 
-        }}
-      >
-        <img 
-          src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
-          alt="Wallet Background" 
-          className="max-w-sm wallet-glow"
-        />
-      </motion.div>
       
       {/* Hero Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
@@ -40,7 +19,7 @@ const Hero = () => {
           className="mb-12"
         >
           {/* Logo and Wallet images floating together */}
-          <div className="flex justify-center mb-8 relative">
+          <div className="flex justify-center mb-16 relative">
             <motion.img 
               src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
               alt="AlienFlowSpace Logo" 
@@ -62,7 +41,7 @@ const Hero = () => {
             <motion.img 
               src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
               alt="Wallet" 
-              className="h-32 wallet-glow absolute -bottom-16 z-10"
+              className="h-32 wallet-glow absolute -bottom-16 z-10 rounded-full"
               initial={{ scale: 0.9 }}
               animate={{ 
                 scale: [1, 1.08, 1],
@@ -79,7 +58,7 @@ const Hero = () => {
           </div>
           
           {/* Title and subtitle with Star Wars effect */}
-          <div className="star-wars-crawl mt-16">
+          <div className="star-wars-crawl mt-20">
             <div className="star-wars-content">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
                 AlienFlow<span className="text-alien-green">Space</span> DAO
