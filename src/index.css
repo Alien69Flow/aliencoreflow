@@ -96,11 +96,6 @@
   filter: drop-shadow(0 0 10px rgba(240, 216, 130, 0.4));
 }
 
-.wallet-glow {
-  box-shadow: 0 0 15px rgba(78, 185, 255, 0.7), 
-              0 0 30px rgba(128, 0, 255, 0.5);
-}
-
 .card-border {
   position: relative;
   border-radius: theme('borderRadius.lg');

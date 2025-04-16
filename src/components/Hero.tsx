@@ -18,8 +18,8 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          {/* Logo and Wallet images floating together */}
-          <div className="flex justify-center mb-16 relative">
+          {/* Logo and Wallet images floating separately */}
+          <div className="flex flex-col justify-center items-center mb-16 relative">
             <motion.img 
               src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
               alt="AlienFlowSpace Logo" 
@@ -37,11 +37,11 @@ const Hero = () => {
               }}
             />
             
-            {/* Wallet image floating below logo */}
+            {/* Wallet image floating below logo with proper distance */}
             <motion.img 
               src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
               alt="Wallet" 
-              className="h-32 wallet-glow absolute -bottom-16 z-10 rounded-full"
+              className="h-32 rounded-full mt-8 z-10"
               initial={{ scale: 0.9 }}
               animate={{ 
                 scale: [1, 1.08, 1],

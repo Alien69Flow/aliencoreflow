@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link } from 'react-router-dom';
 import { 
@@ -88,20 +88,22 @@ const Header = () => {
                         <p className="text-sm text-gray-400">Explore the cosmic journey</p>
                       </Link>
                     </li>
-                    <li>
-                      <Link to="/clubs" className="block p-3 rounded-md hover:bg-alien-space-light">
-                        <div className="text-alien-gold font-[Atomic Age] mb-1">Clubs</div>
-                        <p className="text-sm text-gray-400">Join our communities</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/conetworking" className="block p-3 rounded-md hover:bg-alien-space-light">
-                        <div className="text-alien-gold font-[Atomic Age] mb-1">CoNetWorKing</div>
-                        <p className="text-sm text-gray-400">Connect with others</p>
-                      </Link>
-                    </li>
                   </ul>
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/clubs">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
+                    Clubs
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/conetworking">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
+                    CoNetWorKing
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link to="/contact">
@@ -111,10 +113,10 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
               
-              {/* Language Selector with Planet Icon */}
+              {/* Language Selector with Globe Icon */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
-                  <img src="/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" alt="Language" className="h-5 w-5 mr-1 rounded-full" />
+                  <Globe size={18} className="mr-1" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg">
                   <ul className="grid w-[150px]">
@@ -214,7 +216,7 @@ const Header = () => {
                   Contact
                 </Link>
                 <div className="flex items-center gap-2 mt-2 ml-4">
-                  <img src="/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" alt="Language" className="h-5 w-5 rounded-full" />
+                  <Globe size={18} className="text-alien-gold" />
                   <span className="text-alien-gold">English</span>
                 </div>
                 <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-[Atomic Age] rounded-full mt-4 flex items-center gap-2">
