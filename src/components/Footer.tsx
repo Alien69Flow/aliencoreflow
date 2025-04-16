@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
                 alt="AlienFlowSpace Logo" 
-                className="h-10" 
+                className="h-10 w-auto object-contain" 
               />
               <h3 className="text-xl font-bold text-alien-gold font-[Atomic Age, Star Wars]">AlienFlowSpace</h3>
             </div>

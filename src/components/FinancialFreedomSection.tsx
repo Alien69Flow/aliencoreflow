@@ -48,12 +48,12 @@ const FinancialFreedomSection = () => {
           className="card-border p-8 max-w-3xl mx-auto text-center"
         >
           <Bitcoin className="text-alien-gold h-12 w-12 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-[Atomic Age]">ABTC Token</h3>
+          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-[Atomic Age]">A₿TC</h3>
           <p className="text-gray-300 mb-4 font-[Exo]">
-            AlienBTC token serves as collateral and derivative of Bitcoin, providing stability and growth potential in the cosmic ecosystem.
+            Alien ₿iTCoin cryptoken serves as collateral and derivative of Bitcoin, providing stability and growth potential in the cosmic ecosystem.
           </p>
           <div className="inline-block bg-alien-space-dark px-4 py-2 rounded-full text-alien-green border border-alien-green/30">
-            Bitcoin-backed • Stable • Interoperable
+            Bitcoin-backed • Interoperable • Stable
           </div>
         </motion.div>
       </div>

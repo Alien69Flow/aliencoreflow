@@ -24,11 +24,11 @@ const PriceTicker = () => {
     <div className="w-full overflow-hidden bg-alien-space-dark/80 backdrop-blur-sm border-t border-b border-alien-gold/20 h-[40px]">
       <div 
         id="coinmarketcap-widget-marquee" 
-        data-coins="1,5176,1027,1839,5426,3794" 
-        data-currency="USD" 
-        data-theme="dark" 
-        data-transparent="true" 
-        data-show-symbol-logo="true"
+        coins="1,5176,1027,1839,5426,3794" 
+        currency="USD" 
+        theme="dark" 
+        transparent="true" 
+        show-symbol-logo="true"
       ></div>
     </div>
   );
