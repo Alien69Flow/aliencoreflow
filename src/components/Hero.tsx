@@ -16,14 +16,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6" // Reduced margin to move content up
+          className="mb-6"
         >
           {/* Logo and Wallet images floating separately with better positioning */}
           <div className="flex flex-col justify-center items-center mb-8 relative">
             <motion.img 
               src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
               alt="AlienFlowSpace Logo" 
-              className="h-32 gold-glow z-20" // Reduced size
+              className="h-28 gold-glow z-20" 
               initial={{ scale: 0.8 }}
               animate={{ 
                 scale: [1, 1.05, 1],
@@ -41,7 +41,7 @@ const Hero = () => {
             <motion.img 
               src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
               alt="Wallet" 
-              className="h-24 rounded-full mt-12 z-10" // Increased margin-top and reduced size
+              className="h-20 rounded-full mt-16 z-10"
               initial={{ scale: 0.9 }}
               animate={{ 
                 scale: [1, 1.08, 1],
@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
           
           {/* Title and subtitle with Star Wars effect */}
-          <div className="star-wars-crawl">
+          <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
                 AlienFlow<span className="text-alien-green">Space</span> DAO
@@ -78,7 +78,7 @@ const Hero = () => {
         
         {/* CTA Buttons */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-wrap justify-center gap-4 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}

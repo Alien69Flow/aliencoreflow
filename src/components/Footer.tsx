@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/public/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
+                src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
                 alt="AlienFlowSpace Logo" 
                 className="h-10" 
               />

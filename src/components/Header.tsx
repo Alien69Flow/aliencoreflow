@@ -90,7 +90,7 @@ const Header = () => {
                 <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]">
                   Explore Spaces
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg">
+                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg absolute left-1/2 -translate-x-1/2">
                   <ul className="grid gap-3 p-4 w-[400px] grid-cols-1">
                     <li>
                       <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
@@ -114,16 +114,12 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
-              {/* Language Selector with Earth Icon */}
+              {/* Language Selector with Globe Icon */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
-                  <img 
-                    src="/lovable-uploads/f24cdac2-e03e-4a29-981a-abd1cf8a130b.png" 
-                    alt="Earth" 
-                    className="w-5 h-5 rounded-full mr-1" 
-                  />
+                  <Globe className="w-5 h-5 mr-1" />
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg">
+                <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg absolute left-1/2 -translate-x-1/2">
                   <ul className="grid w-[180px]">
                     <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
                       <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-auto mr-2" />
@@ -249,11 +245,7 @@ const Header = () => {
                 </Link>
                 
                 <div className="flex items-center gap-2 mt-2 ml-4">
-                  <img 
-                    src="/lovable-uploads/f24cdac2-e03e-4a29-981a-abd1cf8a130b.png" 
-                    alt="Earth" 
-                    className="w-5 h-5 rounded-full" 
-                  />
+                  <Globe className="w-5 h-5 text-alien-gold" />
                   <span className="text-alien-gold">English</span>
                 </div>
                 
