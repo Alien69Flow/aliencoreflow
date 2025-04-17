@@ -29,14 +29,23 @@ const PriceTicker = () => {
 
   return (
     <div className="w-full overflow-hidden bg-alien-space-dark/80 backdrop-blur-sm border-t border-b border-alien-gold/20 h-[40px]">
-      <div 
-        id="coinmarketcap-widget-marquee" 
-        coins="1,5176,1027,1839,5426,3794" 
-        currency="USD" 
-        theme="dark" 
-        transparent="true" 
-        show-symbol-logo="true"
-      ></div>
+      {/* 
+        For CoinMarketCap widget, we need to use the exact attribute names they expect.
+        We'll use dangerouslySetInnerHTML to create the div with the required attributes
+        since TypeScript doesn't allow non-standard HTML attributes.
+      */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `<div 
+            id="coinmarketcap-widget-marquee" 
+            coins="1,5176,1027,1839,5426,3794" 
+            currency="USD" 
+            theme="dark" 
+            transparent="true" 
+            show-symbol-logo="true">
+          </div>`
+        }}
+      />
     </div>
   );
 };
