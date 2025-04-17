@@ -58,7 +58,7 @@ const Header = () => {
         {isMobile && isMenuOpen && <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       </AnimatePresence>
       
-      {/* Price Ticker - Colocado debajo del header para que sea visible correctamente */}
+      {/* Price Ticker - Positioned right after the header content */}
       <PriceTicker />
     </header>
   );
