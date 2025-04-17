@@ -55,10 +55,10 @@ const Header = () => {
       
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobile && <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
+        {isMobile && isMenuOpen && <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       </AnimatePresence>
       
-      {/* Price Ticker */}
+      {/* Price Ticker - Adding it right after the header content */}
       <PriceTicker />
     </header>
   );
