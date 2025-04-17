@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Diamond, Network } from 'lucide-react';
+import { GraduationCap, Clover, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
@@ -17,7 +17,7 @@ const spaces = [
     id: 'clubs',
     title: 'Clubs',
     description: 'Join specialized communities focused on specific interests, technologies, and missions within the AlienFlowSpace ecosystem.',
-    icon: <Diamond className="h-10 w-10 text-alien-gold" />,
+    icon: <Clover className="h-10 w-10 text-alien-gold" />,
     link: '/clubs'
   },
   {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Dna, Coins, Wifi, Beaker, Database, Shield, Leaf, Building, Share2, Landmark } from 'lucide-react';
+import { Dna, Coins, Wifi, Beaker, Database, Shield, Leaf, Building, Share2, Landmark, ArrowRight } from 'lucide-react';
+
 const ecosystems = [{
   id: 'biofi',
   title: 'BioFi',
@@ -52,6 +53,7 @@ const ecosystems = [{
   description: 'Traditional finance integration and bridging.',
   icon: <Landmark className="h-8 w-8 text-alien-gold" />
 }];
+
 const EcosystemCard = ({
   ecosystem,
   index
@@ -80,12 +82,13 @@ const EcosystemCard = ({
         <p className="text-gray-300 flex-grow">{ecosystem.description}</p>
         <div className="mt-4">
           <a href={`#${ecosystem.id}`} className="text-alien-green hover:text-alien-green-light text-sm flex items-center">
-            Explore {ecosystem.title} <span className="ml-1">→</span>
+            Explore {ecosystem.title} <ArrowRight className="ml-1 h-4 w-4" />
           </a>
         </div>
       </div>
     </motion.div>;
 };
+
 const EcosystemSection = () => {
   return <section id="ecosystem" className="py-20 relative overflow-hidden cosmic-grid">
       <div className="container mx-auto px-4">
@@ -115,4 +118,5 @@ const EcosystemSection = () => {
       <div className="absolute -top-20 -left-20 w-60 h-60 bg-alien-gold opacity-5 rounded-full blur-2xl"></div>
     </section>;
 };
+
 export default EcosystemSection;
