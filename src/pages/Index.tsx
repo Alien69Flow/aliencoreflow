@@ -27,11 +27,15 @@ const Index: React.FC = () => {
       <Header />
       <main className="relative z-10 pt-16">
         <Hero />
+        {/* First show EcosystemSection */}
         <EcosystemSection />
+        {/* Then show FinancialFreedomSection */}
         <FinancialFreedomSection />
+        {/* Then show ExploreSpacesSection */}
         <ExploreSpacesSection />
-        <EcosystemSection />
+        {/* Then show FeaturesSection */}
         <FeaturesSection />
+        {/* Finally show ParticipationSection */}
         <ParticipationSection />
       </main>
       <Footer />

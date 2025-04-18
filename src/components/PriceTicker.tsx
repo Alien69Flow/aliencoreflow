@@ -29,13 +29,16 @@ const PriceTicker = () => {
     // Add the script to the document body
     document.body.appendChild(script);
     
-    // Initialize widget after script loads with a delay to ensure DOM is ready
+    // Initialize widget after script loads
     script.onload = () => {
       setTimeout(() => {
         if (window.coinmarketcap && typeof window.coinmarketcap.widget === 'function') {
           window.coinmarketcap.widget();
+          console.log('CoinMarketCap widget initialized');
+        } else {
+          console.error('CoinMarketCap widget function not available');
         }
-      }, 1500);
+      }, 1000);
     };
     
     return () => {
@@ -56,6 +59,7 @@ const PriceTicker = () => {
         data-theme="dark" 
         data-transparent="true" 
         data-show-symbol-logo="true"
+        style={{ width: '100%', height: '40px' }}
       ></div>
     </div>
   );

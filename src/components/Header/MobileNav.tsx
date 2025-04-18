@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Globe } from 'lucide-react';
+import { Globe, ChevronDown, ChevronUp, GraduationCap, Clover, Network } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface MobileNavProps {
@@ -11,6 +11,8 @@ interface MobileNavProps {
 }
 
 const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
+  const [spacesExpanded, setSpacesExpanded] = useState(false);
+  
   if (!isMenuOpen) return null;
 
   return (
@@ -43,6 +45,47 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           >
             AlienTrip
           </Link>
+          
+          {/* Explore Spaces Dropdown */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => setSpacesExpanded(!spacesExpanded)}
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex justify-between items-center"
+            >
+              <span>Explore Spaces</span>
+              {spacesExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+            
+            {spacesExpanded && (
+              <div className="pl-8 flex flex-col space-y-2 mt-2">
+                <Link 
+                  to="/academy" 
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <GraduationCap className="mr-2 h-4 w-4 text-alien-green" />
+                  Academy
+                </Link>
+                <Link 
+                  to="/clubs" 
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Clover className="mr-2 h-4 w-4 text-alien-gold" />
+                  Clubs
+                </Link>
+                <Link 
+                  to="/conetworking" 
+                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Network className="mr-2 h-4 w-4 text-alien-green" />
+                  CoNetWorKing
+                </Link>
+              </div>
+            )}
+          </div>
+          
           <Link 
             to="/contact" 
             className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
@@ -50,33 +93,13 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           >
             Contact
           </Link>
-          <div className="text-alien-gold py-2 px-4 font-[Atomic Age]">
-            Explore Spaces:
-          </div>
-          <Link 
-            to="/academy" 
-            className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Academy
-          </Link>
-          <Link 
-            to="/clubs" 
-            className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Clubs
-          </Link>
-          <Link 
-            to="/conetworking" 
-            className="text-alien-gold py-2 px-8 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            CoNetWorKing
-          </Link>
           
           <div className="flex items-center gap-2 mt-2 ml-4">
-            <Globe className="w-5 h-5 text-alien-gold" />
+            <img 
+              src="/lovable-uploads/58877924-4e26-4862-938b-986102e0b5c0.png" 
+              alt="Language Selection" 
+              className="w-5 h-5 rounded-full"
+            />
             <span className="text-alien-gold">English</span>
           </div>
           
