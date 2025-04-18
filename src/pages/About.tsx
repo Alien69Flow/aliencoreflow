@@ -10,6 +10,7 @@ const About: React.FC = () => {
     <div className="min-h-screen bg-alien-space">
       <StarBackground />
       <Header />
+      
       <main className="container mx-auto px-4 pt-24 pb-16">
         {/* Milky Way Background with overlay */}
         <div 

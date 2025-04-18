@@ -2,7 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ScrollText, Globe, Orbit, Sparkles } from 'lucide-react';
+import { ScrollText, Globe, Orbit } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -10,7 +11,6 @@ const Hero = () => {
       {/* Background effect with parallax */}
       <div className="absolute inset-0 bg-glow-radial opacity-70 z-0 parallax"></div>
       
-      {/* Hero Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          {/* Logo and Wallet images floating separately with better positioning */}
+          {/* Logo */}
           <div className="flex flex-col justify-center items-center mb-8 relative">
             <motion.img 
               src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
@@ -36,28 +36,9 @@ const Hero = () => {
                 repeatType: "reverse"
               }}
             />
-            
-            {/* Wallet image floating below logo with increased distance */}
-            <motion.img 
-              src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
-              alt="Wallet" 
-              className="h-20 rounded-full mt-16 z-10"
-              initial={{ scale: 0.9 }}
-              animate={{ 
-                scale: [1, 1.08, 1],
-                rotate: [0, -3, 0],
-                y: [0, 8, 0]
-              }}
-              transition={{ 
-                duration: 7,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: 0.5
-              }}
-            />
           </div>
           
-          {/* Title and subtitle with Star Wars effect */}
+          {/* Title and Description */}
           <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
@@ -86,42 +67,22 @@ const Hero = () => {
           <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium px-8 py-6 text-lg rounded-full font-[Exo]">
             <Orbit className="mr-2 h-5 w-5" /> Enter Portal
           </Button>
-          <Button variant="outline" className="border-alien-green text-alien-green hover:text-alien-green-light hover:bg-alien-space-light px-8 py-6 text-lg rounded-full font-[Exo]">
-            <ScrollText className="mr-2 h-5 w-5" /> Read Manifesto
-          </Button>
-          <Button variant="ghost" className="text-alien-gold-light hover:text-alien-gold hover:bg-alien-space-light px-8 py-6 text-lg rounded-full font-[Exo]">
-            <Globe className="mr-2 h-5 w-5" /> Join Community
-          </Button>
-        </motion.div>
-        
-        {/* Floating elements */}
-        <motion.div 
-          className="absolute -right-20 top-20 opacity-20 hidden lg:block"
-          animate={{ 
-            y: [0, -15, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{ 
-            duration: 8,
-            repeat: Infinity,
-          }}
-        >
-          <Sparkles size={180} className="text-alien-green" />
-        </motion.div>
-        
-        <motion.div 
-          className="absolute -left-10 bottom-40 opacity-20 hidden lg:block"
-          animate={{ 
-            y: [0, 15, 0],
-            rotate: [0, -5, 0],
-          }}
-          transition={{ 
-            duration: 9,
-            repeat: Infinity,
-            delay: 1,
-          }}
-        >
-          <Orbit size={140} className="text-alien-gold" />
+          
+          <Link to="/contact">
+            <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-medium px-8 py-6 text-lg rounded-full font-[Exo]">
+              <Globe className="mr-2 h-5 w-5" /> Join Community
+            </Button>
+          </Link>
+          
+          <a 
+            href="https://alienflowspace.gitbook.io/DAO" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="border-alien-green text-alien-green hover:text-alien-green-light hover:bg-alien-space-light px-8 py-6 text-lg rounded-full font-[Exo]">
+              <ScrollText className="mr-2 h-5 w-5" /> Read Manifesto
+            </Button>
+          </a>
         </motion.div>
       </div>
     </div>
