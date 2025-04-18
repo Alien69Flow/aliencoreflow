@@ -4,11 +4,11 @@ import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import EcosystemSection from '@/components/EcosystemSection';
+import FinancialFreedomSection from '@/components/FinancialFreedomSection';
+import ExploreSpacesSection from '@/components/ExploreSpacesSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ParticipationSection from '@/components/ParticipationSection';
 import Footer from '@/components/Footer';
-import FinancialFreedomSection from '@/components/FinancialFreedomSection';
-import ExploreSpacesSection from '@/components/ExploreSpacesSection';
 
 const Index: React.FC = () => {
   return (
