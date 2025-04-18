@@ -6,7 +6,6 @@ import Hero from '@/components/Hero';
 import EcosystemSection from '@/components/EcosystemSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ParticipationSection from '@/components/ParticipationSection';
-import StatsSection from '@/components/StatsSection';
 import Footer from '@/components/Footer';
 import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ExploreSpacesSection from '@/components/ExploreSpacesSection';
