@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -16,7 +15,6 @@ const DesktopNav = () => {
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="gap-1">
-        {/* Home first, then alphabetically */}
         <NavigationMenuItem>
           <Link to="/">
             <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>

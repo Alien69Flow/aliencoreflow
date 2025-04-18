@@ -64,12 +64,16 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <Button className="bg-alien-green hover:bg-alien-gold hover:text-alien-green text-alien-gold font-medium px-8 py-6 text-lg rounded-full font-[Exo] transition-colors">
+          <Button 
+            className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
+          >
             <Orbit className="mr-2 h-5 w-5" /> Enter Portal
           </Button>
           
           <Link to="/contact">
-            <Button className="bg-alien-green hover:bg-alien-gold hover:text-alien-green text-alien-gold font-medium px-8 py-6 text-lg rounded-full font-[Exo] transition-colors">
+            <Button 
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
+            >
               <Globe className="mr-2 h-5 w-5" /> Join Community
             </Button>
           </Link>
@@ -79,7 +83,9 @@ const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <Button className="bg-alien-green hover:bg-alien-gold hover:text-alien-green text-alien-gold font-medium px-8 py-6 text-lg rounded-full font-[Exo] transition-colors">
+            <Button 
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
+            >
               <ScrollText className="mr-2 h-5 w-5" /> Read Manifesto
             </Button>
           </a>
