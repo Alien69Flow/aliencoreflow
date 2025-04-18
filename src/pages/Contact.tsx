@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
-                    <a href="https://twitter.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@AlienFlowSpace</a>
+                    <a href="https://x.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@AlienFlowSpace</a>
                   </div>
                 </div>
                 
