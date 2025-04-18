@@ -87,7 +87,7 @@ const EcosystemCard = ({
     </motion.div>;
 };
 const EcosystemSection = () => {
-  return <section id="ecosystem" className="py-20 relative overflow-hidden cosmic-grid">
+  return <section id="ecosystem" className="relative overflow-hidden cosmic-grid py-[30px] my-[10px]">
       <div className="container mx-auto px-4">
         <motion.div initial={{
         opacity: 0
