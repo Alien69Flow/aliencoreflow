@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface CoinMarketCapWidget {
   widget: any;
@@ -12,16 +12,10 @@ declare global {
 }
 
 const PriceTicker = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    // Remove existing widget container if it exists
-    const existingWidget = document.getElementById('coinmarketcap-widget-marquee');
-    if (existingWidget) {
-      while (existingWidget.firstChild) {
-        existingWidget.removeChild(existingWidget.firstChild);
-      }
-    }
-    
-    // Remove any existing script to avoid duplicates
+    // Remove existing script to avoid duplicates
     const existingScript = document.getElementById('coinmarketcap-widget-script');
     if (existingScript) {
       existingScript.remove();
@@ -34,17 +28,17 @@ const PriceTicker = () => {
     script.src = 'https://files.coinmarketcap.com/static/widget/coinMarquee.js';
     document.body.appendChild(script);
     
-    // Force widget reinitialization
-    const checkInterval = setInterval(() => {
-      if (window.CoinMarketCapWidget) {
-        clearInterval(checkInterval);
-        console.log('CoinMarketCap widget loaded successfully');
-      }
-    }, 300);
+    // Apply the attributes to the widget div using dataset
+    if (widgetRef.current) {
+      widgetRef.current.dataset.coins = "1,5176,1027,1839,5426,3794";
+      widgetRef.current.dataset.currency = "USD";
+      widgetRef.current.dataset.theme = "light";
+      widgetRef.current.dataset.transparent = "true";
+      widgetRef.current.dataset.showSymbolLogo = "true";
+    }
     
     return () => {
       // Cleanup on unmount
-      clearInterval(checkInterval);
       const scriptToRemove = document.getElementById('coinmarketcap-widget-script');
       if (scriptToRemove) {
         scriptToRemove.remove();
@@ -55,12 +49,9 @@ const PriceTicker = () => {
   return (
     <div className="w-full overflow-hidden bg-alien-space-dark/80 backdrop-blur-sm border-t border-b border-alien-gold/20 h-[40px]">
       <div 
+        ref={widgetRef}
         id="coinmarketcap-widget-marquee" 
-        coins="1,5176,1027,1839,5426,3794" 
-        currency="USD" 
-        theme="light" 
-        transparent="true" 
-        show-symbol-logo="true">
+      >
       </div>
     </div>
   );
