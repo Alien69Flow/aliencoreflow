@@ -49,8 +49,8 @@ const DesktopNav = () => {
           <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]">
             Explore Spaces
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg absolute left-0 transform translate-x-0 mt-1">
-            <ul className="grid gap-3 p-4 w-[400px] grid-cols-1">
+          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg w-[400px]">
+            <ul className="grid gap-3 p-4 w-full grid-cols-1">
               <li>
                 <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
                   <div className="text-alien-gold font-[Atomic Age] mb-1">Academy</div>
@@ -78,8 +78,8 @@ const DesktopNav = () => {
           <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
             <Globe className="w-5 h-5 mr-1" />
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg absolute left-0 transform translate-x-0 mt-1">
-            <ul className="grid w-[180px]">
+          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px]">
+            <ul className="grid w-full">
               <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
                 <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-auto mr-2" />
                 English

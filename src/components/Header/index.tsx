@@ -59,7 +59,9 @@ const Header = () => {
       </AnimatePresence>
       
       {/* Price Ticker component positioned below the header content */}
-      <PriceTicker />
+      <div className="w-full overflow-hidden">
+        <PriceTicker />
+      </div>
     </header>
   );
 };
