@@ -5,19 +5,19 @@ const PriceTicker = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    // Eliminar cualquier script existente de widgets anteriores
+    // Remove any existing script from previous widgets
     const existingScript = document.getElementById('coingecko-widget-script');
     if (existingScript) {
       existingScript.remove();
     }
     
-    // Crear y añadir el script de CoinGecko
+    // Create and add the CoinGecko script
     const script = document.createElement('script');
     script.id = 'coingecko-widget-script';
     script.src = 'https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js';
     script.async = true;
     
-    // Función de limpieza
+    // Cleanup function
     const cleanup = () => {
       script.remove();
       if (containerRef.current) {
@@ -25,21 +25,20 @@ const PriceTicker = () => {
       }
     };
     
-    // Inicializar widget después de que el script cargue
+    // Initialize widget after script loads
     script.onload = () => {
       if (containerRef.current) {
-        // Resetear el contenedor para asegurar una inicialización adecuada
+        // Reset container to ensure proper initialization
         containerRef.current.innerHTML = '';
         
-        // Crear el elemento del widget
+        // Create widget element
         const widgetElement = document.createElement('coingecko-coin-price-marquee-widget');
-        widgetElement.setAttribute('locale', 'es');
         widgetElement.setAttribute('coin-ids', 'bitcoin,tether-gold,ethereum,binancecoin,solana,cosmos');
         widgetElement.setAttribute('currency', 'usd');
         widgetElement.setAttribute('background-color', '#0e1014');
         widgetElement.setAttribute('font-color', '#ffffff');
+        widgetElement.setAttribute('locale', 'es');
         widgetElement.setAttribute('transparent', 'true');
-        widgetElement.setAttribute('height', '40');
         
         containerRef.current.appendChild(widgetElement);
         
@@ -50,7 +49,7 @@ const PriceTicker = () => {
     script.onerror = () => {
       console.error('Error loading CoinGecko widget script');
       
-      // Fallback en caso de error
+      // Fallback in case of error
       if (containerRef.current) {
         containerRef.current.innerHTML = `
           <div class="flex items-center justify-start gap-6 overflow-x-auto py-2 px-4 text-white">
@@ -79,10 +78,10 @@ const PriceTicker = () => {
       }
     };
     
-    // Añadir el script al documento
+    // Add the script to the document
     document.body.appendChild(script);
     
-    // Limpieza al desmontar el componente
+    // Cleanup when unmounting the component
     return () => {
       cleanup();
     };
@@ -94,7 +93,7 @@ const PriceTicker = () => {
         ref={containerRef}
         className="w-full h-[40px]"
       >
-        {/* El widget de CoinGecko se cargará aquí */}
+        {/* The CoinGecko widget will be loaded here */}
         <div className="flex items-center justify-start gap-6 overflow-x-auto py-2 px-4 text-white">
           <div className="flex items-center gap-2">
             <span className="font-bold">BTC:</span>
