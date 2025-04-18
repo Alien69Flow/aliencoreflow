@@ -42,26 +42,28 @@ const DesktopNav = () => {
             Explore Spaces
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-4 rounded-lg min-w-[400px] grid grid-cols-1 gap-3 z-50">
-              <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
-                <GraduationCap className="mr-3 h-5 w-5 text-alien-green mt-1" />
-                <div>
-                  <Link to="/academy" className="w-full text-alien-gold hover:text-alien-green font-semibold">Academy</Link>
-                  <p className="text-gray-400 text-sm">Unlock cosmic knowledge through comprehensive educational resources.</p>
+            <div className="fixed bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-4 rounded-lg w-[400px] shadow-lg z-50">
+              <div className="flex flex-col gap-3">
+                <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
+                  <GraduationCap className="mr-3 h-5 w-5 text-alien-green mt-1" />
+                  <div>
+                    <Link to="/academy" className="w-full text-alien-gold hover:text-alien-green font-semibold">Academy</Link>
+                    <p className="text-gray-400 text-sm">Unlock cosmic knowledge through comprehensive educational resources.</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
-                <Clover className="mr-3 h-5 w-5 text-alien-gold mt-1" />
-                <div>
-                  <Link to="/clubs" className="w-full text-alien-gold hover:text-alien-green font-semibold">Clubs</Link>
-                  <p className="text-gray-400 text-sm">Join specialized communities focused on specific interests.</p>
+                <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
+                  <Clover className="mr-3 h-5 w-5 text-alien-gold mt-1" />
+                  <div>
+                    <Link to="/clubs" className="w-full text-alien-gold hover:text-alien-green font-semibold">Clubs</Link>
+                    <p className="text-gray-400 text-sm">Join specialized communities focused on specific interests.</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
-                <Network className="mr-3 h-5 w-5 text-alien-green mt-1" />
-                <div>
-                  <Link to="/conetworking" className="w-full text-alien-gold hover:text-alien-green font-semibold">CoNetWorKing</Link>
-                  <p className="text-gray-400 text-sm">Connect with like-minded individuals across the multiverse.</p>
+                <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
+                  <Network className="mr-3 h-5 w-5 text-alien-green mt-1" />
+                  <div>
+                    <Link to="/conetworking" className="w-full text-alien-gold hover:text-alien-green font-semibold">CoNetWorKing</Link>
+                    <p className="text-gray-400 text-sm">Connect with like-minded individuals across the multiverse.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,7 +80,7 @@ const DesktopNav = () => {
             />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px] z-50">
+            <div className="fixed bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px] shadow-lg z-50">
               <ul className="grid w-full">
                 <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4 mr-2" />

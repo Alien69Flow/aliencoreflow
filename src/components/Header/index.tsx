@@ -31,12 +31,12 @@ const Header = () => {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'py-3 bg-alien-space-dark/90 backdrop-blur-lg' : 'py-6 bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center relative">
         {/* Logo */}
         <Logo />
         
         {/* Desktop Navigation */}
-        {!isMobile && <DesktopNav />}
+        <DesktopNav />
         
         {/* Connect Button / Mobile Menu Button */}
         <div className="flex items-center gap-4">
