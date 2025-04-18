@@ -14,7 +14,7 @@ const PriceTicker = () => {
     // Create and add the CoinGecko script
     const script = document.createElement('script');
     script.id = 'coingecko-widget-script';
-    script.src = 'https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js';
+    script.src = 'https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js';
     script.async = true;
     
     // Cleanup function
@@ -31,18 +31,18 @@ const PriceTicker = () => {
         // Reset container to ensure proper initialization
         containerRef.current.innerHTML = '';
         
-        // Create widget element
-        const widgetElement = document.createElement('coingecko-coin-price-marquee-widget');
-        widgetElement.setAttribute('coin-ids', 'bitcoin,tether-gold,ethereum,binancecoin,solana,cosmos');
-        widgetElement.setAttribute('currency', 'usd');
-        widgetElement.setAttribute('background-color', '#0e1014');
-        widgetElement.setAttribute('font-color', '#ffffff');
+        // Create widget element with the new structure
+        const widgetElement = document.createElement('gecko-coin-price-marquee-widget');
         widgetElement.setAttribute('locale', 'es');
-        widgetElement.setAttribute('transparent', 'true');
+        widgetElement.setAttribute('dark-mode', 'true');
+        widgetElement.setAttribute('transparent-background', 'true');
+        widgetElement.setAttribute('outlined', 'true');
+        widgetElement.setAttribute('coin-ids', 'bitcoin,tether-gold,ethereum,binancecoin,solana,cosmos');
+        widgetElement.setAttribute('initial-currency', 'usd');
         
         containerRef.current.appendChild(widgetElement);
         
-        console.log('CoinGecko widget initialized');
+        console.log('CoinGecko widget initialized with new format');
       }
     };
     

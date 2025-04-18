@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { X, Facebook, MessageSquare, Instagram, Mail, Disc, Send } from 'lucide-react';
+import { X, Facebook, MessageSquare, Instagram, Mail, Disc, Send, Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -22,13 +22,13 @@ const Footer = () => {
               Uniting diverse blockchain domains under a cosmic governance structure.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://x.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <X size={20} />
               </a>
-              <a href="https://facebook.com/alienflow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://www.facebook.com/Alien69Flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com/alienflowofficial" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://www.instagram.com/alien69flow/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
@@ -37,8 +37,14 @@ const Footer = () => {
               <a href="mailto:info@alienflow.space" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="https://t.me/alienflowofficial" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://T.Me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Send size={20} />
+              </a>
+              <a href="https://github.com/AlienFlowSpaceDAO" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+                <Github size={20} />
+              </a>
+              <a href="https://linkedin.com/in/alienflow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -61,9 +67,9 @@ const Footer = () => {
           <div>
             <h4 className="text-alien-gold font-semibold mb-4 font-[Atomic Age, Star Wars]">Legal</h4>
             <ul className="space-y-3 text-gray-400 font-[Exo]">
-              <li><a href="#" className="hover:text-alien-green transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-alien-green transition-colors">Cookie Policy</a></li>
+              <li><a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">Terms of Service</a></li>
+              <li><a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">Privacy Policy</a></li>
+              <li><a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
         </div>
