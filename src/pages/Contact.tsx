@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Email</h3>
-                    <p className="text-gray-300 font-[Exo]">contact@alienflowspace.dao</p>
+                    <a href="mailto:contact@alienflowspace.dao" className="text-gray-300 font-[Exo] hover:text-alien-green">contact@alienflowspace.dao</a>
                   </div>
                 </div>
                 
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Discord</h3>
-                    <p className="text-gray-300 font-[Exo]">discord.gg/alienflowspace</p>
+                    <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">discord.gg/alienflowspace</a>
                   </div>
                 </div>
                 
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
-                    <p className="text-gray-300 font-[Exo]">@AlienFlowSpace</p>
+                    <a href="https://twitter.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@AlienFlowSpace</a>
                   </div>
                 </div>
                 
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Facebook</h3>
-                    <p className="text-gray-300 font-[Exo]">fb.com/alienflowspace</p>
+                    <a href="https://facebook.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">fb.com/alienflowspace</a>
                   </div>
                 </div>
                 
@@ -68,7 +68,17 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Instagram</h3>
-                    <p className="text-gray-300 font-[Exo]">@alienflowspace</p>
+                    <a href="https://instagram.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alienflowspace</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-alien-space-dark/50 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/70 transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
+                    <Send className="h-5 w-5 text-alien-space-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">Telegram</h3>
+                    <a href="https://t.me/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">t.me/alienflowspace</a>
                   </div>
                 </div>
               </div>

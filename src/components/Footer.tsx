@@ -22,22 +22,22 @@ const Footer = () => {
               Uniting diverse blockchain domains under a cosmic governance structure.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://twitter.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <X size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://facebook.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://instagram.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Disc size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="mailto:contact@alienflowspace.dao" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://t.me/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Send size={20} />
               </a>
             </div>

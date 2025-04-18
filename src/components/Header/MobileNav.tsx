@@ -46,6 +46,14 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
             AlienTrip
           </Link>
           
+          <Link 
+            to="/contact" 
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          
           {/* Explore Spaces Dropdown */}
           <div className="flex flex-col">
             <button
@@ -85,14 +93,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               </div>
             )}
           </div>
-          
-          <Link 
-            to="/contact" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </Link>
           
           <div className="flex items-center gap-2 mt-2 ml-4">
             <img 
