@@ -26,16 +26,17 @@ const PriceTicker = () => {
     script.src = 'https://files.coinmarketcap.com/static/widget/coinMarquee.js';
     script.async = true;
     
-    if (document.body) {
-      document.body.appendChild(script);
-      
-      // Initialize widget after script loads
-      script.onload = () => {
-        if (window.coinmarketcap?.widget) {
+    // Add the script to the document body
+    document.body.appendChild(script);
+    
+    // Initialize widget after script loads
+    script.onload = () => {
+      setTimeout(() => {
+        if (window.coinmarketcap && typeof window.coinmarketcap.widget === 'function') {
           window.coinmarketcap.widget();
         }
-      };
-    }
+      }, 1000);
+    };
     
     return () => {
       const script = document.getElementById('coinmarketcap-widget-script');

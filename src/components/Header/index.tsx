@@ -59,7 +59,7 @@ const Header = () => {
       </AnimatePresence>
       
       {/* Price Ticker component positioned below the header content */}
-      <div className="w-full overflow-hidden">
+      <div className="absolute left-0 right-0 bottom-0 translate-y-full">
         <PriceTicker />
       </div>
     </header>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -9,7 +10,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
-import { Globe } from 'lucide-react';
+import { Earth } from 'lucide-react';
 
 const DesktopNav = () => {
   return (
@@ -71,10 +72,10 @@ const DesktopNav = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         
-        {/* Language Selector with Globe Icon */}
+        {/* Language Selector with Earth Icon */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
-            <Globe className="w-5 h-5 mr-1" />
+            <img src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" alt="Translation" className="w-5 h-5 mr-1" />
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px]">
             <ul className="grid w-full">
