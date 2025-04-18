@@ -26,14 +26,13 @@ const Index: React.FC = () => {
       ></div>
       <StarBackground />
       <Header />
-      <main className="pt-16 relative z-10">
+      <main className="relative z-10 pt-16">
         <Hero />
         <EcosystemSection />
         <FinancialFreedomSection />
         <ExploreSpacesSection />
         <FeaturesSection />
         <ParticipationSection />
-        <StatsSection />
       </main>
       <Footer />
     </div>
