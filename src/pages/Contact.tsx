@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Email</h3>
-                    <a href="mailto:contact@alienflowspace.dao" className="text-gray-300 font-[Exo] hover:text-alien-green">contact@alienflowspace.dao</a>
+                    <a href="mailto:info@alienflowspace.com" className="text-gray-300 font-[Exo] hover:text-alien-green">info@alienflowspace.com</a>
                   </div>
                 </div>
                 
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
-                    <a href="https://x.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@AlienFlowSpace</a>
+                    <a href="https://twitter.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alienflowspace</a>
                   </div>
                 </div>
                 
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">Facebook</h3>
-                    <a href="https://facebook.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">fb.com/alienflowspace</a>
+                    <a href="https://facebook.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">fb.com/AlienFlowSpace</a>
                   </div>
                 </div>
                 

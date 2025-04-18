@@ -12,6 +12,7 @@ interface MobileNavProps {
 
 const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
   const [spacesExpanded, setSpacesExpanded] = useState(false);
+  const [languageExpanded, setLanguageExpanded] = useState(false);
   
   if (!isMenuOpen) return null;
 
@@ -65,42 +66,93 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
             </button>
             
             {spacesExpanded && (
-              <div className="pl-8 flex flex-col space-y-2 mt-2">
-                <Link 
-                  to="/academy" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <GraduationCap className="mr-2 h-4 w-4 text-alien-green" />
-                  Academy
-                </Link>
-                <Link 
-                  to="/clubs" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Clover className="mr-2 h-4 w-4 text-alien-gold" />
-                  Clubs
-                </Link>
-                <Link 
-                  to="/conetworking" 
-                  className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Network className="mr-2 h-4 w-4 text-alien-green" />
-                  CoNetWorKing
-                </Link>
+              <div className="pl-2 flex flex-col space-y-3 mt-2 bg-alien-space-light/20 p-3 rounded-md">
+                <div className="hover:bg-alien-space-light rounded-md p-2">
+                  <Link 
+                    to="/academy" 
+                    className="text-alien-gold hover:text-alien-green font-[Atomic Age] flex items-start"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <GraduationCap className="mr-2 h-5 w-5 text-alien-green flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-semibold">Academy</p>
+                      <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources.</p>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="hover:bg-alien-space-light rounded-md p-2">
+                  <Link 
+                    to="/clubs" 
+                    className="text-alien-gold hover:text-alien-green font-[Atomic Age] flex items-start"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Clover className="mr-2 h-5 w-5 text-alien-gold flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-semibold">Clubs</p>
+                      <p className="text-sm text-gray-400">Join specialized communities focused on interests.</p>
+                    </div>
+                  </Link>
+                </div>
+                
+                <div className="hover:bg-alien-space-light rounded-md p-2">
+                  <Link 
+                    to="/conetworking" 
+                    className="text-alien-gold hover:text-alien-green font-[Atomic Age] flex items-start"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Network className="mr-2 h-5 w-5 text-alien-green flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-semibold">CoNetWorKing</p>
+                      <p className="text-sm text-gray-400">Connect with like-minded individuals across the multiverse.</p>
+                    </div>
+                  </Link>
+                </div>
               </div>
             )}
           </div>
           
-          <div className="flex items-center gap-2 mt-2 ml-4">
-            <img 
-              src="/lovable-uploads/58877924-4e26-4862-938b-986102e0b5c0.png" 
-              alt="Language Selection" 
-              className="w-5 h-5 rounded-full"
-            />
-            <span className="text-alien-gold">English</span>
+          {/* Language Selector */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => setLanguageExpanded(!languageExpanded)}
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center justify-between"
+            >
+              <div className="flex items-center">
+                <img 
+                  src="/lovable-uploads/58877924-4e26-4862-938b-986102e0b5c0.png" 
+                  alt="Language Selection" 
+                  className="w-5 h-5 mr-2 rounded-full"
+                />
+                <span>English</span>
+              </div>
+              {languageExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+            
+            {languageExpanded && (
+              <div className="pl-2 flex flex-col space-y-1 mt-2 bg-alien-space-light/20 p-2 rounded-md">
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4 mr-2" />
+                  English
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-4 mr-2" />
+                  Español
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" className="w-5 h-4 mr-2" />
+                  Deutsch
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4 mr-2" />
+                  Français
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/cn.png" alt="中文" className="w-5 h-4 mr-2" />
+                  中文
+                </div>
+              </div>
+            )}
           </div>
           
           <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold font-[Atomic Age] rounded-full mt-4 flex items-center gap-2">

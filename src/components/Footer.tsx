@@ -22,10 +22,10 @@ const Footer = () => {
               Uniting diverse blockchain domains under a cosmic governance structure.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://x.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://twitter.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <X size={20} />
               </a>
-              <a href="https://facebook.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://facebook.com/AlienFlowSpace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="https://instagram.com/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
@@ -34,7 +34,7 @@ const Footer = () => {
               <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Disc size={20} />
               </a>
-              <a href="mailto:contact@alienflowspace.dao" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="mailto:info@alienflowspace.com" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Mail size={20} />
               </a>
               <a href="https://t.me/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
