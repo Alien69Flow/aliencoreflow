@@ -5,6 +5,11 @@ import { Globe, Shield, Users, Box, BarChart4 } from 'lucide-react';
 
 const features = [
   {
+    icon: <Box className="h-10 w-10" />,
+    title: "Cross-Chain Integration",
+    description: "Seamlessly operate across multiple blockchains with our advanced bridging technology."
+  },
+  {
     icon: <Globe className="h-10 w-10" />,
     title: "Interplanetary Governance",
     description: "Participate in decentralized decision-making across planetary boundaries with our advanced DAO structure."
@@ -18,11 +23,6 @@ const features = [
     icon: <Users className="h-10 w-10" />,
     title: "Multi-Species Collaboration",
     description: "Our platform is designed for collaboration between diverse entities, ensuring inclusive participation."
-  },
-  {
-    icon: <Box className="h-10 w-10" />,
-    title: "Cross-Chain Integration",
-    description: "Seamlessly operate across multiple blockchains with our advanced bridging technology."
   },
   {
     icon: <BarChart4 className="h-10 w-10" />,

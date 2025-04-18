@@ -3,73 +3,96 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuContent,
+  NavigationMenuLink,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
-import { Earth } from 'lucide-react';
 
 const DesktopNav = () => {
   return (
-    <NavigationMenu className="hidden md:flex">
-      <NavigationMenuList className="gap-1">
-        <NavigationMenuItem>
-          <Link to="/">
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
-              Home
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+    <NavigationMenu className="hidden md:block">
+      <NavigationMenuList>
+        {/* About */}
         <NavigationMenuItem>
           <Link to="/about">
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light`}>
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        
+        {/* Ecosystem */}
         <NavigationMenuItem>
-          <Link to="/alien-trip">
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
-              AlienTrip
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link to="/contact">
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]"}>
-              Contact
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light font-[Atomic Age]">
-            Explore Spaces
+          <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
+            Ecosystem
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 rounded-lg w-[400px]">
-            <ul className="grid gap-3 p-4 w-full grid-cols-1">
+          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[400px]">
+            <ul className="grid gap-3 p-4 md:grid-cols-2">
               <li>
-                <Link to="/academy" className="block p-3 rounded-md hover:bg-alien-space-light">
-                  <div className="text-alien-gold font-[Atomic Age] mb-1">Academy</div>
-                  <p className="text-sm text-gray-400">Learn from the stars</p>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link to="/alien-trip" className="flex flex-col h-full p-4 rounded-md hover:bg-alien-space-light">
+                    <div className="text-alien-gold text-lg font-semibold">Alien Trip</div>
+                    <div className="text-gray-400 text-sm">Experience our decentralized metaverse journey</div>
+                  </Link>
+                </NavigationMenuLink>
               </li>
               <li>
-                <Link to="/clubs" className="block p-3 rounded-md hover:bg-alien-space-light">
-                  <div className="text-alien-gold font-[Atomic Age] mb-1">Clubs</div>
-                  <p className="text-sm text-gray-400">Join planetary communities</p>
-                </Link>
-              </li>
-              <li>
-                <Link to="/conetworking" className="block p-3 rounded-md hover:bg-alien-space-light">
-                  <div className="text-alien-gold font-[Atomic Age] mb-1">CoNetWorKing</div>
-                  <p className="text-sm text-gray-400">Connect across the cosmos</p>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full p-4 rounded-md hover:bg-alien-space-light">
+                    <div className="text-alien-gold text-lg font-semibold">Manifesto</div>
+                    <div className="text-gray-400 text-sm">Read our core mission & values</div>
+                  </a>
+                </NavigationMenuLink>
               </li>
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        
+        {/* Communities */}
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
+            Communities
+          </NavigationMenuTrigger>
+          <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[400px]">
+            <ul className="grid gap-3 p-4 md:grid-cols-2">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link to="/academy" className="flex flex-col h-full p-4 rounded-md hover:bg-alien-space-light">
+                    <div className="text-alien-gold text-lg font-semibold">Academy</div>
+                    <div className="text-gray-400 text-sm">Learn through comprehensive resources</div>
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link to="/clubs" className="flex flex-col h-full p-4 rounded-md hover:bg-alien-space-light">
+                    <div className="text-alien-gold text-lg font-semibold">Clubs</div>
+                    <div className="text-gray-400 text-sm">Join specialized communities</div>
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link to="/conetworking" className="flex flex-col h-full p-4 rounded-md hover:bg-alien-space-light">
+                    <div className="text-alien-gold text-lg font-semibold">CoNetWorKing</div>
+                    <div className="text-gray-400 text-sm">Connect with like-minded individuals</div>
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        
+        {/* Contact */}
+        <NavigationMenuItem>
+          <Link to="/contact">
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light`}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         
         {/* Language Selector with Earth Icon */}
@@ -79,34 +102,11 @@ const DesktopNav = () => {
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px]">
             <ul className="grid w-full">
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-auto mr-2" />
-                English
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-auto mr-2" />
-                Español
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-auto mr-2" />
-                Français
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-auto mr-2" />
-                汉语 (Hànyǔ)
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-auto mr-2" />
-                हिन्दी (Hindī)
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/br.png" alt="Português" className="w-5 h-auto mr-2" />
-                Português
-              </li>
-              <li className="px-2 py-1.5 text-alien-gold hover:text-alien-green hover:bg-alien-space-light rounded cursor-pointer flex items-center">
-                <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-auto mr-2" />
-                日本語 (Nihongo)
-              </li>
+              <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md">English</li>
+              <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md">Español</li>
+              <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md">Deutsch</li>
+              <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md">Français</li>
+              <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md">中文</li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

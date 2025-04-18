@@ -30,6 +30,7 @@ const Index: React.FC = () => {
         <EcosystemSection />
         <FinancialFreedomSection />
         <ExploreSpacesSection />
+        <EcosystemSection />
         <FeaturesSection />
         <ParticipationSection />
       </main>

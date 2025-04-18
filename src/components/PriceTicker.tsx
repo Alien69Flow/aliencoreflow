@@ -29,13 +29,13 @@ const PriceTicker = () => {
     // Add the script to the document body
     document.body.appendChild(script);
     
-    // Initialize widget after script loads
+    // Initialize widget after script loads with a delay to ensure DOM is ready
     script.onload = () => {
       setTimeout(() => {
         if (window.coinmarketcap && typeof window.coinmarketcap.widget === 'function') {
           window.coinmarketcap.widget();
         }
-      }, 1000);
+      }, 1500);
     };
     
     return () => {

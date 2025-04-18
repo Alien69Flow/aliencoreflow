@@ -19,7 +19,7 @@ const ParticipationSection = () => {
           >
             <div className="relative">
               <img 
-                src="/public/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" 
+                src="/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png" 
                 alt="Space view from orbit" 
                 className="rounded-xl shadow-2xl object-cover h-full w-full max-h-[600px]"
               />
@@ -79,7 +79,7 @@ const ParticipationSection = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-alien-gold-light">Token Governance</h3>
-                  <p className="text-gray-300">Hold $ALIEN tokens to participate in voting and proposal creation across all ecosystem domains.</p>
+                  <p className="text-gray-300">Hold A₿TC cryptokens to participate in voting and proposal creation across all ecosystem domains.</p>
                 </div>
               </div>
               
