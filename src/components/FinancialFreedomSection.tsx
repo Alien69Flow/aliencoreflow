@@ -58,8 +58,7 @@ const FinancialFreedomSection = () => {
         </motion.div>
       </div>
       
-      {/* Background decorations */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-64 bg-alien-green/5 -skew-y-6"></div>
+      {/* Eliminamos el elemento verde inclinado del fondo */}
     </section>
   );
 };
