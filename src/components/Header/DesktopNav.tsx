@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
 
 const DesktopNav = () => {
   // Estado para controlar qué menú está abierto
@@ -42,16 +43,15 @@ const DesktopNav = () => {
           Contact
         </Link>
         
-        {/* Explore Spaces usando Popover en lugar de NavigationMenu */}
-        <Popover>
-          <PopoverTrigger asChild>
-            <button className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center">
+        {/* Explore Spaces using DropdownMenu instead of Popover */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center">
               Explore Spaces
-            </button>
-          </PopoverTrigger>
-          <PopoverContent 
-            className="bg-alien-space-dark border border-alien-gold/20 p-4 rounded-md w-[320px] shadow-lg z-[9999]"
-            sideOffset={5}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent 
+            className="bg-alien-space-dark border border-alien-gold/20 p-4 rounded-md w-[320px] shadow-lg z-50"
           >
             <div className="flex flex-col space-y-4">
               <Link 
@@ -82,57 +82,55 @@ const DesktopNav = () => {
                 </div>
               </Link>
             </div>
-          </PopoverContent>
-        </Popover>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
-      {/* Language Selector usando Popover para mayor consistencia */}
-      <Popover>
-        <PopoverTrigger asChild>
-          <button className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none">
+      {/* Language Selector using DropdownMenu instead of Popover */}
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none p-0">
             <Globe className="h-5 w-5" />
-          </button>
-        </PopoverTrigger>
-        <PopoverContent 
-          className="bg-alien-space-dark border border-alien-gold/20 p-2 rounded-md w-40 shadow-lg z-[9999]"
-          sideOffset={5}
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          className="bg-alien-space-dark border border-alien-gold/20 p-2 rounded-md w-[220px] shadow-lg z-50"
           align="end"
         >
           <div className="flex flex-col space-y-1">
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4" />
               <span>English</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-4" />
               <span>Español</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4" />
               <span>Français</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4" />
               <span>汉语 (Hànyǔ)</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4" />
               <span>हिन्दी (Hindī)</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4" />
               <span>Português</span>
-            </div>
-            <div className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded">
               <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4" />
               <span>日本語 (Nihongo)</span>
-            </div>
+            </DropdownMenuItem>
           </div>
-        </PopoverContent>
-      </Popover>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </nav>
   );
 };
 
 export default DesktopNav;
-
