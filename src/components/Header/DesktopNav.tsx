@@ -42,7 +42,7 @@ const DesktopNav = () => {
             Explore Spaces
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="fixed bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-4 rounded-lg w-[400px] shadow-lg z-50">
+            <div className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-4 rounded-lg w-[400px] shadow-lg z-50">
               <div className="flex flex-col gap-3">
                 <div className="flex items-start p-2 hover:bg-alien-space-light cursor-pointer rounded-md">
                   <GraduationCap className="mr-3 h-5 w-5 text-alien-green mt-1" />
@@ -71,7 +71,7 @@ const DesktopNav = () => {
         </NavigationMenuItem>
         
         {/* Language Selector */}
-        <NavigationMenuItem>
+        <NavigationMenuItem className="relative">
           <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light">
             <img 
               src="/lovable-uploads/58877924-4e26-4862-938b-986102e0b5c0.png" 
@@ -80,7 +80,7 @@ const DesktopNav = () => {
             />
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="fixed bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px] shadow-lg z-50">
+            <div className="bg-alien-space-dark/95 backdrop-blur-lg border border-alien-gold/20 p-2 rounded-lg w-[180px] shadow-lg z-50">
               <ul className="grid w-full">
                 <li className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4 mr-2" />
