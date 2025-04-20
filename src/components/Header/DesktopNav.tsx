@@ -117,16 +117,24 @@ const DesktopNav = () => {
             <span>Español</span>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" className="w-5 h-4" />
-            <span>Deutsch</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
             <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4" />
             <span>Français</span>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/cn.png" alt="中文" className="w-5 h-4" />
-            <span>中文</span>
+            <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4" />
+            <span>汉语 (Hànyǔ)</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+            <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4" />
+            <span>हिन्दी (Hindī)</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+            <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4" />
+            <span>Português</span>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+            <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4" />
+            <span>日本語 (Nihongo)</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

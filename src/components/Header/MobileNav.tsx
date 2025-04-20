@@ -118,16 +118,24 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   Español
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
-                  <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" className="w-5 h-4 mr-2" />
-                  Deutsch
-                </div>
-                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4 mr-2" />
                   Français
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
-                  <img src="https://flagcdn.com/w20/cn.png" alt="中文" className="w-5 h-4 mr-2" />
-                  中文
+                  <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4 mr-2" />
+                  汉语 (Hànyǔ)
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4 mr-2" />
+                  हिन्दी (Hindī)
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4 mr-2" />
+                  Português
+                </div>
+                <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
+                  <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4 mr-2" />
+                  日本語 (Nihongo)
                 </div>
               </div>
             )}
