@@ -58,7 +58,7 @@ const DesktopNav = () => {
             <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2">
               Explore Spaces
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] rounded-md z-50">
+            <NavigationMenuContent className="absolute top-full left-0 bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] rounded-md shadow-lg z-[100]">
               <ul className="space-y-4">
                 <li>
                   <Link 
@@ -100,44 +100,47 @@ const DesktopNav = () => {
       </NavigationMenu>
 
       {/* Language Selector */}
-      <DropdownMenu>
-        <DropdownMenuTrigger className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none">
-          <Globe className="h-5 w-5" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent 
-          className="bg-alien-space-dark border border-alien-gold/20 p-2 mt-2 rounded-md w-40 z-50"
-          sideOffset={5}
-        >
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4" />
-            <span>English</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-4" />
-            <span>Español</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4" />
-            <span>Français</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4" />
-            <span>汉语 (Hànyǔ)</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4" />
-            <span>हिन्दी (Hindī)</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4" />
-            <span>Português</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
-            <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4" />
-            <span>日本語 (Nihongo)</span>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <div className="relative">
+        <DropdownMenu>
+          <DropdownMenuTrigger className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none">
+            <Globe className="h-5 w-5" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent 
+            className="bg-alien-space-dark border border-alien-gold/20 p-2 mt-2 rounded-md w-40 shadow-lg z-[100]"
+            sideOffset={5}
+            align="end"
+          >
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4" />
+              <span>English</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-4" />
+              <span>Español</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4" />
+              <span>Français</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4" />
+              <span>汉语 (Hànyǔ)</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4" />
+              <span>हिन्दी (Hindī)</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4" />
+              <span>Português</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
+              <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4" />
+              <span>日本語 (Nihongo)</span>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </nav>
   );
 };
