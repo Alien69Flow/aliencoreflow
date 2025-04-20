@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Globe, ChevronDown, ChevronUp, GraduationCap, Clover, Network } from 'lucide-react';
+import { Globe, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface MobileNavProps {
@@ -24,6 +25,13 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     >
       <div className="container mx-auto px-4 py-6">
         <nav className="flex flex-col space-y-4">
+          <Link 
+            to="/" 
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
           <Link 
             to="/about" 
             className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md"

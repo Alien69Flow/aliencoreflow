@@ -24,6 +24,14 @@ const DesktopNav = () => {
         <NavigationMenuList className="space-x-6">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
+              <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2">
+                Home
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
               <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2">
                 About
               </Link>
