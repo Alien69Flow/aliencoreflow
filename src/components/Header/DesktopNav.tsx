@@ -58,7 +58,7 @@ const DesktopNav = () => {
             <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2">
               Explore Spaces
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] z-[100] rounded-md">
+            <NavigationMenuContent className="bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] rounded-md">
               <ul className="space-y-4">
                 <li>
                   <Link 
@@ -105,7 +105,7 @@ const DesktopNav = () => {
           <Globe className="h-5 w-5" />
         </DropdownMenuTrigger>
         <DropdownMenuContent 
-          className="bg-alien-space-dark border border-alien-gold/20 p-2 z-[100] mt-2 rounded-md"
+          className="bg-alien-space-dark border border-alien-gold/20 p-2 mt-2 rounded-md w-40"
           sideOffset={5}
         >
           <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
