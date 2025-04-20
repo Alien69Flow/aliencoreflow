@@ -119,11 +119,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-[Atomic Age] flex items-center justify-between"
             >
               <div className="flex items-center">
-                <img 
-                  src="/lovable-uploads/58877924-4e26-4862-938b-986102e0b5c0.png" 
-                  alt="Language Selection" 
-                  className="w-5 h-5 mr-2 rounded-full"
-                />
+                <Globe className="mr-2 h-5 w-5" />
                 <span>English</span>
               </div>
               {languageExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}

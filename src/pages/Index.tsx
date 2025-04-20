@@ -27,9 +27,9 @@ const Index: React.FC = () => {
       <Header />
       <main className="relative z-10 pt-16">
         <Hero />
+        <EcosystemSection />
         <FinancialFreedomSection />
         <ExploreSpacesSection />
-        <EcosystemSection />
         <FeaturesSection />
         <ParticipationSection />
       </main>
