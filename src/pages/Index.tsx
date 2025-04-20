@@ -3,10 +3,10 @@ import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import EcosystemSection from '@/components/EcosystemSection';
-import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ExploreSpacesSection from '@/components/ExploreSpacesSection';
+import EcosystemSection from '@/components/EcosystemSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ParticipationSection from '@/components/ParticipationSection';
 import Footer from '@/components/Footer';
 
@@ -27,9 +27,9 @@ const Index: React.FC = () => {
       <Header />
       <main className="relative z-10 pt-16">
         <Hero />
-        <EcosystemSection />
         <FinancialFreedomSection />
         <ExploreSpacesSection />
+        <EcosystemSection />
         <FeaturesSection />
         <ParticipationSection />
       </main>

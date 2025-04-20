@@ -37,7 +37,7 @@ const Footer = () => {
               <a href="mailto:info@alienflow.space" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="https://T.Me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://t.me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Send size={20} />
               </a>
               <a href="https://github.com/AlienFlowSpaceDAO" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
