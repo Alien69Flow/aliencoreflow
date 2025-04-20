@@ -3,7 +3,7 @@ import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { GraduationCap, BookOpen, Video, Users, Certificate, Sparkles } from 'lucide-react';
+import { GraduationCap, BookOpen, Video, Users, Award, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CourseCard = ({ title, description, icon, level, duration, color }: {
@@ -56,7 +56,7 @@ const Academy: React.FC = () => {
     {
       title: "Tokenomics Design",
       description: "Understand how to create sustainable token economies and incentive mechanisms.",
-      icon: <Certificate className="h-6 w-6 text-alien-gold" />,
+      icon: <Award className="h-6 w-6 text-alien-gold" />,
       level: "Advanced",
       duration: "8 hours",
       color: "bg-purple-500"
