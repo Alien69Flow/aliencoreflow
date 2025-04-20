@@ -21,7 +21,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: 'auto' }}
       exit={{ opacity: 0, height: 0 }}
-      className="bg-alien-space-dark/95 backdrop-blur-lg absolute w-full z-50 top-full"
+      className="bg-alien-space-dark absolute w-full z-50 top-full"
     >
       <div className="container mx-auto px-4 py-6">
         <nav className="flex flex-col space-y-4">
