@@ -27,8 +27,14 @@ const Index: React.FC = () => {
       <Header />
       <main className="relative z-10 pt-16">
         <Hero />
-        <EcosystemSection />
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-[Atomic Age]">₿£€$$ DAO Ecosystem</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo]">
+            ΔlieπFlΦw $pac€ bridges diverse decentralized domains into a coherent, interoperable ecosystem.
+          </p>
+        </div>
         <FinancialFreedomSection />
+        <EcosystemSection />
         <ExploreSpacesSection />
         <FeaturesSection />
         <ParticipationSection />
