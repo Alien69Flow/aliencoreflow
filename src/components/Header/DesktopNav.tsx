@@ -58,42 +58,44 @@ const DesktopNav = () => {
             <NavigationMenuTrigger className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2">
               Explore Spaces
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="absolute top-full left-0 bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] rounded-md shadow-lg z-[100]">
-              <ul className="space-y-4">
-                <li>
-                  <Link 
-                    to="/academy" 
-                    className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
-                  >
-                    <div className="flex-1">
-                      <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Academy</h3>
-                      <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    to="/clubs" 
-                    className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
-                  >
-                    <div className="flex-1">
-                      <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Clubs</h3>
-                      <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    to="/conetworking" 
-                    className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
-                  >
-                    <div className="flex-1">
-                      <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">CoNetWorKing</h3>
-                      <p className="text-sm text-gray-400">Connect with like-minded individuals across the multiverse</p>
-                    </div>
-                  </Link>
-                </li>
-              </ul>
+            <NavigationMenuContent className="bg-alien-space-dark border border-alien-gold/20 p-4 min-w-[320px] rounded-md shadow-lg z-[999]">
+              <div className="w-full">
+                <ul className="space-y-4">
+                  <li>
+                    <Link 
+                      to="/academy" 
+                      className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
+                    >
+                      <div className="flex-1">
+                        <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Academy</h3>
+                        <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/clubs" 
+                      className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
+                    >
+                      <div className="flex-1">
+                        <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Clubs</h3>
+                        <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/conetworking" 
+                      className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group"
+                    >
+                      <div className="flex-1">
+                        <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">CoNetWorKing</h3>
+                        <p className="text-sm text-gray-400">Connect with like-minded individuals across the multiverse</p>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -106,8 +108,7 @@ const DesktopNav = () => {
             <Globe className="h-5 w-5" />
           </DropdownMenuTrigger>
           <DropdownMenuContent 
-            className="bg-alien-space-dark border border-alien-gold/20 p-2 mt-2 rounded-md w-40 shadow-lg z-[100]"
-            sideOffset={5}
+            className="bg-alien-space-dark border border-alien-gold/20 p-2 mt-2 rounded-md w-40 shadow-lg z-[999]"
             align="end"
           >
             <DropdownMenuItem className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2">
