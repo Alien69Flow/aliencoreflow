@@ -22,28 +22,28 @@ const Footer = () => {
               Uniting diverse blockchain domains under a cosmic governance structure.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://twitter.com/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://twitter.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://facebook.com/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://www.facebook.com/Alien69Flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://www.instagram.com/alien69flow/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Disc size={20} />
               </a>
-              <a href="mailto:contact@alienflow.space" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="mailto:info@alienflow.space" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="https://t.me/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://t.me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Send size={20} />
               </a>
-              <a href="https://github.com/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://github.com/AlienFlowSpaceDAO" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com/company/alienflow69" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+              <a href="https://linkedin.com/in/alienflow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
