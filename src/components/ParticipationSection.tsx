@@ -45,7 +45,9 @@ const ParticipationSection = () => {
           once: true
         }}>
             <h2 className="text-4xl font-bold mb-6 text-alien-gold text-glow">Join the Cosmic Governance</h2>
-            <p className="text-xl text-gray-300 mb-8">ΔlieπFlΦw $pac€ DAO operates on a principle of transparent, decentralized governance where all participants have the opportunity to shape the future of our interplanetary ecosystem.</p>
+            <p className="text-xl text-gray-300 mb-8">
+              AlienFlowSpace DAO operates on a principle of transparent, decentralized governance where all participants have the opportunity to shape the future of our interplanetary ecosystem.
+            </p>
             
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">

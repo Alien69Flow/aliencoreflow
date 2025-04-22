@@ -1,7 +1,7 @@
 
 import React from 'react';
+import { X, Facebook, MessageSquare, Instagram, Mail, Disc, Send, Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Twitter, Facebook, Instagram, Disc, Mail, Send, Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -22,8 +22,8 @@ const Footer = () => {
               Uniting diverse blockchain domains under a cosmic governance structure.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="https://twitter.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
-                <Twitter size={20} />
+              <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
+                <X size={20} />
               </a>
               <a href="https://www.facebook.com/Alien69Flow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-alien-gold transition-colors">
                 <Facebook size={20} />
