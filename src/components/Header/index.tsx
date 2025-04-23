@@ -22,23 +22,23 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-alien-space-dark/90 backdrop-blur-lg' : 'py-6 bg-transparent'
+        isScrolled ? 'py-3 bg-alien-space-dark/90 backdrop-blur-lg shadow-md' : 'py-6 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center relative">
-        {/* Logo */}
+        {/* Logo actualizado */}
         <Logo />
 
-        {/* Desktop Navigation */}
+        {/* Navegación de escritorio */}
         <DesktopNav />
 
-        {/* Connect Button and Mobile Menu */}
+        {/* Botón de conexión y menú móvil */}
         <div className="flex items-center gap-4">
           {!isMobile && <ConnectButton />}
           {isMobile && (
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-alien-gold"
+              className="p-2 text-alien-gold focus:outline-none focus:ring-2 focus:ring-alien-gold"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -46,15 +46,15 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menú móvil */}
       <AnimatePresence>
         {isMobile && isMenuOpen && (
           <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         )}
       </AnimatePresence>
 
-      {/* Price Ticker */}
-      <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full">
+      {/* Ticker de precios */}
+      <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full bg-alien-space-dark/80">
         <PriceTicker />
       </div>
     </header>
