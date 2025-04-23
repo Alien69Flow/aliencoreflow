@@ -26,8 +26,8 @@ const Index: React.FC = () => {
           
         </div>
         <FinancialFreedomSection />
-        <EcosystemSection />
         <ExploreSpacesSection />
+        <EcosystemSection />
         <FeaturesSection />
         <ParticipationSection />
       </main>
