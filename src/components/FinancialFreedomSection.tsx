@@ -37,8 +37,8 @@ const FinancialFreedomSection = () => {
         }} className="text-xl max-w-5xl mx-auto text-gray-300 font-[Exo] leading-relaxed">
             Any Individual or Professional can Understand the Advantage of Digital Money · 
             Impartial Money that does not discriminate, Decentralized Currencies, 
-            Stable without Volatility, As Well As Safe Reserves of Values. 
-            Access with Crypto, NFTs, Tokens to Order & Generate All Types of
+            Scalable and Stable wit the Volatility, As Well As Safe Reserves of Values. 
+            Access with Cryptokens and NFTs to Order & Generate All Types of
             Experiences, Products & Services According to your Demands Instantly...
           </motion.p>
         </motion.div>
@@ -58,8 +58,8 @@ const FinancialFreedomSection = () => {
       }} className="card-border p-8 max-w-3xl mx-auto text-center">
           
           <h3 className="text-2xl font-bold mb-3 text-alien-gold font-[Atomic Age]">A₿tc (Aurum nostrum non est aurum vulgi)</h3>
-          <p className="text-gray-300 mb-4 font-[Exo]">Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin, providing stability and growth potential in the cosmic ecosystem.</p>
-          <div className="inline-block bg-alien-space-dark px-4 py-2 rounded-full text-alien-green border border-alien-green/30">• Bitcoin-backed + Interoperable + Gold + Growth + Scalable + Stable</div>
+          <p className="text-gray-300 mb-4 font-[Exo]">Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, providing stability and growth potential (Φπ) in the cosmic ecosystem.</p>
+          <div className="inline-block bg-alien-space-dark px-4 py-2 rounded-full text-alien-green border border-alien-green/30">• Bitcoin-backed + Interoperable</div>
         </motion.div>
       </div>
       
