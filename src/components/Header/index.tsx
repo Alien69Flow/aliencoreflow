@@ -4,6 +4,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import MobileNav from './MobileNav';
 import ConnectButton from './ConnectButton';
 import PriceTicker from '../PriceTicker';
+import DesktopNav from './DesktopNav';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,15 +24,25 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="logo">AlienCoreFlow</div>
-        {!isMobile && <ConnectButton />}
-        {isMobile && (
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-gold">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        )}
+        <div className="flex items-center">
+          <img src="/logo.png" alt="AlienFlowSpace Logo" className="h-8 mr-2" />
+          <span className="text-xl font-bold text-white">AlienFlowSpace</span>
+        </div>
+
+        {!isMobile && <DesktopNav />}
+
+        <div className="flex items-center gap-4">
+          {!isMobile && <ConnectButton />}
+          {isMobile && (
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-gold">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
+        </div>
       </div>
+
       {isMobile && isMenuOpen && <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
+
       <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full">
         <PriceTicker />
       </div>
