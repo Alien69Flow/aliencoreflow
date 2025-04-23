@@ -58,7 +58,7 @@ const FinancialFreedomSection = () => {
       }} className="card-border p-8 max-w-3xl mx-auto text-center">
           
           <h3 className="text-2xl font-bold mb-3 text-alien-gold font-[Atomic Age]">A₿tc (Aurum nostrum non est aurum vulgi)</h3>
-          <p className="text-gray-300 mb-4 font-[Exo]">Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, providing stability and growth potential (Φπ) in the cosmic ecosystem.</p>
+          <p className="text-gray-300 mb-4 font-[Exo]">Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, providing scalability, stability and growth potential (Φπ) in the cosmic ecosystem.</p>
           <div className="inline-block bg-alien-space-dark px-4 py-2 rounded-full text-alien-green border border-alien-green/30">• Bitcoin-backed + Interoperable</div>
         </motion.div>
       </div>
