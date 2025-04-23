@@ -67,14 +67,14 @@ const Hero = () => {
           <Button 
             className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
           >
-            <Orbit className="mr-2 h-5 w-5" /> Enter Portal
+            <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
           </Button>
           
           <Link to="/contact">
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
             >
-              <Globe className="mr-2 h-5 w-5" /> Join Community
+              <Globe className="mr-2 h-5 w-5" /> Contact & Join
             </Button>
           </Link>
           
@@ -86,7 +86,7 @@ const Hero = () => {
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
             >
-              <ScrollText className="mr-2 h-5 w-5" /> Read Manifesto
+              <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
             </Button>
           </a>
         </motion.div>
