@@ -12,8 +12,8 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
-                alt="AlienFlowSpace Logo" 
+                src="/lovable-uploads/ALogo.png" 
+                alt="AlienFlowSpaceDAO Logo" 
                 className="h-10 w-auto object-contain" 
               />
               <h3 className="text-xl font-bold text-alien-gold font-[Atomic Age, Star Wars]">AlienFlowSpace</h3>
