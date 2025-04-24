@@ -47,10 +47,10 @@ const AlienTrip: React.FC = () => {
   ];
 
   const tokenomics = [
-    { name: "Community Rewards", value: 30, color: "#4CAF50" },
-    { name: "Development", value: 20, color: "#2196F3" },
-    { name: "Reserve", value: 15, color: "#FFC107" },
-    { name: "Team", value: 15, color: "#9C27B0" },
+    { name: "Community Rewards", value: 15, color: "#4CAF50" },
+    { name: "Development Reserve Funds", value: 35, color: "#2196F3" },
+    { name: "Liquidity Pools", value: 20, color: "#FFC107" },
+    { name: "Founders Teams", value: 10, color: "#9C27B0" },
     { name: "Partners", value: 10, color: "#FF5722" },
     { name: "Marketing", value: 10, color: "#E91E63" }
   ];
@@ -73,7 +73,7 @@ const AlienTrip: React.FC = () => {
                 </Button>
                 <Button variant="outline" className="border-alien-green text-alien-green hover:bg-alien-green/20" 
                         onClick={() => window.open("https://alienflowspace.gitbook.io/DAO", "_blank")}>
-                  <ScrollText className="mr-2 h-5 w-5" /> Read Greenpapers
+                  <ScrollText className="mr-2 h-5 w-5" /> Look Greenpapers
                 </Button>
               </div>
               
@@ -85,7 +85,7 @@ const AlienTrip: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">
                   Access our comprehensive documentation to learn about tokenomics, roadmap, and 
-                  technical specifications of the AlienFlowSpace ecosystem.
+                  technical specifications of the ΔlieπFlΦw $pac€ DAO ecosystem.
                 </p>
                 <a href="https://alienflowspace.gitbook.io/DAO" 
                    target="_blank" 
@@ -97,29 +97,29 @@ const AlienTrip: React.FC = () => {
               </div>
             </div>
             <div className="bg-alien-space-dark/50 rounded-lg p-6 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-alien-green mb-4">NFT Mint</h2>
+              <h2 className="text-2xl font-bold text-alien-green mb-4">Crypto Mint NFT</h2>
               <p className="text-gray-300 mb-6">
-                Secure your place in our cosmic ecosystem by minting an AlienFlow Passport NFT, granting you early access to all future features and governance rights.
+                Secure your place in our cosmic ecosystem by minting an ΔlieπFlΦw $pac€ DAO Passport, granting you early access to all present and future features and governance rights.
               </p>
               <div className="bg-alien-space-light rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-alien-gold">Mint Price</span>
-                  <span className="text-alien-green font-semibold">0.08 ETH</span>
+                  <span className="text-alien-green font-semibold">0.08 ₿TC</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-alien-gold">Total Supply</span>
-                  <span className="text-alien-green font-semibold">10,000</span>
+                  <span className="text-alien-green font-semibold">1,618.034</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-alien-gold">Minted</span>
-                  <span className="text-alien-green font-semibold">7,234 / 10,000</span>
+                  <span className="text-alien-green font-semibold">314.159 / 1,618.034</span>
                 </div>
                 <div className="w-full bg-alien-space-dark rounded-full h-2.5 mb-2">
                   <div className="bg-alien-gold h-2.5 rounded-full" style={{ width: '72%' }}></div>
                 </div>
               </div>
               <Button className="w-full bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark">
-                Mint Passport NFT
+                Crypto Mint NFT Passport
               </Button>
             </div>
           </div>
@@ -211,7 +211,7 @@ const AlienTrip: React.FC = () => {
               
               <div className="absolute left-1/2 transform -translate-x-1/2 top-0 -mt-8">
                 <img 
-                  src="/lovable-uploads/f24cdac2-e03e-4a29-981a-abd1cf8a130b.png" 
+                  src="/lovable-uploads/VC.png" 
                   alt="Alien UFO" 
                   className="w-16 h-16 object-contain animate-bounce" 
                 />
