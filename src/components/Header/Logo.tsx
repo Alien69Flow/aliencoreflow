@@ -22,7 +22,7 @@ const Logo = () => {
       {/* Icono del planeta */}
       <Link to="/">
         <img 
-          src="/lovable-uploads/79900e3c-f502-40b8-a628-e021acfcdb40.png" 
+          src="/lovable-uploads/ET.png" 
           alt="Earth" 
           className="h-8 w-8 rounded-full hover:opacity-80 transition-opacity"
         />
