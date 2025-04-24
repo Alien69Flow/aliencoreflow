@@ -7,7 +7,7 @@ const Logo = () => {
       {/* Logo principal */}
       <Link to="/" className="flex items-center gap-2">
         <img 
-          src="/lovable-uploads/a0f89be6-744a-4898-8955-b41b14629755.png" 
+          src="/lovable-uploads/ALogo.png" 
           alt="AlienFlowSpaceDAO Logo" 
           className="h-9" 
         />
