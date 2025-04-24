@@ -41,11 +41,8 @@ const Hero = () => {
           {/* Title and Description */}
           <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow font-[Atomic Age]"
-                <span className="text-alien-green">Δlieπ</span>
-          <span className="text-alien-gold">FlΦw</span>
-          <span className="text-alien-green">$pac€</span>
-          <span className="text-alien-gold">DAO</span>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
+                AlienFlow<span className="text-alien-green">Space</span> DAO
               </h1>
               
               <motion.p 
