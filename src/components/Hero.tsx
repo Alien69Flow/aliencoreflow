@@ -42,7 +42,10 @@ const Hero = () => {
           <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
-                AlienFlow<span className="text-alien-green">Space</span> DAO
+                <span className="text-alien-green">Δlieπ</span>
+          <span className="text-alien-gold">FlΦw</span>
+          <span className="text-alien-green">$pac€</span>
+          <span className="text-alien-gold">DAO</span>
               </h1>
               
               <motion.p 
@@ -64,29 +67,23 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
+          <Link to="/about">
           <Button 
             className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
           >
             <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
           </Button>
-          
+            <Link to="/alientrip">
+            <Button 
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
+            >
+              <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
+            </Button>
           <Link to="/contact">
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
             >
               <Globe className="mr-2 h-5 w-5" /> Contact & Join
-            </Button>
-          </Link>
-          
-          <a 
-            href="https://alienflowspace.gitbook.io/DAO" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-[Exo] px-8 py-6 text-lg rounded-full transition-colors"
-            >
-              <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
             </Button>
           </a>
         </motion.div>
