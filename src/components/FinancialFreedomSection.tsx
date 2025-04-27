@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bitcoin, Landmark, Coins } from 'lucide-react';
+import AnimatedText from './AnimatedText'; // Importamos AnimatedText
 
 const FinancialFreedomSection = () => {
   return (
@@ -31,29 +32,13 @@ const FinancialFreedomSection = () => {
             <Coins className="text-alien-gold h-16 w-16 ml-4" />
           </div>
 
-          {/* Texto dividido en dos párrafos */}
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            viewport={{
-              once: true,
-            }}
-            className="text-xl max-w-5xl mx-auto text-gray-300 font-[Exo] leading-relaxed space-y-6"
-          >
-            <p>
-              Any Individual or Professional can Understand the Advantage of Digital Money: Impartial Money that does not discriminate, Decentralized Currencies, Scalable and Stable with the Volatility. Safe Reserves of Values, allowing individuals to secure their wealth while enjoying the benefits of a decentralized economy.
-            </p>
-            <p>
-              Access with Cryptokens and NFTs to Order & Generate All Types of Experiences, Products & Services According to your Demands Instantly...
-            </p>
-          </motion.div>
+          {/* Usamos AnimatedText aquí */}
+          <AnimatedText className="text-xl max-w-5xl mx-auto text-gray-300 font-[Exo] leading-relaxed">
+            Any Individual or Professional can Understand the Advantage of Digital Money: Impartial Money that does not discriminate, Decentralized Currencies, Scalable and Stable with the Volatility. Safe Reserves of Values, allowing individuals to secure their wealth while enjoying the benefits of a decentralized economy.
+          </AnimatedText>
+          <AnimatedText className="text-xl max-w-5xl mx-auto text-gray-300 font-[Exo] leading-relaxed mt-4">
+            Access with Cryptokens and NFTs to Order & Generate All Types of Experiences, Products & Services According to your Demands Instantly...
+          </AnimatedText>
         </motion.div>
 
         {/* ABTC Token Highlight */}
