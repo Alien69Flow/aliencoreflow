@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Título del Hero */}
           <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-alien-gold text-glow font-[Atomic Age]">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow">
                 <span className="text-alien-green">Δlieπ</span>
                 <span className="text-alien-gold">FlΦw</span>
                 <span className="text-alien-green">$pac€</span>
@@ -52,7 +52,8 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
-Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.              </motion.p>
+                Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+              </motion.p>
             </div>
           </div>
         </motion.div>
