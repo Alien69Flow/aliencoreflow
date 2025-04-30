@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 const Index: React.FC = () => {
   return <div className="min-h-screen bg-alien-space">
       <div className="fixed inset-0 z-0" style={{
-      backgroundImage: `url('/lovable-uploads/97b958b4-b3ba-464b-929a-b8783d910484.png')`,
+      backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
