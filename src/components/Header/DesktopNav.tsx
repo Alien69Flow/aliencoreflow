@@ -73,7 +73,7 @@ const DesktopNav = () => {
                 >
                   <div className="flex-1">
                     <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">CoNetWorKing</h3>
-                    <p className="text-sm text-gray-400">Connect with like-minded individuals across the multiverse</p>
+                    <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                   </div>
                 </Link>
               </DropdownMenuItem>
