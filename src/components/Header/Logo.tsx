@@ -11,7 +11,10 @@ const Logo = () => {
           alt="AlienFlowSpaceDAO Logo" 
           className="h-9" 
         />
-        <span className="font-bold text-xl">
+        <span 
+          className="font-bold text-xl"
+          style={{ fontFamily: "'Atomic Age', cursive" }}
+        >
           <span className="text-alien-green">Δlieπ</span>
           <span className="text-alien-gold">FlΦw</span>
           <span className="text-alien-green">$pac€</span>
