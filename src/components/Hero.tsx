@@ -38,7 +38,10 @@ const Hero = () => {
           </div>
           
           {/* Título del Hero */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center" style={{ fontFamily: "'Atomic Age', cursive" }}>
+          <h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center"
+            style={{ fontFamily: "'Atomic Age', cursive" }}
+          >
             <span className="text-alien-green">Δlieπ</span>
             <span className="text-alien-gold">FlΦw</span>
             <span className="text-alien-green">$pac€</span>
