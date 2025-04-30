@@ -40,7 +40,7 @@ const Hero = () => {
           {/* Título del Hero */}
           <div className="star-wars-crawl mt-6">
             <div className="star-wars-content">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow flex space-x-2">
                 <span className="text-alien-green">Δlieπ</span>
                 <span className="text-alien-gold">FlΦw</span>
                 <span className="text-alien-green">$pac€</span>
