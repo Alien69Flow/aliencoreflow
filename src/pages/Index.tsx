@@ -14,6 +14,7 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
+    // Asegura que `window` esté disponible
     if (typeof window === "undefined") return;
 
     const handleScroll = () => {
@@ -25,7 +26,7 @@ const Header = () => {
   }, []);
 
   if (isMobile === undefined) {
-    // Renderiza un loader mientras el estado de `isMobile` se determina.
+    // Renderiza un loader mientras se determina el estado de `isMobile`
     return <div className="bg-alien-space-dark h-16 w-full" />;
   }
 
