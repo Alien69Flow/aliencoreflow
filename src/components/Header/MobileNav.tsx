@@ -88,7 +88,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <h3 className="font-semibold">CoNetWorKing</h3>
-                  <p className="text-sm text-gray-400">Connect with like-minded individuals across the multiverse</p>
+                  <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                 </Link>
               </div>
             )}
