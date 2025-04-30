@@ -38,8 +38,11 @@ const Hero = () => {
           </div>
           
           {/* Título del Hero */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow text-center text-alien-green">
-            ΔlieπFlΦw <span className="text-alien-gold">$pac€ DAO</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow text-center">
+            <span className="text-alien-green">Δlieπ</span>
+            <span className="text-alien-gold">FlΦw</span>
+            <span className="text-alien-green">$pac€</span>
+            <span className="text-alien-gold">DAO</span>
           </h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
