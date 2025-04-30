@@ -38,24 +38,17 @@ const Hero = () => {
           </div>
           
           {/* Título del Hero */}
-          <div className="star-wars-crawl mt-6">
-            <div className="star-wars-content">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow flex space-x-2">
-                <span className="text-alien-green">Δlieπ</span>
-                <span className="text-alien-gold">FlΦw</span>
-                <span className="text-alien-green">$pac€</span>
-                <span className="text-alien-gold">DAO</span>
-              </h1>
-              <motion.p 
-                className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-              >
-                Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
-              </motion.p>
-            </div>
-          </div>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight font-[Atomic Age] text-glow text-center text-alien-green">
+            ΔlieπFlΦw <span className="text-alien-gold">$pac€ DAO</span>
+          </h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+          </motion.p>
         </motion.div>
         
         {/* Botones de llamada a la acción */}
