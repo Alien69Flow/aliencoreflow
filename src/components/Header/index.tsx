@@ -9,6 +9,11 @@ import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ParticipationSection from '@/components/ParticipationSection';
 import Footer from '@/components/Footer';
 
+// Cambiar esta línea:
+import Logo from '@/components/Header/Logo';
+// Por esta línea:
+import Logo from '../components/Header/Logo'; // Ruta relativa
+
 const Index: React.FC = () => {
   return <div className="min-h-screen bg-alien-space">
       <div className="fixed inset-0 z-0" style={{
