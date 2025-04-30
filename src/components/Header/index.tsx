@@ -1,64 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
-import Logo from './Logo';
-import DesktopNav from './DesktopNav';
-import MobileNav from './MobileNav';
-import ConnectButton from './ConnectButton';
-import PriceTicker from '../PriceTicker';
+import React from 'react';
+import StarBackground from '@/components/StarBackground';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import ExploreSpacesSection from '@/components/ExploreSpacesSection';
+import EcosystemSection from '@/components/EcosystemSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import FinancialFreedomSection from '@/components/FinancialFreedomSection';
+import ParticipationSection from '@/components/ParticipationSection';
+import Footer from '@/components/Footer';
 
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-alien-space-dark/90 backdrop-blur-lg shadow-md' : 'py-6 bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center relative">
-        {/* Logo actualizado */}
-        <Logo />
-
-        {/* Navegación de escritorio */}
-        <DesktopNav />
-
-        {/* Botón de conexión y menú móvil */}
-        <div className="flex items-center gap-4">
-          {!isMobile && <ConnectButton />}
-          {isMobile && (
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-alien-gold focus:outline-none focus:ring-2 focus:ring-alien-gold"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          )}
+const Index: React.FC = () => {
+  return <div className="min-h-screen bg-alien-space">
+      <div className="fixed inset-0 z-0" style={{
+      backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      opacity: 0.3
+    }}></div>
+      <StarBackground />
+      <Header />
+      <main className="relative z-10 pt-16">
+        <Hero />
+        <div className="container mx-auto text-center px-0 py-0">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-[Atomic Age]">₿£€$$</h2>
+          
         </div>
-      </div>
-
-      {/* Menú móvil */}
-      <AnimatePresence>
-        {isMobile && isMenuOpen && (
-          <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        )}
-      </AnimatePresence>
-
-      {/* Ticker de precios */}
-      <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full bg-alien-space-dark/80">
-        <PriceTicker />
-      </div>
-    </header>
-  );
+        <FinancialFreedomSection />
+        <ExploreSpacesSection />
+        <EcosystemSection />
+        <FeaturesSection />
+        <ParticipationSection />
+      </main>
+      <Footer />
+    </div>;
 };
 
-export default Header;
+export default Index;
