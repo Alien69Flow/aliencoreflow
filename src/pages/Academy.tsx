@@ -105,7 +105,7 @@ const Academy: React.FC = () => {
           <div className="mb-16 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-[Atomic Age]">Certification Degree Master's Program of transcendental self-realization</h2>
+                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-[Atomic Age]">Certification Degree Master's Program</h2>
                 <p className="text-gray-300 mb-6 font-[Exo]">
                   Become a certified ΔlieπFlΦw $pac€ Explorer & Navigator and unlock exclusive opportunities in our expanding cosmic ecosystem.
                 </p>
