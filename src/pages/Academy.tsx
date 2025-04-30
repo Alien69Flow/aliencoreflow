@@ -105,18 +105,18 @@ const Academy: React.FC = () => {
           <div className="mb-16 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-[Atomic Age]">AlienFlow Certification Program</h2>
+                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-[Atomic Age]">Certification Degree Master's Program of transcendental self-realization</h2>
                 <p className="text-gray-300 mb-6 font-[Exo]">
-                  Become a certified AlienFlow Space Navigator and unlock exclusive opportunities in our expanding cosmic ecosystem.
+                  Become a certified ΔlieπFlΦw $pac€ Explorer & Navigator and unlock exclusive opportunities in our expanding cosmic ecosystem.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">24 interactive modules</p>
+                    <p className="text-alien-green">161 interactive modules</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">Live mentoring sessions</p>
+                    <p className="text-alien-green">Bootcamps with Live mentoring sessions</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
