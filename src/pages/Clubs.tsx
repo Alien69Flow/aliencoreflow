@@ -49,26 +49,26 @@ const ClubCard = ({ club }: { club: ClubProps }) => (
 const Clubs: React.FC = () => {
   const featuredClubs: ClubProps[] = [
     {
-      name: "Cosmic Traders",
-      description: "Advanced trading strategies and market analysis for interplanetary assets.",
-      members: 2438,
+      name: "Δ CashFlow",
+      description: "Advanced earning strategies and wining analysis for interplanetary assets.",
+      members: 314159,
       icon: <Zap className="h-6 w-6 text-alien-gold" />,
-      category: "DeFi",
+      category: "CashFlow",
       categoryColor: "bg-blue-500 text-white",
       bgColor: "bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/20"
     },
     {
-      name: "Governance Council",
-      description: "Shaping the future of AlienFlowSpace through collaborative decision-making.",
-      members: 1256,
+      name: "Δ EcoFlow",
+      description: "Shaping the planet's present through collaborative decision-making with budgets and proposals.",
+      members: 161803,
       icon: <Shield className="h-6 w-6 text-alien-gold" />,
       category: "DAO",
       categoryColor: "bg-emerald-500 text-white",
       bgColor: "bg-gradient-to-r from-emerald-900/30 to-green-900/30 border border-emerald-500/20"
     },
     {
-      name: "NFT Explorers",
-      description: "Discovering and creating digital artifacts across the multiverse.",
+      name: "ΔGameFlow ΔWeedFlow ΔXFlow",
+      description: "Discovering and creating digital artifacts across the multiverse with utility in the reality.",
       members: 3712,
       icon: <Rocket className="h-6 w-6 text-alien-gold" />,
       category: "NFTs",
@@ -80,11 +80,11 @@ const Clubs: React.FC = () => {
   const allClubs: ClubProps[] = [
     ...featuredClubs,
     {
-      name: "DeSci Research",
+      name: "DeSci: Research, Development and Innovation",
       description: "Advancing scientific discovery through decentralized collaboration.",
       members: 843,
       icon: <Rocket className="h-6 w-6 text-alien-gold" />,
-      category: "Science",
+      category: "DeSci",
       categoryColor: "bg-cyan-500 text-white",
       bgColor: "bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/20"
     },
