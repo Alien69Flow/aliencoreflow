@@ -12,7 +12,6 @@ import NotFound from './pages/NotFound';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Analytics />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
