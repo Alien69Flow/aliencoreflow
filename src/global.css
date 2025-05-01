@@ -1,0 +1,47 @@
+
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-logo {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 250px;
+  height: 250px;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Layout fixes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Make sure content is visible */
+.content-container {
+  flex: 1;
+  z-index: 1;
+  position: relative;
+}

@@ -1,29 +1,34 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import Index from './pages/Index';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import Academy from './pages/Academy';
+import AlienTrip from './pages/AlienTrip';
 import Clubs from './pages/Clubs';
 import CoNetWorKing from './pages/CoNetWorKing';
-import AlienTrip from './pages/AlienTrip';
+import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import './index.css';
+import './global.css';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/alien-trip" element={<AlienTrip />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/academy" element={<Academy />} />
-        <Route path="/clubs" element={<Clubs />} />
-        <Route path="/conetworking" element={<CoNetWorKing />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Index />} />
+          <Route path="about" element={<About />} />
+          <Route path="academy" element={<Academy />} />
+          <Route path="alien-trip" element={<AlienTrip />} />
+          <Route path="clubs" element={<Clubs />} />
+          <Route path="conetworking" element={<CoNetWorKing />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-};
+}
 
 export default App;
