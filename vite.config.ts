@@ -18,5 +18,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".json"], // Asegurando soporte para extensiones
   },
+  logLevel: "info", // Habilitar logs detallados
 }));
