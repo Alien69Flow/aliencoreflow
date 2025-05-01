@@ -44,4 +44,24 @@ body {
   flex: 1;
   z-index: 1;
   position: relative;
+  margin-top: 4rem;
+}
+
+/* Add text glow effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Add card border effect */
+.card-border {
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+  background-color: rgba(17, 17, 25, 0.6);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.card-border:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }

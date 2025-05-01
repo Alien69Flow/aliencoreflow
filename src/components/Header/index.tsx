@@ -1,40 +1,59 @@
-import React from 'react';
-import StarBackground from '@/components/StarBackground';
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import ExploreSpacesSection from '@/components/ExploreSpacesSection';
-import EcosystemSection from '@/components/EcosystemSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import FinancialFreedomSection from '@/components/FinancialFreedomSection';
-import ParticipationSection from '@/components/ParticipationSection';
-import Footer from '@/components/Footer';
-import Logo from '@/components/Header/Logo';
 
-const Index: React.FC = () => {
-  return <div className="min-h-screen bg-alien-space">
-      <div className="fixed inset-0 z-0" style={{
-      backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      opacity: 0.3
-    }}></div>
-      <StarBackground />
-      <Header />
-      <main className="relative z-10 pt-16">
-        <Hero />
-        <div className="container mx-auto text-center px-0 py-0">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-[Atomic Age]">₿£€$$</h2>
-          
+import React from 'react';
+import { AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useScroll } from "@/hooks/use-scroll";
+import Logo from "@/components/Header/Logo";
+import DesktopNav from "@/components/Header/DesktopNav";
+import MobileNav from "@/components/Header/MobileNav";
+import ConnectButton from "@/components/Header/ConnectButton";
+import PriceTicker from "@/components/PriceTicker";
+
+const Header = () => {
+  const isScrolled = useScroll();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const isMobile = useIsMobile();
+
+  if (isMobile === undefined) {
+    return <div className="bg-alien-space-dark h-16 w-full flex items-center justify-center">Cargando...</div>;
+  }
+
+  return (
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "py-3 bg-alien-space-dark/90 backdrop-blur-lg shadow-md" : "py-6 bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center relative">
+        <Logo />
+        <DesktopNav />
+        <div className="flex items-center gap-4">
+          {!isMobile && <ConnectButton />}
+          {isMobile && (
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-alien-gold focus:outline-none focus:ring-2 focus:ring-alien-gold"
+              aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              data-state={isMenuOpen ? "open" : "closed"}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
         </div>
-        <FinancialFreedomSection />
-        <ExploreSpacesSection />
-        <EcosystemSection />
-        <FeaturesSection />
-        <ParticipationSection />
-      </main>
-      <Footer />
-    </div>;
+      </div>
+      <AnimatePresence>
+        {isMobile && isMenuOpen && (
+          <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        )}
+      </AnimatePresence>
+      <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full bg-alien-space-dark/80">
+        <PriceTicker />
+      </div>
+    </header>
+  );
 };
 
-export default Index;
+export default Header;
