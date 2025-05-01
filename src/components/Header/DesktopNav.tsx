@@ -14,16 +14,16 @@ const DesktopNav = () => {
   return (
     <nav className="hidden md:flex items-center gap-6">
       <div className="hidden md:flex space-x-4">
-        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2">
+        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
           Home
         </Link>
-        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2">
+        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
           About
         </Link>
-        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2">
+        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
           AlienTrip
         </Link>
-        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2">
+        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
           Contact
         </Link>
         
@@ -32,7 +32,7 @@ const DesktopNav = () => {
           <DropdownMenuTrigger asChild>
             <Button 
               variant="ghost" 
-              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group"
+              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-atomic"
             >
               Explore Spaces
               <ChevronDown 
@@ -50,7 +50,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Academy</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1 font-atomic">Academy</h3>
                     <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
                   </div>
                 </Link>
@@ -61,7 +61,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">Clubs</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1 font-atomic">Clubs</h3>
                     <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
                   </div>
                 </Link>
@@ -72,7 +72,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1">CoNetWorKing</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-semibold mb-1 font-atomic">CoNetWorKing</h3>
                     <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                   </div>
                 </Link>
@@ -129,4 +129,3 @@ const DesktopNav = () => {
 };
 
 export default DesktopNav;
-

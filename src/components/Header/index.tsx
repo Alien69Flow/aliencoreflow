@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-3 bg-alien-space-dark/90 backdrop-blur-lg shadow-md" : "py-6 bg-transparent"
+        isScrolled ? "py-3 bg-alien-space-dark shadow-md" : "py-6 bg-alien-space-dark/80 backdrop-blur-lg"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center relative">
@@ -49,7 +49,7 @@ const Header = () => {
           <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         )}
       </AnimatePresence>
-      <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full bg-alien-space-dark/80">
+      <div className="w-full border-t border-alien-gold/20 border-b border-alien-gold/20">
         <PriceTicker />
       </div>
     </header>

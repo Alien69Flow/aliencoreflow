@@ -43,7 +43,7 @@ body {
 main {
   flex: 1;
   position: relative;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 /* Add text glow effect */
