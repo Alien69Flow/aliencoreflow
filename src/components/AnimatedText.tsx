@@ -1,19 +1,20 @@
-import { motion } from "framer-motion";
+
+import { motion, TargetAndTransition, VariantLabels } from "framer-motion";
 import React from "react";
 
-// Props para el componente AnimatedText
+// Props for the AnimatedText component
 interface AnimatedTextProps {
-  children: React.ReactNode; // Contenido del texto animado
-  className?: string; // Clases adicionales para personalizar estilos
-  initial?: object; // Configuración inicial de la animación (opcional)
-  animate?: object; // Configuración de la animación final (opcional)
-  transition?: object; // Configuración de la transición (opcional)
+  children: React.ReactNode; // Content of the animated text
+  className?: string; // Additional classes to customize styles
+  initial?: boolean | TargetAndTransition | VariantLabels; // Initial animation configuration (optional)
+  animate?: boolean | TargetAndTransition | VariantLabels; // Final animation configuration (optional)
+  transition?: { duration?: number; ease?: string | number[]; delay?: number }; // Transition configuration (optional)
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   children,
   className = "",
-  initial = { opacity: 0, y: 20 }, // Valores por defecto
+  initial = { opacity: 0, y: 20 }, // Default values
   animate = { opacity: 1, y: 0 },
   transition = { duration: 0.8 },
 }) => {

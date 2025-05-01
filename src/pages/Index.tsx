@@ -1,3 +1,4 @@
+
 import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -45,7 +46,7 @@ const Header = () => {
       </div>
       <AnimatePresence>
         {isMobile && isMenuOpen && (
-          <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} id="mobile-menu" />
+          <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         )}
       </AnimatePresence>
       <div className="absolute left-0 right-0 bottom-0 translate-y-full w-full bg-alien-space-dark/80">
