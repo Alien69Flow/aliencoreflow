@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # Cambia según tu ecosistema (ejemplo: pip, maven, etc.)
+    directory: "/" # Directorio del archivo package.json
+    schedule:
+      interval: "daily" # Frecuencia de las actualizaciones
