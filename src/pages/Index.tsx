@@ -7,10 +7,11 @@ import EcosystemSection from '@/components/EcosystemSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ParticipationSection from '@/components/ParticipationSection';
+import StatsSection from '@/components/StatsSection';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-alien-space">
+    <div className="min-h-screen bg-alien-space relative">
       <div className="fixed inset-0 z-0" style={{
         backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
         backgroundSize: 'cover',
@@ -19,17 +20,18 @@ const Index: React.FC = () => {
         opacity: 0.3
       }}></div>
       <StarBackground />
-      <main className="relative z-10 pt-16">
+      <div className="relative z-10">
         <Hero />
-        <div className="container mx-auto text-center px-0 py-0">
+        <div className="container mx-auto text-center px-4 py-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-[Atomic Age]">₿£€$$</h2>
         </div>
         <FinancialFreedomSection />
+        <StatsSection />
         <ExploreSpacesSection />
         <EcosystemSection />
         <FeaturesSection />
         <ParticipationSection />
-      </main>
+      </div>
     </div>
   );
 };

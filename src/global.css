@@ -40,11 +40,10 @@ body {
 }
 
 /* Make sure content is visible */
-.content-container {
+main {
   flex: 1;
-  z-index: 1;
   position: relative;
-  margin-top: 4rem;
+  padding-top: 4rem;
 }
 
 /* Add text glow effect */
