@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Index from './pages/Index';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <SpeedInsights />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
