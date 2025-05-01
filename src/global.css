@@ -64,3 +64,18 @@ main {
   border-color: rgba(255, 215, 0, 0.4);
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
+
+/* Aseguramos que las fuentes se apliquen correctamente */
+h1, h2, h3, h4, h5, h6, .font-atomic {
+  font-family: 'Atomic Age', system-ui, sans-serif !important;
+}
+
+/* Corrección de alineación para secciones */
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}

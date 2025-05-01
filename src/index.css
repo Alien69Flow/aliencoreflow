@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Exo:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -47,7 +48,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Atomic Age', system-ui, sans-serif;
+    font-family: 'Atomic Age', system-ui, sans-serif !important;
   }
 
   body, p, span, div, a, button {
@@ -194,4 +195,18 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+/* Correcciones adicionales */
+.font-atomic {
+  font-family: 'Atomic Age', system-ui, sans-serif !important;
+}
+
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }

@@ -22,15 +22,17 @@ const Index: React.FC = () => {
       <StarBackground />
       <div className="relative z-10">
         <Hero />
-        <div className="container mx-auto text-center px-4 py-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-[Atomic Age]">₿£€$$</h2>
+        <div className="container mx-auto text-center px-4 py-8 section-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-atomic">₿£€$$</h2>
         </div>
         <FinancialFreedomSection />
         <StatsSection />
         <ExploreSpacesSection />
         <EcosystemSection />
         <FeaturesSection />
-        <ParticipationSection />
+        <div className="section-center">
+          <ParticipationSection />
+        </div>
       </div>
     </div>
   );
