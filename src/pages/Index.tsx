@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import Logo from ".components/Header/Logo";
+import Logo from "../components/Header/Logo";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import ConnectButton from "./ConnectButton";
