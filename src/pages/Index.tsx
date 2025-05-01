@@ -1,13 +1,13 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useIsMobile } from "src/hooks/use-mobile";
-import { useScroll } from "src/hooks/use-scroll";
-import Logo from "src/components/Header/Logo";
-import DesktopNav from "src/components/Header/DesktopNav";
-import MobileNav from "src/components/Header/MobileNav";
-import ConnectButton from "src/components/Header/ConnectButton";
-import PriceTicker from "src/components/PriceTicker";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useScroll } from "@/hooks/use-scroll";
+import Logo from "@/components/Header/Logo";
+import DesktopNav from "@/components/Header/DesktopNav";
+import MobileNav from "@/components/Header/MobileNav";
+import ConnectButton from "@/components/Header/ConnectButton";
+import PriceTicker from "@/components/PriceTicker";
 
 const Header = () => {
   const isScrolled = useScroll();
