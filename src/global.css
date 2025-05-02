@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Exo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #000;
   color: #fff;
 }
@@ -43,7 +43,7 @@ body {
 main {
   flex: 1;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 
 /* Add text glow effect */
@@ -65,12 +65,12 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Aseguramos que las fuentes se apliquen correctamente */
+/* Ensure fonts apply correctly */
 h1, h2, h3, h4, h5, h6, .font-atomic {
   font-family: 'Atomic Age', system-ui, sans-serif !important;
 }
 
-/* Corrección de alineación para secciones */
+/* Alignment correction for sections */
 .section-center {
   display: flex;
   flex-direction: column;
