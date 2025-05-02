@@ -14,16 +14,16 @@ const DesktopNav = () => {
   return (
     <nav className="hidden md:flex items-center gap-6">
       <div className="hidden md:flex space-x-4">
-        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
+        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-semibold">
           Home
         </Link>
-        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
+        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-semibold">
           About
         </Link>
-        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
+        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-semibold">
           AlienTrip
         </Link>
-        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic">
+        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-semibold">
           Contact
         </Link>
         
@@ -32,7 +32,7 @@ const DesktopNav = () => {
           <DropdownMenuTrigger asChild>
             <Button 
               variant="ghost" 
-              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-atomic"
+              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-atomic font-semibold"
             >
               Explore Spaces
               <ChevronDown 

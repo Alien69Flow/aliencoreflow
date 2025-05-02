@@ -32,7 +32,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-alien-space-light relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -62,7 +62,7 @@ const StatsSection = () => {
         </div>
       </div>
       
-      {/* Subtle animated background grid */}
+      {/* Subtle background grid */}
       <div className="absolute inset-0 cosmic-grid opacity-30"></div>
     </section>
   );

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -27,28 +26,28 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         <nav className="flex flex-col space-y-4">
           <Link 
             to="/" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic font-semibold"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic font-semibold"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             to="/alien-trip" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic font-semibold"
             onClick={() => setIsMenuOpen(false)}
           >
             AlienTrip
           </Link>
           <Link 
             to="/contact" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic font-semibold"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
@@ -58,7 +57,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           <div className="flex flex-col">
             <button
               onClick={() => setSpacesExpanded(!spacesExpanded)}
-              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center font-atomic"
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center font-atomic font-semibold"
             >
               <span>Explore Spaces</span>
               {spacesExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}

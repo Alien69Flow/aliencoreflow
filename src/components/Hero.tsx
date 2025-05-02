@@ -44,8 +44,8 @@ const Hero = () => {
           >
             <span className="text-alien-green">Δlieπ</span>
             <span className="text-alien-gold">FlΦw</span>
-            <span className="text-alien-green">$pac€</span>
-            <span className="text-alien-gold">DAO</span>
+            <span className="text-alien-green"> $pac€</span>
+            <span className="text-alien-gold"> DAO</span>
           </h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
