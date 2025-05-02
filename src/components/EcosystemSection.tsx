@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Dna, Coins, Wifi, Beaker, Database, Shield, Leaf, Building, Share2, Landmark, ArrowRight } from 'lucide-react';
+
 const ecosystems = [{
   id: 'biofi',
   title: 'BioFi',
@@ -52,6 +54,7 @@ const ecosystems = [{
   description: 'Traditional finance integration and bridging.',
   icon: <Landmark className="h-8 w-8 text-alien-gold" />
 }];
+
 const EcosystemCard = ({
   ecosystem,
   index
@@ -86,6 +89,7 @@ const EcosystemCard = ({
       </div>
     </motion.div>;
 };
+
 const EcosystemSection = () => {
   return <section id="ecosystem" className="relative overflow-hidden cosmic-grid py-[30px] my-[10px]">
       <div className="container mx-auto px-4">
@@ -108,9 +112,8 @@ const EcosystemSection = () => {
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-alien-green opacity-5 rounded-full blur-3xl"></div>
-      <div className="absolute -top-20 -left-20 w-60 h-60 bg-alien-gold opacity-5 rounded-full blur-2xl"></div>
+      {/* Remove background decoration */}
     </section>;
 };
+
 export default EcosystemSection;

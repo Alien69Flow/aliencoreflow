@@ -26,7 +26,7 @@ const Index: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-atomic">₿£€$$</h2>
         </div>
         <FinancialFreedomSection />
-        <StatsSection />
+        {/* StatsSection removed from here as its content has been moved to ParticipationSection */}
         <ExploreSpacesSection />
         <EcosystemSection />
         <FeaturesSection />
