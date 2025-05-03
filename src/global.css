@@ -67,7 +67,12 @@ main {
 
 /* Ensure fonts apply correctly */
 h1, h2, h3, h4, h5, h6, .font-atomic {
-  font-family: 'Atomic Age', system-ui, sans-serif !important;
+  font-family: 'Atomic Age', cursive !important;
+}
+
+/* Force the Atomic Age font to appear correctly */
+.force-atomic {
+  font-family: 'Atomic Age', cursive !important;
 }
 
 /* Alignment correction for sections */

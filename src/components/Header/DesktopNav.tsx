@@ -14,16 +14,16 @@ const DesktopNav = () => {
   return (
     <nav className="hidden md:flex items-center gap-6">
       <div className="hidden md:flex space-x-4">
-        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-bold">
+        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-bold" style={{fontFamily: "'Atomic Age', cursive"}}>
           Home
         </Link>
-        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-bold">
+        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-bold" style={{fontFamily: "'Atomic Age', cursive"}}>
           About
         </Link>
-        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-bold">
+        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-bold" style={{fontFamily: "'Atomic Age', cursive"}}>
           AlienTrip
         </Link>
-        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-atomic font-bold">
+        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-bold" style={{fontFamily: "'Atomic Age', cursive"}}>
           Contact
         </Link>
         
@@ -32,7 +32,8 @@ const DesktopNav = () => {
           <DropdownMenuTrigger asChild>
             <Button 
               variant="ghost" 
-              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-atomic font-bold"
+              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-bold"
+              style={{fontFamily: "'Atomic Age', cursive"}}
             >
               Explore Spaces
               <ChevronDown 
@@ -50,7 +51,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1 font-atomic">Academy</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1" style={{fontFamily: "'Atomic Age', cursive"}}>Academy</h3>
                     <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
                   </div>
                 </Link>
@@ -61,7 +62,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1 font-atomic">Clubs</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1" style={{fontFamily: "'Atomic Age', cursive"}}>Clubs</h3>
                     <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
                   </div>
                 </Link>
@@ -72,7 +73,7 @@ const DesktopNav = () => {
                   className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
                 >
                   <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1 font-atomic">CoNetWorKing</h3>
+                    <h3 className="text-alien-gold group-hover:text-alien-green font-bold mb-1" style={{fontFamily: "'Atomic Age', cursive"}}>CoNetWorKing</h3>
                     <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                   </div>
                 </Link>
