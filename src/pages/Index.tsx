@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       <div className="relative z-10">
         <Hero />
         <div className="container mx-auto text-center px-4 py-8 section-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold force-atomic" style={{fontFamily: "'Atomic Age', cursive"}}>₿£€$$</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-atomic-force">₿£€$$</h2>
         </div>
         <FinancialFreedomSection />
         {/* StatsSection removed from here as its content has been moved to ParticipationSection */}

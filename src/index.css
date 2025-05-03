@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Exo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,6 +54,20 @@
 
   body, p, span, div, a, button {
     font-family: 'Exo', system-ui, sans-serif;
+  }
+
+  /* Force font loading */
+  @font-face {
+    font-family: 'Atomic Age';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/atomicage/v27/f0Xz0eug6sdmRFkYZZGL58Ht9a8.woff2) format('woff2');
+  }
+
+  .font-atomic-force {
+    font-family: 'Atomic Age', cursive !important;
+    font-weight: 400 !important;
   }
 }
 

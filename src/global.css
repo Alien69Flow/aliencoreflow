@@ -65,14 +65,16 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Ensure fonts apply correctly */
+/* Force Atomic Age font to appear correctly */
 h1, h2, h3, h4, h5, h6, .font-atomic {
   font-family: 'Atomic Age', cursive !important;
 }
 
-/* Force the Atomic Age font to appear correctly */
-.force-atomic {
+/* We're adding a separate class with higher specificity for problematic elements */
+.font-atomic-force {
   font-family: 'Atomic Age', cursive !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
 /* Alignment correction for sections */
