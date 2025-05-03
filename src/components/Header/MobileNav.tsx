@@ -27,28 +27,28 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         <nav className="flex flex-col space-y-4">
           <Link 
             to="/" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force font-bold"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force font-bold"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             to="/alien-trip" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force font-bold"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
             onClick={() => setIsMenuOpen(false)}
           >
             AlienTrip
           </Link>
           <Link 
             to="/contact" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force font-bold"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
@@ -58,7 +58,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           <div className="flex flex-col">
             <button
               onClick={() => setSpacesExpanded(!spacesExpanded)}
-              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center font-atomic-force font-bold"
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center alien-logo-text"
             >
               <span>Explore Spaces</span>
               {spacesExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -71,7 +71,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="font-bold font-atomic-force">Academy</h3>
+                  <h3 className="alien-logo-text">Academy</h3>
                   <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
                 </Link>
                 <Link 
@@ -79,7 +79,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="font-bold font-atomic-force">Clubs</h3>
+                  <h3 className="alien-logo-text">Clubs</h3>
                   <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
                 </Link>
                 <Link 
@@ -87,7 +87,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="font-bold font-atomic-force">CoNetWorKing</h3>
+                  <h3 className="alien-logo-text">CoNetWorKing</h3>
                   <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                 </Link>
               </div>
@@ -98,7 +98,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           <div className="flex flex-col">
             <button
               onClick={() => setLanguageExpanded(!languageExpanded)}
-              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex items-center justify-between font-atomic-force font-bold"
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex items-center justify-between alien-logo-text"
             >
               <div className="flex items-center">
                 <Globe className="mr-2 h-5 w-5" />
@@ -141,9 +141,9 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
             )}
           </div>
           
-          <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold rounded-full mt-4 flex items-center gap-2 font-atomic-force font-bold">
+          <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold rounded-full mt-4 flex items-center gap-2 alien-logo-text">
             <img 
-              src="/lovable-uploads/e2d45b36-c4c1-4b45-953d-5376a5f5b6cc.png" 
+              src="/lovable-uploads/AW.png" 
               alt="Wallet" 
               className="h-6 w-6 rounded-full" 
             />

@@ -7,7 +7,6 @@ import EcosystemSection from '@/components/EcosystemSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ParticipationSection from '@/components/ParticipationSection';
-import StatsSection from '@/components/StatsSection';
 
 const Index: React.FC = () => {
   return (
@@ -23,10 +22,9 @@ const Index: React.FC = () => {
       <div className="relative z-10">
         <Hero />
         <div className="container mx-auto text-center px-4 py-8 section-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-alien-gold font-atomic-force">₿£€$$</h2>
+          <h2 className="text-4xl md:text-5xl mb-4 text-alien-gold alien-logo-text">₿£€$$</h2>
         </div>
         <FinancialFreedomSection />
-        {/* StatsSection removed from here as its content has been moved to ParticipationSection */}
         <ExploreSpacesSection />
         <EcosystemSection />
         <FeaturesSection />
