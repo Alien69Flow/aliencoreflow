@@ -39,13 +39,14 @@ const Hero = () => {
           </div>
           
           {/* Título del Hero */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center font-atomic-force">
+          <h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center font-atomic-force"
+          >
             <span className="text-alien-green">Δlieπ</span>
             <span className="text-alien-gold">FlΦw</span>
-            <span className="text-alien-green">$pac€</span>
-            <span className="text-alien-gold">DAO</span>
+            <span className="text-alien-green"> $pac€</span>
+            <span className="text-alien-gold"> DAO</span>
           </h1>
-          
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
             initial={{ opacity: 0 }}
@@ -66,16 +67,16 @@ const Hero = () => {
           {/* Botón About */}
           <Link to="/about">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors whitespace-nowrap"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors"
             >
               <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
             </Button>
           </Link>
 
           {/* Botón AlienTrip */}
-          <Link to="/alien-trip">
+          <Link to="/alientrip">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors whitespace-nowrap"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors"
             >
               <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
             </Button>
@@ -84,7 +85,7 @@ const Hero = () => {
           {/* Botón Contact */}
           <Link to="/contact">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors whitespace-nowrap"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-8 py-6 text-lg rounded-full transition-colors"
             >
               <Globe className="mr-2 h-5 w-5" /> Contact & Join
             </Button>
