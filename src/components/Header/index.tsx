@@ -16,7 +16,7 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   if (isMobile === undefined) {
-    return <div className="bg-alien-space-dark h-16 w-full flex items-center justify-center alien-logo-text">Cargando...</div>;
+    return <div className="bg-alien-space-dark h-16 w-full flex items-center justify-center font-atomic-force">Cargando...</div>;
   }
 
   return (
