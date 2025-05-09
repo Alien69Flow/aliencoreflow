@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="AlienFlowSpaceDAO Logo" 
                 className="h-10 w-auto object-contain" 
               />
-              <h3 className="text-xl font-bold text-alien-gold font-[Atomic Age, Star Wars]">AlienFlowSpace</h3>
+              <h3 className="text-xl font-bold text-alien-gold font-atomic-force">AlienFlowSpace</h3>
             </div>
             <p className="text-gray-400 font-[Exo]">
               Uniting diverse blockchain domains under a cosmic governance structure.
@@ -51,7 +51,7 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div>
-            <h4 className="text-alien-gold font-semibold mb-4 font-[Atomic Age, Star Wars]">Navigation</h4>
+            <h4 className="text-alien-gold font-semibold mb-4 font-atomic-force">Navigation</h4>
             <ul className="space-y-3 text-gray-400 font-[Exo]">
               <li><Link to="/" className="hover:text-alien-green transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-alien-green transition-colors">About</Link></li>
@@ -65,7 +65,7 @@ const Footer = () => {
           
           {/* Legal */}
           <div>
-            <h4 className="text-alien-gold font-semibold mb-4 font-[Atomic Age, Star Wars]">Legal</h4>
+            <h4 className="text-alien-gold font-semibold mb-4 font-atomic-force">Legal</h4>
             <ul className="space-y-3 text-gray-400 font-[Exo]">
               <li><a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">Terms of Service</a></li>
               <li><a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">Privacy Policy</a></li>

@@ -43,7 +43,7 @@ body {
 main {
   flex: 1;
   position: relative;
-  padding-top: 6rem;
+  padding-top: 8rem; /* Increased padding to prevent menu overlap */
 }
 
 /* Add text glow effect */
@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6, .font-atomic {
   font-weight: 400 !important;
   font-style: normal !important;
   letter-spacing: 0.5px !important;
+  white-space: nowrap !important; /* Evitar que se rompa en líneas */
 }
 
 /* Alien logo text specific styling */
@@ -94,6 +95,7 @@ h1, h2, h3, h4, h5, h6, .font-atomic {
   font-weight: 400 !important;
   font-style: normal !important;
   font-display: block !important;
+  white-space: nowrap !important; /* Evitar que se rompa en líneas */
 }
 
 /* Alignment correction for sections */

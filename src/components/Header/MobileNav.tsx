@@ -21,34 +21,34 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: 'auto' }}
       exit={{ opacity: 0, height: 0 }}
-      className="bg-alien-space-dark absolute w-full z-50 top-full"
+      className="bg-alien-space-dark absolute w-full z-50 top-full shadow-lg"
     >
       <div className="container mx-auto px-4 py-6">
         <nav className="flex flex-col space-y-4">
           <Link 
             to="/" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             to="/alien-trip" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force"
             onClick={() => setIsMenuOpen(false)}
           >
             AlienTrip
           </Link>
           <Link 
             to="/contact" 
-            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md alien-logo-text"
+            className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md font-atomic-force"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
@@ -58,7 +58,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           <div className="flex flex-col">
             <button
               onClick={() => setSpacesExpanded(!spacesExpanded)}
-              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center alien-logo-text"
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex justify-between items-center font-atomic-force"
             >
               <span>Explore Spaces</span>
               {spacesExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -71,7 +71,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="alien-logo-text">Academy</h3>
+                  <h3 className="font-atomic-force">Academy</h3>
                   <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
                 </Link>
                 <Link 
@@ -79,7 +79,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="alien-logo-text">Clubs</h3>
+                  <h3 className="font-atomic-force">Clubs</h3>
                   <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
                 </Link>
                 <Link 
@@ -87,7 +87,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
                   className="p-2 hover:bg-alien-space-light rounded-md text-alien-gold hover:text-alien-green"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <h3 className="alien-logo-text">CoNetWorKing</h3>
+                  <h3 className="font-atomic-force">CoNetWorKing</h3>
                   <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
                 </Link>
               </div>
@@ -98,7 +98,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
           <div className="flex flex-col">
             <button
               onClick={() => setLanguageExpanded(!languageExpanded)}
-              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex items-center justify-between alien-logo-text"
+              className="text-alien-gold py-2 px-4 hover:text-alien-green hover:bg-alien-space-light rounded-md flex items-center justify-between font-atomic-force"
             >
               <div className="flex items-center">
                 <Globe className="mr-2 h-5 w-5" />
@@ -111,43 +111,43 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
               <div className="pl-2 flex flex-col space-y-1 mt-2 bg-alien-space-light/20 p-2 rounded-md">
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/us.png" alt="English" className="w-5 h-4 mr-2" />
-                  English
+                  <span>English</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/es.png" alt="Español" className="w-5 h-4 mr-2" />
-                  Español
+                  <span>Español</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/fr.png" alt="Français" className="w-5 h-4 mr-2" />
-                  Français
+                  <span>Français</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/cn.png" alt="汉语" className="w-5 h-4 mr-2" />
-                  汉语 (Hànyǔ)
+                  <span>汉语 (Hànyǔ)</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/in.png" alt="हिन्दी" className="w-5 h-4 mr-2" />
-                  हिन्दी (Hindī)
+                  <span>हिन्दी (Hindī)</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/pt.png" alt="Português" className="w-5 h-4 mr-2" />
-                  Português
+                  <span>Português</span>
                 </div>
                 <div className="p-2 hover:bg-alien-space-light cursor-pointer rounded-md text-alien-gold hover:text-alien-green flex items-center">
                   <img src="https://flagcdn.com/w20/jp.png" alt="日本語" className="w-5 h-4 mr-2" />
-                  日本語 (Nihongo)
+                  <span>日本語 (Nihongo)</span>
                 </div>
               </div>
             )}
           </div>
           
-          <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold rounded-full mt-4 flex items-center gap-2 alien-logo-text">
+          <Button className="bg-alien-green hover:bg-alien-green-light text-alien-gold rounded-full mt-4 flex items-center gap-2 font-atomic-force">
             <img 
               src="/lovable-uploads/AW.png" 
               alt="Wallet" 
               className="h-6 w-6 rounded-full" 
             />
-            Connect Portal
+            <span className="font-atomic-force">Connect Portal</span>
           </Button>
         </nav>
       </div>

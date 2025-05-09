@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2">
       {/* Logo principal */}
       <Link to="/" className="flex items-center gap-2">
         <img 
@@ -12,7 +12,7 @@ const Logo = () => {
           alt="AlienFlowSpaceDAO Logo" 
           className="h-9" 
         />
-        <span className="alien-logo-text text-xl">
+        <span className="alien-logo-text text-base sm:text-lg md:text-xl">
           <span className="text-alien-green">Δlieπ</span>
           <span className="text-alien-gold">FlΦw</span>
           <span className="text-alien-green"> $pac€</span>
@@ -25,7 +25,7 @@ const Logo = () => {
         <img 
           src="/lovable-uploads/ET.png" 
           alt="Earth" 
-          className="h-8 w-8 rounded-full hover:opacity-80 transition-opacity"
+          className="h-7 w-7 sm:h-8 sm:w-8 rounded-full hover:opacity-80 transition-opacity"
         />
       </Link>
     </div>

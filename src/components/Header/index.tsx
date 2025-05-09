@@ -16,13 +16,13 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   if (isMobile === undefined) {
-    return <div className="bg-alien-space-dark h-16 w-full flex items-center justify-center alien-logo-text">Cargando...</div>;
+    return <div className="bg-alien-space-dark h-16 w-full flex items-center justify-center font-atomic-force">Cargando...</div>;
   }
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-2 bg-transparent shadow-md backdrop-blur-md" : "py-3 bg-transparent backdrop-blur-sm"
+        isScrolled ? "py-1 bg-transparent shadow-md backdrop-blur-md" : "py-2 bg-transparent backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center relative">
