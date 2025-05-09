@@ -51,13 +51,15 @@ main {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-/* Add card border effect */
+/* Card border effect - improved to avoid unwanted backgrounds */
 .card-border {
   border: 1px solid rgba(255, 215, 0, 0.2);
   border-radius: 10px;
   background-color: rgba(17, 17, 25, 0.6);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .card-border:hover {
@@ -65,37 +67,36 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Force Atomic Age font to appear correctly */
+/* Nasalization font configuration */
 @font-face {
-  font-family: 'Atomic Age';
+  font-family: 'Nasalization';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/atomicage/v27/f0Xz0eug6sdmRFkYZZGL58Ht9a8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('https://fonts.cdnfonts.com/css/nasalization') format('woff2');
 }
 
 h1, h2, h3, h4, h5, h6, .font-atomic {
-  font-family: 'Atomic Age', cursive !important;
+  font-family: 'Nasalization', sans-serif !important;
   letter-spacing: 0.5px;
 }
 
 .font-atomic-force {
-  font-family: 'Atomic Age', cursive !important;
+  font-family: 'Nasalization', sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
   letter-spacing: 0.5px !important;
-  white-space: nowrap !important; /* Evitar que se rompa en líneas */
+  white-space: nowrap !important; /* Keep text in one line */
 }
 
 /* Alien logo text specific styling */
 .alien-logo-text {
-  font-family: 'Atomic Age', cursive !important;
+  font-family: 'Nasalization', sans-serif !important;
   letter-spacing: 0.5px !important;
   font-weight: 400 !important;
   font-style: normal !important;
   font-display: block !important;
-  white-space: nowrap !important; /* Evitar que se rompa en líneas */
+  white-space: nowrap !important; /* Keep text in one line */
 }
 
 /* Alignment correction for sections */

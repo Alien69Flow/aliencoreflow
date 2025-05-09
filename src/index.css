@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nasalization');
 
 @tailwind base;
 @tailwind components;
@@ -49,7 +49,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Atomic Age', system-ui, sans-serif !important;
+    font-family: 'Nasalization', sans-serif !important;
   }
 
   body, p, span, div, a, button {
@@ -58,15 +58,15 @@
 
   /* Force font loading */
   @font-face {
-    font-family: 'Atomic Age';
+    font-family: 'Nasalization';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(https://fonts.gstatic.com/s/atomicage/v27/f0Xz0eug6sdmRFkYZZGL58Ht9a8.woff2) format('woff2');
+    src: url('https://fonts.cdnfonts.com/css/nasalization') format('woff2');
   }
 
   .font-atomic-force {
-    font-family: 'Atomic Age', cursive !important;
+    font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
   }
 }
@@ -111,10 +111,11 @@
   filter: drop-shadow(0 0 10px rgba(240, 216, 130, 0.4));
 }
 
+/* Improved card-border without unwanted backgrounds */
 .card-border {
   position: relative;
   border-radius: theme('borderRadius.lg');
-  background: theme('backgroundImage.card-gradient');
+  background: rgba(17, 17, 25, 0.6);
   backdrop-filter: blur(8px);
 }
 
@@ -212,9 +213,9 @@
   }
 }
 
-/* Correcciones adicionales */
+/* Additional corrections */
 .font-atomic {
-  font-family: 'Atomic Age', system-ui, sans-serif !important;
+  font-family: 'Nasalization', sans-serif !important;
 }
 
 .section-center {
