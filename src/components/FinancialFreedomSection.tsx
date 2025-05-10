@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bitcoin, Landmark, Coins } from 'lucide-react';
-import AnimatedText from './AnimatedText'; // Importamos AnimatedText
+import AnimatedText from './AnimatedText';
 
 const FinancialFreedomSection = () => {
   return (
@@ -22,7 +23,7 @@ const FinancialFreedomSection = () => {
           }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-6 text-alien-gold text-glow font-[Atomic Age]">
+          <h2 className="text-4xl font-bold mb-6 text-alien-gold text-glow font-atomic-force">
             Financial Freedom
           </h2>
 
@@ -60,8 +61,8 @@ const FinancialFreedomSection = () => {
           }}
           className="card-border p-8 max-w-3xl mx-auto text-center"
         >
-          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-[Atomic Age]">
-            A₿tc (Aurum nostrum non est aurum vulgi)
+          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-atomic-force">
+            A₿tc (Aurum nostrum non est aurum vulgi)
           </h3>
           <p className="text-gray-300 mb-4 font-[Exo]">
             Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, providing scalability, stability and growth potential (Φπ)...
@@ -71,8 +72,6 @@ const FinancialFreedomSection = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Eliminamos el elemento verde inclinado del fondo */}
     </section>
   );
 };

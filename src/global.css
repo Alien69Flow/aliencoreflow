@@ -77,16 +77,6 @@ h1, h2, h3, h4, h5, h6, .font-atomic {
   white-space: nowrap !important; /* Keep text in one line */
 }
 
-/* Alien logo text specific styling */
-.alien-logo-text {
-  font-family: 'Nasalization', sans-serif !important;
-  letter-spacing: 0.5px !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
-  font-display: block !important;
-  white-space: nowrap !important; /* Keep text in one line */
-}
-
 /* Alignment correction for sections */
 .section-center {
   display: flex;

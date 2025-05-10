@@ -36,7 +36,7 @@ const ExploreSpacesSection = () => {
           viewport={{ once: true }} 
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-atomic">Explore Spaces</h2>
+          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-atomic-force">Explore Spaces</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover specialized environments designed to enhance your journey through the cosmos
           </p>
@@ -55,7 +55,7 @@ const ExploreSpacesSection = () => {
               <div className="mb-6 p-4 bg-alien-space-dark rounded-full">
                 {space.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-alien-gold font-atomic">{space.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-alien-gold font-atomic-force">{space.title}</h3>
               <p className="text-gray-300 mb-8 flex-grow">{space.description}</p>
               <Link to={space.link}>
                 <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark">
@@ -66,8 +66,6 @@ const ExploreSpacesSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Remove background decorations that were causing yellow glow */}
     </section>
   );
 };

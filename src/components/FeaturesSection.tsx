@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Shield, Users, Box, BarChart4 } from 'lucide-react';
+
 const features = [{
   icon: <Box className="h-10 w-10" />,
   title: "Cross-Chain Integration",
@@ -22,6 +24,7 @@ const features = [{
   title: "Transparent Analytics",
   description: "Access real-time data visualization and analytics on all ecosystem activity and performance."
 }];
+
 const FeaturesSection = () => {
   return <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 py-0 my-0">
@@ -34,7 +37,7 @@ const FeaturesSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow">Advanced Features</h2>
+          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-atomic-force">Advanced Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">ΔlieπFlΦw $pac€ offers cutting-edge technologies to support our interstellar ecosystem</p>
         </motion.div>
 
@@ -58,7 +61,7 @@ const FeaturesSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 text-alien-gold">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-alien-gold font-atomic-force">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
               
               {/* Hover effect */}
@@ -71,4 +74,5 @@ const FeaturesSection = () => {
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-alien-space to-transparent"></div>
     </section>;
 };
+
 export default FeaturesSection;
