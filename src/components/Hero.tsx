@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-16 overflow-hidden">
-      {/* Fondo con efecto parallax */}
-      <div className="absolute inset-0 bg-glow-radial opacity-70 z-0 parallax"></div>
+      {/* Background image is handled in pages/Index.tsx */}
       
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div

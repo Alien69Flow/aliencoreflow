@@ -56,7 +56,6 @@ main {
   border: 1px solid rgba(255, 215, 0, 0.2);
   border-radius: 10px;
   background-color: rgba(17, 17, 25, 0.6);
-  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;

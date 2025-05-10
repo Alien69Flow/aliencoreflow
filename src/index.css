@@ -56,7 +56,7 @@
     font-family: 'Exo', system-ui, sans-serif;
   }
 
-  /* Force font loading */
+  /* Ensure Nasalization font is loaded */
   @font-face {
     font-family: 'Nasalization';
     font-style: normal;
@@ -177,12 +177,12 @@
   background-size: cover;
 }
 
-/* Background gradient */
+/* Background gradient - REMOVED the yellow tint */
 .bg-glow-radial {
-  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.1) 0%, rgba(240, 216, 130, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
-/* Cosmic grid for backgrounds */
+/* Cosmic grid for backgrounds - UPDATED to be more subtle */
 .cosmic-grid {
   position: relative;
 }
@@ -195,8 +195,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(240, 216, 130, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(240, 216, 130, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(240, 216, 130, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 216, 130, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
   pointer-events: none;
