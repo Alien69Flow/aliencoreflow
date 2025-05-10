@@ -12,11 +12,6 @@ const Layout: React.FC = () => {
         <div className="container mx-auto px-4">
           <Outlet />
         </div>
-        <img 
-          src="/lovable-uploads/ALogo.png" 
-          alt="AlienFlowSpace Logo" 
-          className="background-logo" 
-        />
       </main>
       <Footer />
     </div>

@@ -20,17 +20,6 @@ body {
   flex-direction: column;
 }
 
-.background-logo {
-  position: fixed;
-  bottom: 10%;
-  right: 5%;
-  width: 250px;
-  height: 250px;
-  opacity: 0.2;
-  z-index: -1;
-  pointer-events: none;
-}
-
 /* Layout fixes */
 .container {
   width: 100%;
@@ -72,7 +61,7 @@ main {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.cdnfonts.com/css/nasalization') format('woff2');
+  src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
 }
 
 h1, h2, h3, h4, h5, h6, .font-atomic {
