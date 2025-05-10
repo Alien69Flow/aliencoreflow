@@ -33,7 +33,6 @@ const FinancialFreedomSection = () => {
             <Coins className="text-alien-gold h-16 w-16 ml-4" />
           </div>
 
-          {/* Usamos AnimatedText aquí */}
           <AnimatedText className="text-xl max-w-5xl mx-auto text-gray-300 font-[Exo] leading-relaxed">
             Any Individual or Professional can Understand the Advantage of Digital Money: Impartial Money that does not discriminate, Decentralized Currencies, Scalable and Stable with the Volatility. Safe Reserves of Values, allowing individuals to secure their wealth while enjoying the benefits of a decentralized economy.
           </AnimatedText>

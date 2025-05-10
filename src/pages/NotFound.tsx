@@ -14,7 +14,7 @@ const NotFound: React.FC = () => {
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-16 flex items-center justify-center min-h-[calc(100vh-16rem)]">
         <div className="text-center max-w-xl">
-          <h1 className="text-7xl md:text-9xl font-bold text-alien-gold mb-4 font-[Atomic Age, Star Wars]">404</h1>
+          <h1 className="text-7xl md:text-9xl font-bold text-alien-gold mb-4 font-atomic-force">404</h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 font-[Exo]">Parece que te has perdido en el espacio. Esta dimensión no existe en nuestro multiverso.</p>
           <Link to="/">
             <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark px-8 font-[Exo]">
