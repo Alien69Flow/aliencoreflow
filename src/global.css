@@ -55,7 +55,7 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Nasalization font configuration */
+/* Nasalization font configuration - corrected path and format */
 @font-face {
   font-family: 'Nasalization';
   font-style: normal;

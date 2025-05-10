@@ -10,7 +10,7 @@ const ConnectButton = () => {
         alt="Wallet" 
         className="h-5 w-5 sm:h-6 sm:w-6 rounded-full" 
       />
-      <span className="alien-logo-text">Connect Portal</span>
+      <span className="font-atomic-force">Connect Portal</span>
     </Button>
   );
 };

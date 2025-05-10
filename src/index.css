@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/nasalization');
 
@@ -55,7 +56,7 @@
     font-family: 'Exo', system-ui, sans-serif;
   }
 
-  /* Ensure Nasalization font is loaded with direct source */
+  /* Direct font-face declaration to ensure Nasalization is loaded */
   @font-face {
     font-family: 'Nasalization';
     font-style: normal;

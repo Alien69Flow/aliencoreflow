@@ -10,6 +10,7 @@
  
     <!-- Preload and Direct Load Nasalization Font -->
     <link rel="preload" href="https://fonts.gstatic.com/s/exo/v20/4UaZrEtFpBI4f1ZSIK9d4LjJ4lM2CwNsOl4p5Is.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf" as="font" type="font/ttf" crossorigin />
     <link href="https://fonts.cdnfonts.com/css/nasalization" rel="stylesheet">
     
     <!-- Font Stylesheets -->
@@ -31,6 +32,21 @@
  
     <!-- Favicon -->
     <link rel="icon" href="/lovable-uploads/ALogo.png" type="image/x-icon" />
+
+    <!-- Inline font CSS to ensure the Nasalization font is loaded properly -->
+    <style>
+      @font-face {
+        font-family: 'Nasalization';
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+        src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
+      }
+
+      .font-atomic-force, .alien-logo-text, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Nasalization', sans-serif !important;
+      }
+    </style>
   </head>
  
   <body>
