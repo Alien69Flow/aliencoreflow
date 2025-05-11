@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -8,8 +7,6 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-16 overflow-hidden">
-      {/* Background image is handled in pages/Index.tsx */}
-      
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +14,6 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          {/* Logo animado */}
           <div className="flex flex-col justify-center items-center mb-8 relative">
             <motion.img 
               src="/lovable-uploads/ALogo.png" 
@@ -37,9 +33,8 @@ const Hero = () => {
             />
           </div>
           
-          {/* Título del Hero */}
           <h1 
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center font-nasalization"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 tracking-tight text-glow text-center font-nasalization"
           >
             <span className="text-alien-green">Δlieπ</span>
             <span className="text-alien-gold">FlΦw</span>
@@ -52,18 +47,16 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+            Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and more.
           </motion.p>
         </motion.div>
         
-        {/* Botones de llamada a la acción */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          {/* Botón About */}
           <Link to="/about">
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
@@ -71,8 +64,7 @@ const Hero = () => {
               <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
             </Button>
           </Link>
-
-          {/* Botón AlienTrip */}
+ 
           <Link to="/alien-trip">
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
@@ -81,7 +73,6 @@ const Hero = () => {
             </Button>
           </Link>
 
-          {/* Botón Contact */}
           <Link to="/contact">
             <Button 
               className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
