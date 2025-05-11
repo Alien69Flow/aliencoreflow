@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="AlienFlowSpaceDAO Logo" 
                 className="h-10 w-auto object-contain" 
               />
-              <h3 className="text-xl font-bold text-alien-gold font-atomic-force">AlienFlowSpace</h3>
+              <h3 className="text-xl font-bold text-alien-gold font-nasalization">AlienFlowSpace</h3>
             </div>
             <p className="text-gray-400 font-[Exo]">
               Uniting diverse blockchain domains under a cosmic governance structure.
