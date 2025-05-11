@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
+  src: url('https://www.dafont.com/es/nasalization.charmap') format('truetype');
 }
 
 @layer base {
@@ -67,14 +67,6 @@
 
   /* Clase estándar para fuente Nasalization */
   .font-nasalization {
-    font-family: 'Nasalization', sans-serif !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.5px !important;
-  }
-
-  /* Convertir todas las referencias atomic-force/atomic a nasalization */
-  .font-atomic-force,
-  .font-atomic {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
     letter-spacing: 0.5px !important;
