@@ -57,7 +57,7 @@ main {
 /* NASALIZATION FONT: Carga desde archivo local */
 @font-face {
   font-family: 'Nasalization';
-  src: url('/fonts/Nasalization%20Rg.otf') format('opentype');
+  src: url('/fonts/NasalizationRg.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
