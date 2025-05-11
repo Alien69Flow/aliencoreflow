@@ -8,16 +8,16 @@
     <meta name="author" content="AlienFlowSpace" />
     <meta name="description" content="AlienFlowSpace DAO unites BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem." />
  
-    <!-- Preconnect to Font Sources -->
+    <!-- Preload Fonts - Alta prioridad para Nasalization -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     
-    <!-- HIGH PRIORITY FONT LOADING -->
-    <link rel="preload" href="https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf" as="font" type="font/ttf" crossorigin />
+    <!-- MAXIMUM PRIORITY: Preload Nasalization Font -->
+    <link rel="preload" href="https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     
-    <!-- Font Stylesheets - Direct loading -->
-    <link href="https://fonts.cdnfonts.com/css/nasalization" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <!-- Font Stylesheets - Carga directa sin @import -->
+    <link href="https://fonts.cdnfonts.com/css/nasalization" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap" />
  
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="AlienFlowSpace DAO | Cosmic Decentralized Governance" />
@@ -36,32 +36,31 @@
     <!-- Favicon -->
     <link rel="icon" href="/lovable-uploads/ALogo.png" type="image/x-icon" />
 
-    <!-- CRITICAL FONT LOADING IN PAGE HEAD -->
+    <!-- Critical Font CSS inlined para asegurar carga inmediata de Nasalization -->
     <style>
-      /* Immediate font application */
+      /* CRITICAL: Carga prioritaria de Nasalization */
       @font-face {
         font-family: 'Nasalization';
         src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
         font-weight: 400;
         font-style: normal;
-        font-display: block;
+        font-display: swap;
       }
       
-      /* Global style overrides */
+      /* FORZAR aplicación de Nasalization a todos los elementos con clase o etiqueta */
       h1, h2, h3, h4, h5, h6,
-      .font-nasalization,
-      .font-atomic-force,
-      .font-atomic,
-      .font-[Atomic\ Age],
-      .font-[Atomic\ Age\,\ Star\ Wars] {
+      .font-nasalization {
         font-family: 'Nasalization', sans-serif !important;
         font-weight: 400 !important;
         letter-spacing: 0.5px !important;
       }
       
-      /* Forcing menu and title fonts */
-      nav, header, .page-title, button, a.font-nasalization {
+      /* Eliminar todas las referencias a atomic-force/atomic */
+      .font-atomic-force,
+      .font-atomic {
         font-family: 'Nasalization', sans-serif !important;
+        font-weight: 400 !important;
+        letter-spacing: 0.5px !important;
       }
     </style>
   </head>
