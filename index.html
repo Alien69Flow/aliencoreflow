@@ -8,14 +8,14 @@
     <meta name="author" content="AlienFlowSpace" />
     <meta name="description" content="AlienFlowSpace DAO unites BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem." />
  
-    <!-- Preload Fonts -->
+    <!-- Preload Fonts - Alta prioridad para Nasalization -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     
-    <!-- Preload Nasalization Font with high priority -->
+    <!-- MAXIMUM PRIORITY: Preload Nasalization Font -->
     <link rel="preload" href="https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     
-    <!-- Font Stylesheets - Direct import without @import -->
+    <!-- Font Stylesheets - Carga directa sin @import -->
     <link href="https://fonts.cdnfonts.com/css/nasalization" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap" />
  
@@ -36,8 +36,9 @@
     <!-- Favicon -->
     <link rel="icon" href="/lovable-uploads/ALogo.png" type="image/x-icon" />
 
-    <!-- Critical Font CSS inlined to ensure Nasalization loads first -->
+    <!-- Critical Font CSS inlined para asegurar carga inmediata de Nasalization -->
     <style>
+      /* CRITICAL: Carga prioritaria de Nasalization */
       @font-face {
         font-family: 'Nasalization';
         src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
@@ -46,19 +47,20 @@
         font-display: swap;
       }
       
+      /* FORZAR aplicación de Nasalization a todos los elementos con clase o etiqueta */
       h1, h2, h3, h4, h5, h6,
       .font-nasalization {
         font-family: 'Nasalization', sans-serif !important;
-        font-weight: 400;
-        letter-spacing: 0.5px;
+        font-weight: 400 !important;
+        letter-spacing: 0.5px !important;
       }
       
-      /* Remove all references to atomic-force */
-      body * .font-atomic-force,
-      body * .font-atomic {
+      /* Eliminar todas las referencias a atomic-force/atomic */
+      .font-atomic-force,
+      .font-atomic {
         font-family: 'Nasalization', sans-serif !important;
-        font-weight: 400;
-        letter-spacing: 0.5px;
+        font-weight: 400 !important;
+        letter-spacing: 0.5px !important;
       }
     </style>
   </head>

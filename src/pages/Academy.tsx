@@ -26,7 +26,7 @@ const CourseCard = ({ title, description, icon, level, duration, color }: {
           <span className="px-2 py-1 text-xs bg-alien-space-light rounded-full text-alien-green">{duration}</span>
         </div>
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-alien-gold font-atomic-force">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-alien-gold font-nasalization">{title}</h3>
       <p className="text-gray-300 text-sm mb-4">{description}</p>
       <Button variant="outline" className="w-full border-alien-gold/30 text-alien-gold hover:bg-alien-gold/10">
         Explore Course
@@ -95,7 +95,7 @@ const Academy: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <GraduationCap className="h-16 w-16 text-alien-gold mx-auto mb-4" />
-            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-atomic-force">Academy</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">Academy</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
               Expand your cosmic knowledge and master the principles of decentralized technologies through our immersive learning experiences.
             </p>
@@ -105,7 +105,7 @@ const Academy: React.FC = () => {
           <div className="mb-16 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-atomic-force">Certification Degree Master's Program</h2>
+                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Certification Degree Master's Program</h2>
                 <p className="text-gray-300 mb-6 font-[Exo]">
                   Become a certified ΔlieπFlΦw $pac€ Explorer & Navigator and unlock exclusive opportunities in our expanding cosmic ecosystem.
                 </p>
@@ -135,7 +135,7 @@ const Academy: React.FC = () => {
 
           {/* Course Grid */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-alien-gold mb-8 font-atomic-force">Featured Courses</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-8 font-nasalization">Featured Courses</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {courses.map((course, index) => (
                 <CourseCard key={index} {...course} />
@@ -145,7 +145,7 @@ const Academy: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center bg-alien-space-dark/50 rounded-xl p-8 backdrop-blur-md border border-alien-gold/20">
-            <h2 className="text-2xl font-bold text-alien-gold mb-4 font-atomic-force">Ready to Expand Your Cosmic Knowledge?</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-4 font-nasalization">Ready to Expand Your Cosmic Knowledge?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto font-[Exo]">
               Join thousands of space navigators on their journey to master the principles of the decentralized multiverse.
             </p>
