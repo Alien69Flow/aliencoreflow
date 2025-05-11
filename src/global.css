@@ -55,23 +55,24 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* NASALIZATION FONT: Carga directa con ruta fija */
+/* NASALIZATION FONT: Direct loading with fixed path */
 @font-face {
   font-family: 'Nasalization';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
+  font-display: block !important; /* Force display */
 }
 
-/* IMPORTANTE: Aplicar fuente a TODOS los encabezados con !important para forzar */
+/* CRITICAL: Apply font to ALL headings with !important to force */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nasalization', sans-serif !important;
   letter-spacing: 0.5px !important;
   font-weight: 400 !important;
 }
 
-/* Clase estandarizada para la fuente - usar solo 'font-nasalization' */
+/* Standardized class for the font - use only 'font-nasalization' */
 .font-nasalization {
   font-family: 'Nasalization', sans-serif !important;
   font-weight: 400 !important;
@@ -79,9 +80,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px !important;
 }
 
-/* Soporte legacy - convertir todas las instancias a Nasalization */
+/* Legacy support - convert all instances to Nasalization */
 .font-atomic-force,
-.font-atomic {
+.font-atomic,
+.font-\[Atomic\ Age\],
+.font-\[Atomic\ Age\,\ Star\ Wars\] {
   font-family: 'Nasalization', sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;

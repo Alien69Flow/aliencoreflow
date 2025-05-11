@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-[Atomic Age, Star Wars]">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-nasalization">Contact Us</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
                     <Mail className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">Email</h3>
+                    <h3 className="font-medium text-alien-gold font-nasalization">Email</h3>
                     <a href="mailto:info@alienflow.space" className="text-gray-300 font-[Exo] hover:text-alien-green">info@alienflow.space</a>
                   </div>
                 </div>
@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
                     <Disc className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">Discord</h3>
+                    <h3 className="font-medium text-alien-gold font-nasalization">Discord</h3>
                     <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">discord.gg/alienflowspace</a>
                   </div>
                 </div>
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                     <X className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
+                    <h3 className="font-medium text-alien-gold font-nasalization">X</h3>
                     <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="bg-alien-space-dark/50 p-6 rounded-lg backdrop-blur-md">
-              <h2 className="text-2xl font-semibold text-alien-green mb-4 font-[Atomic Age, Star Wars]">Send us a message</h2>
+              <h2 className="text-2xl font-semibold text-alien-green mb-4 font-nasalization">Send us a message</h2>
               <form className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-1 font-[Exo]" htmlFor="name">Name</label>
