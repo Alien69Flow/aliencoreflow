@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://www.dafont.com/es/nasalization.charmap') format('truetype');
+  src: url('/fonts/NasalizationRg.otf') format('truetype');
 }
 
 @layer base {
