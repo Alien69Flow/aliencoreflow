@@ -1,15 +1,16 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* NASALIZATION FONT: Carga directa sin @import para mejor rendimiento */
+/* NASALIZATION FONT: Carga directa con múltiples formatos para compatibilidad */
 @font-face {
   font-family: 'Nasalization';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/NasalizationRg.otf') format('truetype');
+  src: url('/fonts/Nasalization.woff2') format('woff2'),
+       url('/fonts/Nasalization.woff') format('woff'),
+       url('/fonts/Nasalization.otf') format('opentype');
 }
 
 @layer base {
@@ -54,11 +55,11 @@
     --sidebar-ring: 48 83% 72%;
   }
 
-  /* IMPORTANTE: Declaraciones de fuente prioritarias con !important */
+  /* IMPORTANTE: Declaraciones de fuente prioritarias */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nasalization', sans-serif !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.5px !important;
+    font-family: 'Nasalization', sans-serif;
+    font-weight: 400; /* Asegurado que no esté en bold */
+    letter-spacing: 0.5px;
   }
 
   body, p, span, div, a, button {
@@ -67,9 +68,9 @@
 
   /* Clase estándar para fuente Nasalization */
   .font-nasalization {
-    font-family: 'Nasalization', sans-serif !important;
-    font-weight: 400 !important;
-    letter-spacing: 0.5px !important;
+    font-family: 'Nasalization', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -139,7 +140,7 @@
   pointer-events: none;
 }
 
-/* Star Wars scrolling text effect - improved */
+/* Star Wars scrolling text effect */
 .star-wars-crawl {
   perspective: 400px;
   overflow: hidden;
@@ -171,7 +172,7 @@
   }
 }
 
-/* Parallax effect for stars */
+/* Parallax effect */
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -179,12 +180,12 @@
   background-size: cover;
 }
 
-/* Background gradient - REMOVED the yellow tint */
+/* Background gradient */
 .bg-glow-radial {
   background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
-/* Cosmic grid for backgrounds - UPDATED to be more subtle */
+/* Cosmic grid */
 .cosmic-grid {
   position: relative;
 }
@@ -215,7 +216,7 @@
   }
 }
 
-/* Additional corrections for font consistency */
+/* Additional corrections */
 .section-center {
   display: flex;
   flex-direction: column;
