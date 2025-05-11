@@ -12,7 +12,7 @@ const Logo = () => {
           alt="AlienFlowSpaceDAO Logo" 
           className="h-9" 
         />
-        <span className="font-atomic-force text-base sm:text-lg md:text-xl overflow-hidden text-ellipsis">
+        <span className="font-nasalization text-base sm:text-lg md:text-xl overflow-hidden text-ellipsis">
           <span className="text-alien-green">Δlieπ</span>
           <span className="text-alien-gold">FlΦw</span>
           <span className="text-alien-green"> $pac€</span>

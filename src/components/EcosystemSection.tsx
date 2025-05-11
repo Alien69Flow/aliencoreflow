@@ -79,7 +79,7 @@ const EcosystemCard = ({
         <div className="mb-4 p-3 bg-alien-space-dark rounded-full w-fit">
           {ecosystem.icon}
         </div>
-        <h3 className="text-xl font-semibold mb-2 text-alien-gold font-atomic-force">{ecosystem.title}</h3>
+        <h3 className="text-xl font-semibold mb-2 text-alien-gold font-nasalization">{ecosystem.title}</h3>
         <p className="text-gray-300 flex-grow">{ecosystem.description}</p>
         <div className="mt-4">
           <a href={`#${ecosystem.id}`} className="text-alien-green hover:text-alien-green-light text-sm flex items-center">
@@ -103,7 +103,7 @@ const EcosystemSection = () => {
         once: true,
         margin: "-100px"
       }} className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-atomic-force">DAO Ecosystem</h2>
+          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-nasalization">DAO Ecosystem</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">ΔlieπFlΦw $pac€ bridges diverse decentralized domains into a coherent, interoperable ecosystem.</p>
         </motion.div>
 

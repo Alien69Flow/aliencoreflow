@@ -37,7 +37,7 @@ const FeaturesSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-atomic-force">Advanced Features</h2>
+          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-nasalization">Advanced Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">ΔlieπFlΦw $pac€ offers cutting-edge technologies to support our interstellar ecosystem</p>
         </motion.div>
 
@@ -61,7 +61,7 @@ const FeaturesSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 text-alien-gold font-atomic-force">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-alien-gold font-nasalization">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
               
               {/* Hover effect */}

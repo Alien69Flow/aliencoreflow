@@ -23,7 +23,7 @@ const FinancialFreedomSection = () => {
           }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-6 text-alien-gold text-glow font-atomic-force">
+          <h2 className="text-4xl font-bold mb-6 text-alien-gold text-glow font-nasalization">
             Financial Freedom
           </h2>
 
@@ -60,7 +60,7 @@ const FinancialFreedomSection = () => {
           }}
           className="card-border p-8 max-w-3xl mx-auto text-center"
         >
-          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-atomic-force">
+          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-nasalization">
             A₿tc (Aurum nostrum non est aurum vulgi)
           </h3>
           <p className="text-gray-300 mb-4 font-[Exo]">
