@@ -12,10 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
     
-    <!-- Preload Nasalization Font -->
+    <!-- Preload Nasalization Font with high priority -->
     <link rel="preload" href="https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
     
-    <!-- Font Stylesheets -->
+    <!-- Font Stylesheets - Direct import without @import -->
     <link href="https://fonts.cdnfonts.com/css/nasalization" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap" />
  
@@ -36,12 +36,12 @@
     <!-- Favicon -->
     <link rel="icon" href="/lovable-uploads/ALogo.png" type="image/x-icon" />
 
-    <!-- Critical Font CSS to prioritize Nasalization font loading -->
+    <!-- Critical Font CSS inlined to ensure Nasalization loads first -->
     <style>
       @font-face {
         font-family: 'Nasalization';
         src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
@@ -50,12 +50,15 @@
       .font-nasalization {
         font-family: 'Nasalization', sans-serif !important;
         font-weight: 400;
+        letter-spacing: 0.5px;
       }
       
       /* Remove all references to atomic-force */
-      .font-atomic-force {
+      body * .font-atomic-force,
+      body * .font-atomic {
         font-family: 'Nasalization', sans-serif !important;
         font-weight: 400;
+        letter-spacing: 0.5px;
       }
     </style>
   </head>

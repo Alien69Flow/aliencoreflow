@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/nasalization');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Direct font loading - no @import to ensure better loading */
+@font-face {
+  font-family: 'Nasalization';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
+}
 
 @layer base {
   :root {
@@ -47,7 +54,7 @@
     --sidebar-ring: 48 83% 72%;
   }
 
-  /* Primary font declarations */
+  /* Primary font declarations with !important to override any other styles */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400;
@@ -57,23 +64,15 @@
     font-family: 'Exo', system-ui, sans-serif;
   }
 
-  /* Direct font-face declaration to ensure Nasalization is loaded */
-  @font-face {
-    font-family: 'Nasalization';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
-  }
-
   /* Standard class for Nasalization font */
   .font-nasalization {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
   }
 
-  /* Legacy support but all components should transition to font-nasalization */
-  .font-atomic-force {
+  /* Convert all atomic-force references to nasalization */
+  .font-atomic-force,
+  .font-atomic {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
   }
@@ -221,11 +220,7 @@
   }
 }
 
-/* Additional corrections */
-.font-atomic {
-  font-family: 'Nasalization', sans-serif !important;
-}
-
+/* Additional corrections for font consistency */
 .section-center {
   display: flex;
   flex-direction: column;

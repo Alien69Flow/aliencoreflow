@@ -55,7 +55,7 @@ main {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Nasalization font configuration - fixed path and format */
+/* Direct font-face declarations with fixed path and format */
 @font-face {
   font-family: 'Nasalization';
   font-style: normal;
@@ -64,14 +64,14 @@ main {
   src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
 }
 
-/* Apply font to all headings */
+/* Apply font to all headings with !important to enforce */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nasalization', sans-serif !important;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 
-/* Font class standardization - use only 'font-nasalization' */
+/* Standardize font class - use only 'font-nasalization' */
 .font-nasalization {
   font-family: 'Nasalization', sans-serif !important;
   font-weight: 400 !important;
@@ -80,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap !important; /* Keep text in one line */
 }
 
-/* Maintain backward compatibility but phase out atomic-force */
-.font-atomic-force {
+/* Legacy support - convert all instances to Nasalization */
+.font-atomic-force,
+.font-atomic {
   font-family: 'Nasalization', sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
