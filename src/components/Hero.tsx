@@ -39,7 +39,7 @@ const Hero = () => {
           
           {/* Título del Hero */}
           <h1 
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center font-atomic-force"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight text-glow text-center font-nasalization"
           >
             <span className="text-alien-green">Δlieπ</span>
             <span className="text-alien-gold">FlΦw</span>
@@ -66,7 +66,7 @@ const Hero = () => {
           {/* Botón About */}
           <Link to="/about">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
             >
               <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
             </Button>
@@ -75,7 +75,7 @@ const Hero = () => {
           {/* Botón AlienTrip */}
           <Link to="/alien-trip">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
             >
               <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
             </Button>
@@ -84,7 +84,7 @@ const Hero = () => {
           {/* Botón Contact */}
           <Link to="/contact">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-atomic-force px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
             >
               <Globe className="mr-2 h-5 w-5" /> Contact & Join
             </Button>

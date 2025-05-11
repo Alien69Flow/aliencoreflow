@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/nasalization');
 
@@ -48,8 +47,10 @@
     --sidebar-ring: 48 83% 72%;
   }
 
+  /* Primary font declarations */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Nasalization', sans-serif !important;
+    font-weight: 400;
   }
 
   body, p, span, div, a, button {
@@ -65,11 +66,13 @@
     src: url('https://fonts.cdnfonts.com/s/35587/nasalization-rg.ttf') format('truetype');
   }
 
+  /* Standard class for Nasalization font */
   .font-nasalization {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
   }
 
+  /* Legacy support but all components should transition to font-nasalization */
   .font-atomic-force {
     font-family: 'Nasalization', sans-serif !important;
     font-weight: 400 !important;
