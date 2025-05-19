@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { CircleDollarSign, Calendar, MessagesSquare, Network, Users, ShieldCheck, Database, Coins } from 'lucide-react';
+import { CircleDollarSign, Calendar, MessagesSquare, Users, ShieldCheck, Database, Coins } from 'lucide-react';
 
-// Stats that were previously in StatsSection
 const stats = [
   {
     icon: <Users className="h-8 w-8" />,
@@ -106,32 +105,34 @@ const ParticipationSection = () => {
               Connect & Participate
             </Button>
 
-            {/* Stats Grid - Ahora centrado */}
-            <div className="grid grid-cols-2 gap-6 mt-12 justify-center items-center text-center mx-auto">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className={`mx-auto mb-4 p-3 rounded-full bg-alien-space-dark w-fit ${stat.color}`}>
-                    {stat.icon}
-                  </div>
+            {/* Stats Grid - Ahora centrado en todos los dispositivos */}
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-2 gap-6 mt-12 w-full max-w-xl text-center">
+                {stats.map((stat, index) => (
                   <motion.div
-                    initial={{ scale: 0.8 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 100, delay: index * 0.1 + 0.2 }}
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`text-3xl font-bold mb-2 ${stat.color}`}
+                    className="text-center"
                   >
-                    {stat.value}
+                    <div className={`mx-auto mb-4 p-3 rounded-full bg-alien-space-dark w-fit ${stat.color}`}>
+                      {stat.icon}
+                    </div>
+                    <motion.div
+                      initial={{ scale: 0.8 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ type: "spring", stiffness: 100, delay: index * 0.1 + 0.2 }}
+                      viewport={{ once: true }}
+                      className={`text-3xl font-bold mb-2 ${stat.color}`}
+                    >
+                      {stat.value}
+                    </motion.div>
+                    <div className="text-gray-300 text-sm">{stat.label}</div>
                   </motion.div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </motion.div>
-              ))}
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
