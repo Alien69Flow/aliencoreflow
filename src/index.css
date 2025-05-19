@@ -204,3 +204,11 @@
   width: 100%;
   text-align: center;
 }
+
+/* === REFUERZO UNIVERSAL NASALIZATION === */
+/* Esto asegura que SIEMPRE que uses .font-nasalization, la fuente se aplica y no es pisada por nada */
+.font-nasalization, .font-nasalization * {
+  font-family: 'Nasalization', sans-serif !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
