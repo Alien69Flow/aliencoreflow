@@ -34,10 +34,11 @@ const ParticipationSection = () => {
   return (
     <section id="participate" className="py-20 relative">
       <div className="container mx-auto px-4">
+        {/* Layout principal: ya NO hay lg:w-1/2 */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Image side */}
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -49,7 +50,7 @@ const ParticipationSection = () => {
           </motion.div>
           {/* Content side */}
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
