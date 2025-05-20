@@ -8,9 +8,9 @@ const About: React.FC = () => {
     <div className="min-h-screen bg-alien-space">
       <StarBackground />
       <Header />
-      {/* Fondo de pantalla with overlay */}
+      {/* Fondo de pantalla sin opacidad */}
       <div
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('/lovable-uploads/EMWBack.png')` }}
       />
       <main className="container mx-auto px-4 pt-24 pb-16">
