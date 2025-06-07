@@ -34,15 +34,20 @@ const Hero = () => {
             />
           </div>
           
-          <h1 
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 tracking-tight text-glow text-center font-nasalization"
-            style={{ fontFamily: "'Nasalization', sans-serif !important" }}
-          >
-            <span className="text-alien-green">Δlieπ</span>
-            <span className="text-alien-gold">FlΦw</span>
-            <span className="text-alien-green"> $pac€</span>
-            <span className="text-alien-gold"> DAO</span>
-          </h1>
+          <div className="star-wars-crawl mb-8">
+            <div className="star-wars-content">
+              <h1 
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 tracking-tight text-glow text-center font-nasalization"
+                style={{ fontFamily: "'Nasalization', sans-serif !important" }}
+              >
+                <span className="text-alien-green">Δlieπ</span>
+                <span className="text-alien-gold">FlΦw</span>
+                <span className="text-alien-green"> $pac€</span>
+                <span className="text-alien-gold"> DAO</span>
+              </h1>
+            </div>
+          </div>
+          
           <motion.p 
             className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
             initial={{ opacity: 0 }}

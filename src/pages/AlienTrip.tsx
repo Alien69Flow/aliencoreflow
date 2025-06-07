@@ -1,8 +1,6 @@
 
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Rocket, Star, Clock, ScrollText, BookOpen, PieChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
@@ -56,22 +54,30 @@ const AlienTrip: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-alien-space">
+    <div className="relative flex flex-col flex-1 bg-alien-space">
       <StarBackground />
-      <Header />
-      <main className="container mx-auto px-4 pt-24 pb-16">
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
+        }}
+      >
+        <div className="w-full h-full bg-black/50" />
+      </div>
+      
+      <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6">AlienTrip</h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">AlienTrip</h1>
+              <p className="text-xl text-gray-300 mb-8 font-[Exo]">
                 Explore our cosmic journey through the blockchain multiverse as we build the next generation of decentralized collaboration.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark">
+                <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-nasalization">
                   <Rocket className="mr-2 h-5 w-5" /> Join the Journey
                 </Button>
-                <Button variant="outline" className="border-alien-green text-alien-green hover:bg-alien-green/20" 
+                <Button variant="outline" className="border-alien-green text-alien-green hover:bg-alien-green/20 font-nasalization" 
                         onClick={() => window.open("https://alienflowspace.gitbook.io/DAO", "_blank")}>
                   <ScrollText className="mr-2 h-5 w-5" /> Look Greenpapers
                 </Button>
@@ -81,44 +87,44 @@ const AlienTrip: React.FC = () => {
               <div className="mt-8 bg-alien-space-dark/50 backdrop-blur-md rounded-lg p-6 border border-alien-gold/20">
                 <div className="flex items-center mb-4">
                   <BookOpen className="h-6 w-6 text-alien-gold mr-3" />
-                  <h3 className="text-xl font-semibold text-alien-gold">Official Documentation</h3>
+                  <h3 className="text-xl font-semibold text-alien-gold font-nasalization">Official Documentation</h3>
                 </div>
-                <p className="text-gray-300 mb-4">
+                <p className="text-gray-300 mb-4 font-[Exo]">
                   Access our comprehensive documentation to learn about tokenomics, roadmap, and 
                   technical specifications of the ΔlieπFlΦw $pac€ DAO ecosystem.
                 </p>
                 <a href="https://alienflowspace.gitbook.io/DAO" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   className="flex items-center text-alien-green hover:text-alien-green-light">
+                   className="flex items-center text-alien-green hover:text-alien-green-light font-[Exo]">
                   <span>Visit GitBook</span>
                   <Rocket className="ml-2 h-4 w-4" />
                 </a>
               </div>
             </div>
             <div className="bg-alien-space-dark/50 rounded-lg p-6 backdrop-blur-md">
-              <h2 className="text-2xl font-bold text-alien-green mb-4">Crypto Mint NFT</h2>
-              <p className="text-gray-300 mb-6">
+              <h2 className="text-2xl font-bold text-alien-green mb-4 font-nasalization">Crypto Mint NFT</h2>
+              <p className="text-gray-300 mb-6 font-[Exo]">
                 Secure your place in our cosmic ecosystem by minting an ΔlieπFlΦw $pac€ DAO Passport, granting you early access to all present and future features and governance rights.
               </p>
               <div className="bg-alien-space-light rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold">Mint Price</span>
-                  <span className="text-alien-green font-semibold">0.08 ₿TC</span>
+                  <span className="text-alien-gold font-[Exo]">Mint Price</span>
+                  <span className="text-alien-green font-semibold font-[Exo]">0.08 ₿TC</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold">Total Supply</span>
-                  <span className="text-alien-green font-semibold">1,618.034</span>
+                  <span className="text-alien-gold font-[Exo]">Total Supply</span>
+                  <span className="text-alien-green font-semibold font-[Exo]">1,618.034</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold">Minted</span>
-                  <span className="text-alien-green font-semibold">314.159 / 1,618.034</span>
+                  <span className="text-alien-gold font-[Exo]">Minted</span>
+                  <span className="text-alien-green font-semibold font-[Exo]">314.159 / 1,618.034</span>
                 </div>
                 <div className="w-full bg-alien-space-dark rounded-full h-2.5 mb-2">
                   <div className="bg-alien-gold h-2.5 rounded-full" style={{ width: '72%' }}></div>
                 </div>
               </div>
-              <Button className="w-full bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark">
+              <Button className="w-full bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-nasalization">
                 Crypto Mint NFT Passport
               </Button>
             </div>
@@ -127,8 +133,8 @@ const AlienTrip: React.FC = () => {
           {/* Tokenomics Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-alien-gold mb-4">Tokenomics</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Tokenomics</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
                 The A₿TC token distribution is designed to ensure sustainable ecosystem growth and balanced governance.
               </p>
             </div>
@@ -177,8 +183,8 @@ const AlienTrip: React.FC = () => {
                   <div key={index} className="flex items-center">
                     <div className="w-4 h-4 mr-2" style={{ backgroundColor: item.color }}></div>
                     <div>
-                      <span className="text-gray-300">{item.name}</span>
-                      <span className="ml-2 text-alien-gold font-bold">{item.value}%</span>
+                      <span className="text-gray-300 font-[Exo]">{item.name}</span>
+                      <span className="ml-2 text-alien-gold font-bold font-[Exo]">{item.value}%</span>
                     </div>
                   </div>
                 ))}
@@ -190,7 +196,7 @@ const AlienTrip: React.FC = () => {
                 href="https://alienflowspace.gitbook.io/DAO" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-alien-green hover:text-alien-green-light inline-flex items-center"
+                className="text-alien-green hover:text-alien-green-light inline-flex items-center font-[Exo]"
               >
                 View detailed tokenomics <Rocket className="ml-2 h-4 w-4" />
               </a>
@@ -199,8 +205,8 @@ const AlienTrip: React.FC = () => {
           
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-alien-gold mb-4">Roadmap</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Roadmap</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
                 Our mission to unify the blockchain multiverse follows this strategic path through interstellar space.
               </p>
             </div>
@@ -220,12 +226,12 @@ const AlienTrip: React.FC = () => {
               {roadmapEvents.map((event, index) => (
                 <div key={index} className="relative grid grid-cols-1 md:grid-cols-5 gap-8 mb-16">
                   <div className={`md:col-span-2 ${index % 2 === 0 ? 'md:text-right order-1' : 'order-1 md:order-3'}`}>
-                    <h3 className="text-2xl font-bold text-alien-gold mb-2">{event.title}</h3>
-                    <div className="text-sm text-alien-green mb-2 flex items-center gap-2 justify-start md:justify-end">
+                    <h3 className="text-2xl font-bold text-alien-gold mb-2 font-nasalization">{event.title}</h3>
+                    <div className="text-sm text-alien-green mb-2 flex items-center gap-2 justify-start md:justify-end font-[Exo]">
                       <Clock className="h-4 w-4" />
                       <span>{event.quarter}</span>
                     </div>
-                    <p className="text-gray-300">{event.description}</p>
+                    <p className="text-gray-300 font-[Exo]">{event.description}</p>
                   </div>
                   
                   <div className="order-2 flex justify-center">
@@ -258,7 +264,7 @@ const AlienTrip: React.FC = () => {
                 href="https://alienflowspace.gitbook.io/DAO" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-alien-green hover:text-alien-green-light inline-flex items-center"
+                className="text-alien-green hover:text-alien-green-light inline-flex items-center font-[Exo]"
               >
                 View complete roadmap <Rocket className="ml-2 h-4 w-4" />
               </a>
@@ -266,19 +272,18 @@ const AlienTrip: React.FC = () => {
           </div>
           
           <div className="bg-alien-space-dark/70 rounded-lg p-8 backdrop-blur-md text-center">
-            <h2 className="text-3xl font-bold text-alien-gold mb-4">Join Our Cosmic Journey</h2>
-            <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Join Our Cosmic Journey</h2>
+            <p className="text-gray-300 mb-8 max-w-3xl mx-auto font-[Exo]">
               The AlienFlowSpace DAO is more than a project—it's a movement to transform blockchain collaboration across the multiverse. Be part of this revolutionary journey.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark px-8 py-6">
+              <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark px-8 py-6 font-nasalization">
                 <Rocket className="mr-2 h-5 w-5" /> Join AlienFlowSpace
               </Button>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
