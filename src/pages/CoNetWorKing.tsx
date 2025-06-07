@@ -1,5 +1,8 @@
+
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Network, Globe, Users, Zap, Briefcase, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -135,22 +138,14 @@ const CoNetWorKing: React.FC = () => {
   ];
 
   return (
-    <div className="relative flex flex-col flex-1 bg-alien-space">
+    <div className="min-h-screen bg-alien-space">
       <StarBackground />
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
-        }}
-      >
-        <div className="w-full h-full bg-black/50" />
-      </div>
-      
-      <main className="relative z-10 flex-grow container mx-auto px-4 pt-28 pb-16">
+      <Header />
+      <main className="container mx-auto px-4 pt-28 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Network className="h-16 w-16 text-alien-gold mx-auto mb-4" />
-            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">CoNetWorKing</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-[Atomic Age, Star Wars]">CoNetWorKing</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
               Connect with like-minded individuals across the multiverse and forge powerful collaborations to shape the future.
             </p>
@@ -158,7 +153,7 @@ const CoNetWorKing: React.FC = () => {
 
           {/* Connection Map */}
           <div className="mb-16 relative bg-alien-space-dark/30 rounded-lg overflow-hidden p-6 backdrop-blur-md border border-alien-gold/20">
-            <h2 className="text-2xl font-bold text-alien-gold mb-6 font-nasalization">Global Network</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-6 font-[Atomic Age]">Global Network</h2>
             
             <div className="aspect-[2/1] bg-alien-space-dark/50 rounded-lg relative overflow-hidden">
               {/* World map with glow points */}
@@ -237,7 +232,7 @@ const CoNetWorKing: React.FC = () => {
           {/* Featured Connections */}
           <div className="mb-16">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-alien-gold font-nasalization">Featured Connections</h2>
+              <h2 className="text-2xl font-bold text-alien-gold font-[Atomic Age]">Featured Connections</h2>
               <Button variant="outline" className="border-alien-green text-alien-green hover:bg-alien-green/10 font-[Exo]">
                 View All
               </Button>
@@ -253,7 +248,7 @@ const CoNetWorKing: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Upcoming Networking Events */}
             <div>
-              <h2 className="text-2xl font-bold text-alien-gold mb-6 font-nasalization">Upcoming Events</h2>
+              <h2 className="text-2xl font-bold text-alien-gold mb-6 font-[Atomic Age]">Upcoming Events</h2>
               <div className="space-y-4">
                 {upcomingEvents.map((event, index) => (
                   <div key={index} className="bg-alien-space-dark/50 p-4 rounded-lg backdrop-blur-md border border-alien-gold/20">
@@ -280,7 +275,7 @@ const CoNetWorKing: React.FC = () => {
             
             {/* Collaboration Opportunities */}
             <div>
-              <h2 className="text-2xl font-bold text-alien-gold mb-6 font-nasalization">Collaboration Opportunities</h2>
+              <h2 className="text-2xl font-bold text-alien-gold mb-6 font-[Atomic Age]">Collaboration Opportunities</h2>
               <div className="space-y-4">
                 {collaborationOpportunities.map((opportunity, index) => (
                   <div key={index} className="bg-alien-space-dark/50 p-4 rounded-lg backdrop-blur-md border border-alien-gold/20">
@@ -312,7 +307,7 @@ const CoNetWorKing: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-alien-green/30 to-alien-gold/30 rounded-lg p-8 text-center backdrop-blur-md">
             <Briefcase className="h-12 w-12 text-alien-gold mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-alien-gold mb-3 font-nasalization">Create Your Professional Profile</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-3 font-[Atomic Age]">Create Your Professional Profile</h2>
             <p className="text-gray-200 max-w-2xl mx-auto mb-6 font-[Exo]">
               Showcase your skills, experience, and interests to connect with the perfect collaborators for your next cosmic venture.
             </p>
@@ -322,6 +317,7 @@ const CoNetWorKing: React.FC = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

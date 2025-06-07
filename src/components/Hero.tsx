@@ -48,18 +48,14 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="star-wars-crawl mb-8">
-            <div className="star-wars-content">
-              <motion.p 
-                className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-              >
-                Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
-              </motion.p>
-            </div>
-          </div>
+          <motion.p 
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+          </motion.p>
         </motion.div>
         
         <motion.div 

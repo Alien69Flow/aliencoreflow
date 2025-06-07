@@ -7,7 +7,6 @@ import EcosystemSection from '@/components/EcosystemSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import FinancialFreedomSection from '@/components/FinancialFreedomSection';
 import ParticipationSection from '@/components/ParticipationSection';
-import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
@@ -38,9 +37,6 @@ const Index: React.FC = () => {
           <ParticipationSection />
         </div>
       </div>
-      
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
