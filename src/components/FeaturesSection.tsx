@@ -26,35 +26,30 @@ const features = [{
 }];
 
 const FeaturesSection = () => {
-  return <section className="py-20 relative overflow-hidden">
+  return (
+    <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 py-0 my-0">
-        <motion.div initial={{
-        opacity: 0
-      }} whileInView={{
-        opacity: 1
-      }} transition={{
-        duration: 0.8
-      }} viewport={{
-        once: true
-      }} className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          whileInView={{ opacity: 1 }} 
+          transition={{ duration: 0.8 }} 
+          viewport={{ once: true }} 
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-nasalization">Advanced Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">ΔlieπFlΦw $pac€ offers cutting-edge technologies to support our interstellar ecosystem</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => <motion.div key={index} initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5,
-          delay: index * 0.1
-        }} viewport={{
-          once: true,
-          margin: "-50px"
-        }} className="card-border p-6 relative overflow-hidden group">
+          {features.map((feature, index) => (
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5, delay: index * 0.1 }} 
+              viewport={{ once: true, margin: "-50px" }} 
+              className="card-border p-6 relative overflow-hidden group"
+            >
               <div className="mb-6 p-4 rounded-full bg-gradient-to-br from-alien-gold-dark/20 to-alien-green-dark/20 w-fit">
                 <div className="text-alien-gold group-hover:text-alien-green transition-colors duration-300">
                   {feature.icon}
@@ -64,15 +59,13 @@ const FeaturesSection = () => {
               <h3 className="text-xl font-semibold mb-3 text-alien-gold font-nasalization">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
               
-              {/* Hover effect */}
               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-alien-gold to-alien-green scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </motion.div>)}
+            </motion.div>
+          ))}
         </div>
       </div>
-      
-      {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-alien-space to-transparent"></div>
-    </section>;
+    </section>
+  );
 };
 
 export default FeaturesSection;

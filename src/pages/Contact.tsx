@@ -1,19 +1,25 @@
 
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <div className="min-h-screen bg-alien-space">
+    <div className="relative flex flex-col flex-1 bg-alien-space">
       <StarBackground />
-      <Header />
-      <main className="container mx-auto px-4 pt-24 pb-16">
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
+        }}
+      >
+        <div className="w-full h-full bg-black/50" />
+      </div>
+      
+      <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-[Atomic Age, Star Wars]">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-nasalization">Contact Us</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
@@ -105,7 +111,7 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="bg-alien-space-dark/50 p-6 rounded-lg backdrop-blur-md">
-              <h2 className="text-2xl font-semibold text-alien-green mb-4 font-[Atomic Age, Star Wars]">Send us a message</h2>
+              <h2 className="text-2xl font-semibold text-alien-green mb-4 font-nasalization">Send us a message</h2>
               <form className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-1 font-[Exo]" htmlFor="name">Name</label>
@@ -145,7 +151,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

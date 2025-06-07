@@ -1,8 +1,6 @@
 
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -88,10 +86,18 @@ const Academy: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-alien-space">
+    <div className="relative flex flex-col flex-1 bg-alien-space">
       <StarBackground />
-      <Header />
-      <main className="container mx-auto px-4 pt-28 pb-16">
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
+        }}
+      >
+        <div className="w-full h-full bg-black/50" />
+      </div>
+      
+      <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <GraduationCap className="h-16 w-16 text-alien-gold mx-auto mb-4" />
@@ -160,7 +166,6 @@ const Academy: React.FC = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
