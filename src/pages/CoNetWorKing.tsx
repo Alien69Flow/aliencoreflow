@@ -1,8 +1,5 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Network, Globe, Users, Zap, Briefcase, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -140,7 +137,6 @@ const CoNetWorKing: React.FC = () => {
   return (
     <div className="min-h-screen bg-alien-space">
       <StarBackground />
-      <Header />
       <main className="container mx-auto px-4 pt-28 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -317,7 +313,6 @@ const CoNetWorKing: React.FC = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
