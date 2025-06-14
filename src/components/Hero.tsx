@@ -34,13 +34,13 @@ const Hero = () => {
             />
           </div>
           
-          <div className="star-wars-crawl mb-10">
+          <div className="star-wars-crawl mb-8">
             <div className="star-wars-content">
               <h1 
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-glow text-center font-nasalization leading-tight"
                 style={{ 
                   fontFamily: "'Nasalization', sans-serif !important",
-                  letterSpacing: '0.1em'
+                  letterSpacing: '0.02em'
                 }}
               >
                 <span className="text-alien-green">Δlieπ</span>
@@ -51,11 +51,11 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="star-wars-crawl mb-10">
+          <div className="star-wars-crawl mb-8">
             <div className="star-wars-content">
               <motion.p 
                 className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed"
-                style={{ letterSpacing: '0.025em' }}
+                style={{ letterSpacing: '0.01em' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -67,7 +67,7 @@ const Hero = () => {
         </motion.div>
         
         <motion.div 
-          className="flex flex-wrap justify-center gap-4 mt-12"
+          className="flex flex-wrap justify-center gap-4 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
