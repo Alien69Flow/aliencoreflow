@@ -32,9 +32,6 @@ const Index: React.FC = () => {
       {/* Main content - ensure it has proper height and flow */}
       <div className="relative z-10 min-h-screen">
         <Hero />
-        <div className="container mx-auto text-center px-4 py-8 section-center">
-          <h2 className="text-4xl md:text-5xl mb-4 text-alien-gold font-nasalization">₿£€$$</h2>
-        </div>
         <FinancialFreedomSection />
         <ExploreSpacesSection />
         <EcosystemSection />
