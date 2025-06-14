@@ -13,13 +13,13 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6"
+          className="mb-8"
         >
-          <div className="flex flex-col justify-center items-center mb-8 relative">
+          <div className="flex flex-col justify-center items-center mb-12 relative">
             <motion.img 
               src="/lovable-uploads/ALogo.png" 
               alt="AlienFlowSpaceDAO Logo" 
-              className="h-28 gold-glow z-20" 
+              className="h-24 md:h-28 gold-glow z-20" 
               initial={{ scale: 0.8 }}
               animate={{ 
                 scale: [1, 1.05, 1],
@@ -34,11 +34,14 @@ const Hero = () => {
             />
           </div>
           
-          <div className="star-wars-crawl mb-8">
+          <div className="star-wars-crawl mb-10">
             <div className="star-wars-content">
               <h1 
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 tracking-tight text-glow text-center font-nasalization"
-                style={{ fontFamily: "'Nasalization', sans-serif !important" }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 text-glow text-center font-nasalization leading-tight"
+                style={{ 
+                  fontFamily: "'Nasalization', sans-serif !important",
+                  letterSpacing: '0.1em'
+                }}
               >
                 <span className="text-alien-green">Δlieπ</span>
                 <span className="text-alien-gold">FlΦw</span>
@@ -48,10 +51,11 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="star-wars-crawl mb-8">
+          <div className="star-wars-crawl mb-10">
             <div className="star-wars-content">
               <motion.p 
-                className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 font-[Exo] text-center"
+                className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed"
+                style={{ letterSpacing: '0.025em' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -63,32 +67,32 @@ const Hero = () => {
         </motion.div>
         
         <motion.div 
-          className="flex flex-wrap justify-center gap-4 mt-8"
+          className="flex flex-wrap justify-center gap-4 mt-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <Link to="/about">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base rounded-full transition-colors"
             >
-              <Orbit className="mr-2 h-5 w-5" /> About Enter Portal
+              <Orbit className="mr-2 h-4 w-4" /> About Enter Portal
             </Button>
           </Link>
  
           <Link to="/alien-trip">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base rounded-full transition-colors"
             >
-              <ScrollText className="mr-2 h-5 w-5" /> Alientrip Manifesto
+              <ScrollText className="mr-2 h-4 w-4" /> Alientrip Manifesto
             </Button>
           </Link>
 
           <Link to="/contact">
             <Button 
-              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full transition-colors"
+              className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base rounded-full transition-colors"
             >
-              <Globe className="mr-2 h-5 w-5" /> Contact & Join
+              <Globe className="mr-2 h-4 w-4" /> Contact & Join
             </Button>
           </Link>
         </motion.div>
