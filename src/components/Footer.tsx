@@ -1,75 +1,115 @@
+
 import React from 'react';
 import { X, Facebook, Instagram, Mail, Disc, Send, Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-alien-space-dark border-t border-alien-gold/10 py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-alien-space-dark border-t border-alien-gold/20 py-8 lg:py-12">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo and description */}
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2">
+          <div className="lg:col-span-2 flex flex-col gap-4">
+            <div className="flex items-center gap-3">
               <img 
                 src="/lovable-uploads/ALogo.png" 
                 alt="AlienFlowSpaceDAO Logo" 
-                className="h-9 w-auto object-contain" 
+                className="h-10 w-auto object-contain gold-glow" 
               />
-              <span className="text-lg text-alien-gold font-nasalization font-bold">AlienFlowSpace</span>
+              <span className="text-xl font-bold text-alien-gold font-nasalization">
+                AlienFlowSpace DAO
+              </span>
             </div>
-            <p className="text-gray-400 text-sm font-[Exo] leading-snug">
-              Uniting diverse blockchain domains under a cosmic governance structure.
+            <p className="text-gray-300 text-sm lg:text-base font-[Exo] leading-relaxed max-w-md">
+              Uniting diverse blockchain domains under a cosmic governance structure. 
+              Building the future of decentralized finance and sustainable technology across the multiverse.
             </p>
-            <div className="flex gap-3 pt-1 flex-wrap">
-              <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-gray-400 hover:text-alien-gold transition-colors"><X size={18} /></a>
-              <a href="https://www.facebook.com/Alien69Flow" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-alien-gold transition-colors"><Facebook size={18} /></a>
-              <a href="https://www.instagram.com/alien69flow/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-alien-gold transition-colors"><Instagram size={18} /></a>
-              <a href="https://discord.gg/alienflowspace" target="_blank" rel="noopener noreferrer" aria-label="Discord" className="text-gray-400 hover:text-alien-gold transition-colors"><Disc size={18} /></a>
-              <a href="mailto:info@alienflow.space" aria-label="Email" className="text-gray-400 hover:text-alien-gold transition-colors"><Mail size={18} /></a>
-              <a href="https://t.me/AlienFlow" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="text-gray-400 hover:text-alien-gold transition-colors"><Send size={18} /></a>
-              <a href="https://github.com/AlienFlowSpaceDAO" target="_blank" rel="noopener noreferrer" aria-label="Github" className="text-gray-400 hover:text-alien-gold transition-colors"><Github size={18} /></a>
-              <a href="https://linkedin.com/in/alienflow" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-alien-gold transition-colors"><Linkedin size={18} /></a>
+            <div className="flex gap-3 pt-2 flex-wrap">
+              {[
+                { href: "https://x.com/alien69flow", icon: X, label: "X (Twitter)" },
+                { href: "https://www.facebook.com/Alien69Flow", icon: Facebook, label: "Facebook" },
+                { href: "https://www.instagram.com/alien69flow/", icon: Instagram, label: "Instagram" },
+                { href: "https://discord.gg/alienflowspace", icon: Disc, label: "Discord" },
+                { href: "mailto:info@alienflow.space", icon: Mail, label: "Email" },
+                { href: "https://t.me/AlienFlow", icon: Send, label: "Telegram" },
+                { href: "https://github.com/AlienFlowSpaceDAO", icon: Github, label: "Github" },
+                { href: "https://linkedin.com/in/alienflow", icon: Linkedin, label: "LinkedIn" }
+              ].map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label={social.label}
+                  className="p-2 text-gray-400 hover:text-alien-gold transition-all duration-300 hover:scale-110 hover:bg-alien-space-light/20 rounded-lg"
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
             </div>
           </div>
           
           {/* Navigation Links */}
           <div>
-            <h4 className="text-alien-gold font-nasalization font-bold mb-3 text-base">Navigation</h4>
-            <ul className="space-y-1 text-gray-400 font-[Exo] text-sm leading-tight">
-              <li><Link to="/" className="hover:text-alien-green transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-alien-green transition-colors">About</Link></li>
-              <li><Link to="/alien-trip" className="hover:text-alien-green transition-colors">AlienTrip</Link></li>
-              <li><Link to="/contact" className="hover:text-alien-green transition-colors">Contact</Link></li>
-              <li><Link to="/academy" className="hover:text-alien-green transition-colors">Academy</Link></li>
-              <li><Link to="/clubs" className="hover:text-alien-green transition-colors">Clubs</Link></li>
-              <li><Link to="/conetworking" className="hover:text-alien-green transition-colors">CoNetWorKing</Link></li>
+            <h4 className="text-alien-gold font-nasalization font-bold mb-4 text-lg">Navigation</h4>
+            <ul className="space-y-3 text-gray-300 font-[Exo]">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/alien-trip", label: "AlienTrip" },
+                { to: "/contact", label: "Contact" },
+                { to: "/academy", label: "Academy" },
+                { to: "/clubs", label: "Clubs" },
+                { to: "/conetworking", label: "CoNetWorKing" }
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.to} 
+                    className="hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
-          {/* Legal */}
+          {/* Legal & Resources */}
           <div>
-            <h4 className="text-alien-gold font-nasalization font-bold mb-3 text-base">Legal</h4>
-            <ul className="space-y-1 text-gray-400 font-[Exo] text-sm leading-tight">
-              <li>
-                <a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="hover:text-alien-green transition-colors">
-                  Cookie Policy
-                </a>
-              </li>
+            <h4 className="text-alien-gold font-nasalization font-bold mb-4 text-lg">Resources</h4>
+            <ul className="space-y-3 text-gray-300 font-[Exo]">
+              {[
+                { href: "https://alienflowspace.gitbook.io/DAO", label: "Documentation" },
+                { href: "https://alienflowspace.gitbook.io/DAO", label: "Terms of Service" },
+                { href: "https://alienflowspace.gitbook.io/DAO", label: "Privacy Policy" },
+                { href: "https://alienflowspace.gitbook.io/DAO", label: "Cookie Policy" }
+              ].map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="border-t border-alien-gold/10 mt-8 pt-4 text-center text-xs text-gray-500 font-[Exo]">
-          © {new Date().getFullYear()} AlienFlowSpace DAO. All rights reserved across the multiverse.
+        
+        <div className="border-t border-alien-gold/20 mt-8 lg:mt-12 pt-6 lg:pt-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+            <p className="text-xs lg:text-sm text-gray-500 font-[Exo] text-center lg:text-left">
+              © {new Date().getFullYear()} AlienFlowSpace DAO. All rights reserved across the multiverse.
+            </p>
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <span>Made with</span>
+              <span className="text-alien-gold">💚</span>
+              <span>for the cosmic community</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

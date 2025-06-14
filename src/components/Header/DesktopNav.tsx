@@ -11,72 +11,75 @@ import {
 import { Button } from "@/components/ui/button";
 
 const DesktopNav = () => {
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/alien-trip", label: "AlienTrip" },
+    { to: "/contact", label: "Contact" }
+  ];
+
+  const spaceLinks = [
+    { to: "/academy", label: "Academy", desc: "Unlock cosmic knowledge through educational resources" },
+    { to: "/clubs", label: "Clubs", desc: "Join specialized communities focused on interests" },
+    { to: "/conetworking", label: "CoNetWorKing", desc: "Connect with like-minded profits across the multiverse" }
+  ];
+
+  const languages = [
+    { code: 'us', name: 'English', lang: 'en' },
+    { code: 'es', name: 'Español', lang: 'es' },
+    { code: 'fr', name: 'Français', lang: 'fr' },
+    { code: 'cn', name: '汉语 (Hànyǔ)', lang: 'zh' },
+    { code: 'in', name: 'हिन्दी (Hindī)', lang: 'hi' },
+    { code: 'pt', name: 'Português', lang: 'pt' },
+    { code: 'jp', name: '日本語 (Nihongo)', lang: 'ja' }
+  ];
+
   return (
-    <nav className="hidden md:flex items-center gap-6">
-      <div className="hidden md:flex space-x-4">
-        <Link to="/" className="text-alien-gold hover:text-alien-green px-2 py-2 font-nasalization">
-          Home
-        </Link>
-        <Link to="/about" className="text-alien-gold hover:text-alien-green px-2 py-2 font-nasalization">
-          About
-        </Link>
-        <Link to="/alien-trip" className="text-alien-gold hover:text-alien-green px-2 py-2 font-nasalization">
-          AlienTrip
-        </Link>
-        <Link to="/contact" className="text-alien-gold hover:text-alien-green px-2 py-2 font-nasalization">
-          Contact
-        </Link>
+    <nav className="hidden lg:flex items-center gap-8">
+      <div className="flex items-center space-x-6">
+        {/* Main Navigation */}
+        {navLinks.map((link) => (
+          <Link 
+            key={link.to}
+            to={link.to} 
+            className="text-alien-gold hover:text-alien-green px-3 py-2 font-nasalization transition-all duration-300 hover:scale-105 relative group"
+          >
+            {link.label}
+            <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-alien-green scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </Link>
+        ))}
         
         {/* Explore Spaces Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button 
               variant="ghost" 
-              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/30 px-2 py-2 rounded flex items-center group font-nasalization"
+              className="text-alien-gold hover:text-alien-green bg-transparent hover:bg-alien-space-light/20 px-3 py-2 rounded-lg flex items-center group font-nasalization transition-all duration-300 hover:scale-105"
             >
-              <span className="font-nasalization">Explore Spaces</span>
-              <ChevronDown 
-                className="ml-2 h-4 w-4 transform transition-transform duration-300 group-data-[state=open]:rotate-180 group-hover:text-alien-green" 
-              />
+              <span>Explore Spaces</span>
+              <ChevronDown className="ml-2 h-4 w-4 transform transition-transform duration-300 group-data-[state=open]:rotate-180" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent 
-            className="bg-alien-space-dark border border-alien-gold/20 p-4 rounded-md w-[320px] shadow-lg z-[9999]"
+            className="bg-alien-space-dark/95 backdrop-blur-md border border-alien-gold/30 p-2 rounded-xl w-[380px] shadow-2xl shadow-alien-gold/10 z-[9999]"
+            sideOffset={8}
           >
-            <div className="flex flex-col space-y-4">
-              <DropdownMenuItem asChild>
-                <Link 
-                  to="/academy" 
-                  className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
-                >
-                  <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green mb-1 font-nasalization">Academy</h3>
-                    <p className="text-sm text-gray-400">Unlock cosmic knowledge through educational resources</p>
-                  </div>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link 
-                  to="/clubs" 
-                  className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
-                >
-                  <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green mb-1 font-nasalization">Clubs</h3>
-                    <p className="text-sm text-gray-400">Join specialized communities focused on interests</p>
-                  </div>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link 
-                  to="/conetworking" 
-                  className="flex items-start p-2 rounded-lg hover:bg-alien-space-light/20 group cursor-pointer"
-                >
-                  <div className="flex-1">
-                    <h3 className="text-alien-gold group-hover:text-alien-green mb-1 font-nasalization">CoNetWorKing</h3>
-                    <p className="text-sm text-gray-400">Connect with like-minded and profits across the multiverse</p>
-                  </div>
-                </Link>
-              </DropdownMenuItem>
+            <div className="flex flex-col space-y-1">
+              {spaceLinks.map((link) => (
+                <DropdownMenuItem key={link.to} asChild>
+                  <Link 
+                    to={link.to} 
+                    className="flex flex-col items-start p-4 rounded-lg hover:bg-alien-space-light/30 group cursor-pointer transition-all duration-300"
+                  >
+                    <h3 className="text-alien-gold group-hover:text-alien-green mb-2 font-nasalization font-semibold transition-colors duration-300">
+                      {link.label}
+                    </h3>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 leading-relaxed transition-colors duration-300">
+                      {link.desc}
+                    </p>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
             </div>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -86,38 +89,29 @@ const DesktopNav = () => {
           <DropdownMenuTrigger asChild>
             <Button 
               variant="ghost" 
-              className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none group p-2"
+              className="flex items-center text-alien-gold hover:text-alien-green focus:outline-none group p-2 hover:bg-alien-space-light/20 rounded-lg transition-all duration-300 hover:scale-105"
             >
-              <Globe className="h-5 w-5 group-hover:text-alien-green" />
-              <ChevronDown 
-                className="ml-1 h-4 w-4 transform transition-transform duration-300 group-data-[state=open]:rotate-180" 
-              />
+              <Globe className="h-5 w-5" />
+              <ChevronDown className="ml-1 h-4 w-4 transform transition-transform duration-300 group-data-[state=open]:rotate-180" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent 
-            className="bg-alien-space-dark border border-alien-gold/20 p-2 rounded-md w-[220px] shadow-lg z-[9999]"
+            className="bg-alien-space-dark/95 backdrop-blur-md border border-alien-gold/30 p-2 rounded-xl w-[240px] shadow-2xl shadow-alien-gold/10 z-[9999] max-h-80 overflow-y-auto"
             align="end"
+            sideOffset={8}
           >
             <div className="flex flex-col space-y-1">
-              {[
-                { code: 'us', name: 'English', lang: 'en' },
-                { code: 'es', name: 'Español', lang: 'es' },
-                { code: 'fr', name: 'Français', lang: 'fr' },
-                { code: 'cn', name: '汉语 (Hànyǔ)', lang: 'zh' },
-                { code: 'in', name: 'हिन्दी (Hindī)', lang: 'hi' },
-                { code: 'pt', name: 'Português', lang: 'pt' },
-                { code: 'jp', name: '日本語 (Nihongo)', lang: 'ja' },
-              ].map((lang) => (
+              {languages.map((lang) => (
                 <DropdownMenuItem 
                   key={lang.code} 
-                  className="flex items-center gap-2 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/20 cursor-pointer p-2 rounded"
+                  className="flex items-center gap-3 text-alien-gold hover:text-alien-green hover:bg-alien-space-light/30 cursor-pointer p-3 rounded-lg transition-all duration-300"
                 >
                   <img 
                     src={`https://flagcdn.com/w20/${lang.code}.png`} 
                     alt={`${lang.name} flag`} 
-                    className="w-5 h-4" 
+                    className="w-5 h-4 rounded-sm" 
                   />
-                  <span>{lang.name}</span>
+                  <span className="font-medium">{lang.name}</span>
                 </DropdownMenuItem>
               ))}
             </div>

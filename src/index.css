@@ -72,43 +72,53 @@
 
   body {
     @apply bg-alien-space text-foreground overflow-x-hidden;
+    scroll-behavior: smooth;
   }
 
-  /* Custom Scrollbar */
+  /* Custom Scrollbar - Mejorado */
   ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
     background: hsl(var(--sidebar-background));
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--sidebar-primary));
-    border-radius: 4px;
+    background: linear-gradient(180deg, hsl(var(--sidebar-primary)), hsl(var(--sidebar-accent)));
+    border-radius: 6px;
+    border: 1px solid hsl(var(--sidebar-background));
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--sidebar-primary-foreground));
+    background: linear-gradient(180deg, hsl(var(--sidebar-accent)), hsl(var(--sidebar-primary)));
+  }
+  ::-webkit-scrollbar-corner {
+    background: hsl(var(--sidebar-background));
   }
 }
 
-/* === Helpers y utilidades === */
+/* === Helpers y utilidades mejoradas === */
 .text-glow {
-  text-shadow: 0 0 8px rgba(240, 216, 130, 0.8);
+  text-shadow: 
+    0 0 8px rgba(240, 216, 130, 0.8),
+    0 0 16px rgba(240, 216, 130, 0.4),
+    0 0 24px rgba(240, 216, 130, 0.2);
 }
 
 .green-glow {
-  filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.4));
+  filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.6)) drop-shadow(0 0 20px rgba(34, 197, 94, 0.3));
 }
 
 .gold-glow {
-  filter: drop-shadow(0 0 10px rgba(240, 216, 130, 0.4));
+  filter: drop-shadow(0 0 10px rgba(240, 216, 130, 0.6)) drop-shadow(0 0 20px rgba(240, 216, 130, 0.3));
 }
 
-/* Improved card-border without unwanted backgrounds */
+/* Improved card-border with better effects */
 .card-border {
   position: relative;
   border-radius: var(--radius);
-  background: rgba(17, 17, 25, 0.6);
-  backdrop-filter: blur(8px); /* Puede avisar pero es seguro para navegadores modernos */
+  background: rgba(17, 17, 25, 0.7);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-border::before {
   content: '';
@@ -123,14 +133,18 @@
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; /* Puede avisar, es experimental */
-  mask-composite: exclude;     /* Puede avisar, es experimental */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.card-border:hover::before {
+  background: linear-gradient(145deg, hsl(var(--sidebar-accent)), hsl(var(--sidebar-primary)));
 }
 
-/* Star Wars scrolling text effect - COMPACTO */
+/* Star Wars scrolling text effect - COMPACTO Y MEJORADO */
 .star-wars-crawl {
-  perspective: 400px;
+  perspective: 500px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -157,6 +171,26 @@
   }
 }
 
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .star-wars-content {
+    transform: rotateX(10deg);
+  }
+  @keyframes star-wars-float-compact {
+    0% {
+      transform: rotateX(10deg) translateY(20px);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotateX(10deg) translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -165,7 +199,7 @@
 }
 
 .bg-glow-radial {
-  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .cosmic-grid {
@@ -179,13 +213,14 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(240, 216, 130, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(240, 216, 130, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(240, 216, 130, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 216, 130, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
   pointer-events: none;
   z-index: -1;
 }
+
 @keyframes ticker-scroll {
   0% {
     transform: translateX(0);
@@ -195,7 +230,7 @@
   }
 }
 
-/* Additional corrections */
+/* Additional responsive utilities */
 .section-center {
   display: flex;
   flex-direction: column;
@@ -205,10 +240,30 @@
   text-align: center;
 }
 
+/* Smooth transitions for better UX */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--sidebar-primary));
+  outline-offset: 2px;
+}
+
 /* === REFUERZO UNIVERSAL NASALIZATION === */
-/* Esto asegura que SIEMPRE que uses .font-nasalization, la fuente se aplica y no es pisada por nada */
 .font-nasalization, .font-nasalization * {
   font-family: 'Nasalization', sans-serif !important;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
