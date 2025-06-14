@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles } from 'lucide-react';
@@ -12,16 +11,16 @@ const CourseCard = ({ title, description, icon, level, duration, color }: {
   duration: string;
   color: string;
 }) => (
-  <div className="bg-alien-space-dark/50 backdrop-blur-md rounded-lg overflow-hidden border border-alien-gold/20 hover:border-alien-gold/50 transition-all hover:transform hover:scale-[1.01]">
+  <div className="bg-alien-space-dark/60 backdrop-blur-md rounded-lg overflow-hidden border border-alien-gold/20 hover:border-alien-gold/50 transition-all hover:transform hover:scale-[1.01]">
     <div className={`h-2 ${color}`}></div>
     <div className="p-6">
       <div className="flex items-start justify-between mb-4">
-        <div className="p-3 bg-alien-space-light rounded-full">
+        <div className="p-3 bg-alien-space-light/50 rounded-full">
           {icon}
         </div>
         <div className="flex space-x-2">
-          <span className="px-2 py-1 text-xs bg-alien-space-light rounded-full text-alien-gold">{level}</span>
-          <span className="px-2 py-1 text-xs bg-alien-space-light rounded-full text-alien-green">{duration}</span>
+          <span className="px-2 py-1 text-xs bg-alien-space-light/50 rounded-full text-alien-gold">{level}</span>
+          <span className="px-2 py-1 text-xs bg-alien-space-light/50 rounded-full text-alien-green">{duration}</span>
         </div>
       </div>
       <h3 className="text-xl font-semibold mb-2 text-alien-gold font-nasalization">{title}</h3>
@@ -86,21 +85,11 @@ const Academy: React.FC = () => {
   ];
 
   return (
-    <div className="relative flex flex-col flex-1 bg-alien-space">
-      <StarBackground />
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
-        }}
-      >
-        <div className="w-full h-full bg-black/50" />
-      </div>
-      
-      <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
+    <div className="relative flex flex-col flex-1">
+      <main className="relative z-10 flex-grow container mx-auto px-4 pt-4 pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <GraduationCap className="h-16 w-16 text-alien-gold mx-auto mb-4" />
+          <div className="text-center mb-12">
+            <GraduationCap className="h-12 w-12 text-alien-gold mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">Academy</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
               Expand your cosmic knowledge and master the principles of decentralized technologies through our immersive learning experiences.
@@ -108,7 +97,7 @@ const Academy: React.FC = () => {
           </div>
 
           {/* Featured Course */}
-          <div className="mb-16 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
+          <div className="mb-12 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Certification Degree Master's Program</h2>
@@ -133,14 +122,14 @@ const Academy: React.FC = () => {
                   Join Waitlist
                 </Button>
               </div>
-              <div className="bg-gradient-to-tr from-alien-green/30 to-alien-gold/30 p-8 flex items-center justify-center">
-                <GraduationCap className="h-32 w-32 text-alien-gold" />
+              <div className="bg-gradient-to-tr from-alien-green/20 to-alien-gold/20 p-8 flex items-center justify-center">
+                <GraduationCap className="h-24 w-24 text-alien-gold" />
               </div>
             </div>
           </div>
 
           {/* Course Grid */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h2 className="text-2xl font-bold text-alien-gold mb-8 font-nasalization">Featured Courses</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {courses.map((course, index) => (
@@ -150,7 +139,7 @@ const Academy: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-alien-space-dark/50 rounded-xl p-8 backdrop-blur-md border border-alien-gold/20">
+          <div className="text-center bg-alien-space-dark/60 rounded-xl p-8 backdrop-blur-md border border-alien-gold/20">
             <h2 className="text-2xl font-bold text-alien-gold mb-4 font-nasalization">Ready to Expand Your Cosmic Knowledge?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto font-[Exo]">
               Join thousands of space navigators on their journey to master the principles of the decentralized multiverse.
