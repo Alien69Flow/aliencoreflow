@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-alien-space-dark border-t border-alien-gold/20 py-8 lg:py-12">
+    <footer className="bg-alien-space-dark/80 backdrop-blur-sm border-t border-alien-gold/20 py-6 lg:py-8 mt-auto">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Logo and description */}
-          <div className="lg:col-span-2 flex flex-col gap-4">
-            <div className="flex items-center gap-3">
+          <div className="lg:col-span-2 flex flex-col gap-3">
+            <div className="flex items-center gap-2">
               <img 
                 src="/lovable-uploads/ALogo.png" 
                 alt="AlienFlowSpaceDAO Logo" 
-                className="h-10 w-auto object-contain gold-glow" 
+                className="h-8 w-auto object-contain gold-glow" 
               />
-              <span className="text-xl font-bold text-alien-gold font-nasalization">
+              <span className="text-lg font-bold text-alien-gold font-nasalization">
                 AlienFlowSpace DAO
               </span>
             </div>
-            <p className="text-gray-300 text-sm lg:text-base font-[Exo] leading-relaxed max-w-md">
+            <p className="text-gray-300 text-sm font-[Exo] leading-relaxed max-w-md">
               Uniting diverse blockchain domains under a cosmic governance structure. 
               Building the future of decentralized finance and sustainable technology across the multiverse.
             </p>
-            <div className="flex gap-3 pt-2 flex-wrap">
+            <div className="flex gap-2 pt-1 flex-wrap">
               {[
                 { href: "https://x.com/alien69flow", icon: X, label: "X (Twitter)" },
                 { href: "https://www.facebook.com/Alien69Flow", icon: Facebook, label: "Facebook" },
@@ -41,9 +41,9 @@ const Footer = () => {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label={social.label}
-                  className="p-2 text-gray-400 hover:text-alien-gold transition-all duration-300 hover:scale-110 hover:bg-alien-space-light/20 rounded-lg"
+                  className="p-1.5 text-gray-400 hover:text-alien-gold transition-all duration-300 hover:scale-110 hover:bg-alien-space-light/20 rounded-lg"
                 >
-                  <social.icon size={20} />
+                  <social.icon size={16} />
                 </a>
               ))}
             </div>
@@ -51,8 +51,8 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div>
-            <h4 className="text-alien-gold font-nasalization font-bold mb-4 text-lg">Navigation</h4>
-            <ul className="space-y-3 text-gray-300 font-[Exo]">
+            <h4 className="text-alien-gold font-nasalization font-bold mb-3 text-base">Navigation</h4>
+            <ul className="space-y-2 text-gray-300 font-[Exo]">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About" },
@@ -65,7 +65,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link 
                     to={link.to} 
-                    className="hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -76,8 +76,8 @@ const Footer = () => {
           
           {/* Legal & Resources */}
           <div>
-            <h4 className="text-alien-gold font-nasalization font-bold mb-4 text-lg">Resources</h4>
-            <ul className="space-y-3 text-gray-300 font-[Exo]">
+            <h4 className="text-alien-gold font-nasalization font-bold mb-3 text-base">Resources</h4>
+            <ul className="space-y-2 text-gray-300 font-[Exo]">
               {[
                 { href: "https://alienflowspace.gitbook.io/DAO", label: "Documentation" },
                 { href: "https://alienflowspace.gitbook.io/DAO", label: "Terms of Service" },
@@ -89,7 +89,7 @@ const Footer = () => {
                     href={link.href} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm hover:text-alien-green transition-colors duration-300 hover:translate-x-1 inline-block"
                   >
                     {link.label}
                   </a>
@@ -99,12 +99,12 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-alien-gold/20 mt-8 lg:mt-12 pt-6 lg:pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <p className="text-xs lg:text-sm text-gray-500 font-[Exo] text-center lg:text-left">
+        <div className="border-t border-alien-gold/20 mt-6 pt-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
+            <p className="text-xs text-gray-500 font-[Exo] text-center lg:text-left">
               © {new Date().getFullYear()} AlienFlowSpace DAO. All rights reserved across the multiverse.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="flex items-center gap-1 text-xs text-gray-500">
               <span>Made with</span>
               <span className="text-alien-gold">💚</span>
               <span>for the cosmic community</span>
