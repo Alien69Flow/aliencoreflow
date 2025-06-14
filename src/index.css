@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -127,7 +128,7 @@
   pointer-events: none;
 }
 
-/* Star Wars scrolling text effect */
+/* Star Wars scrolling text effect - COMPACTO */
 .star-wars-crawl {
   perspective: 400px;
   overflow: hidden;
@@ -137,22 +138,21 @@
   max-width: 100%;
 }
 .star-wars-content {
-  transform: rotateX(20deg);
+  transform: rotateX(15deg);
   transform-origin: center top;
-  animation: star-wars-float 4s ease-out forwards;
+  animation: star-wars-float-compact 3s ease-out forwards;
   width: 100%;
-  padding: 2rem;
 }
-@keyframes star-wars-float {
+@keyframes star-wars-float-compact {
   0% {
-    transform: rotateX(20deg) translateY(100px);
+    transform: rotateX(15deg) translateY(30px);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
   100% {
-    transform: rotateX(20deg) translateY(0);
+    transform: rotateX(15deg) translateY(0);
     opacity: 1;
   }
 }

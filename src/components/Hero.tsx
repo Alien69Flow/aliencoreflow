@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <div className="flex flex-col justify-center items-center mb-8 relative">
+          <div className="flex flex-col justify-center items-center mb-6 relative">
             <motion.img 
               src="/lovable-uploads/ALogo.png" 
               alt="AlienFlowSpaceDAO Logo" 
@@ -34,31 +34,35 @@ const Hero = () => {
             />
           </div>
           
-          <div className="mb-6">
-            <h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 text-glow text-center font-nasalization leading-tight"
-              style={{ 
-                fontFamily: "'Nasalization', sans-serif !important",
-                letterSpacing: '0.02em'
-              }}
-            >
-              <span className="text-alien-green">Δlieπ</span>
-              <span className="text-alien-gold">FlΦw</span>
-              <span className="text-alien-green"> $pac€</span>
-              <span className="text-alien-gold"> DAO</span>
-            </h1>
+          <div className="star-wars-crawl mb-4">
+            <div className="star-wars-content py-4">
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 text-glow text-center font-nasalization leading-tight"
+                style={{ 
+                  fontFamily: "'Nasalization', sans-serif !important",
+                  letterSpacing: '0.02em'
+                }}
+              >
+                <span className="text-alien-green">Δlieπ</span>
+                <span className="text-alien-gold">FlΦw</span>
+                <span className="text-alien-green"> $pac€</span>
+                <span className="text-alien-gold"> DAO</span>
+              </h1>
+            </div>
           </div>
           
-          <div className="mb-6">
-            <motion.p 
-              className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed"
-              style={{ letterSpacing: '0.01em' }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
-              Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
-            </motion.p>
+          <div className="star-wars-crawl mb-4">
+            <div className="star-wars-content py-2">
+              <motion.p 
+                className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed"
+                style={{ letterSpacing: '0.01em' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+              >
+                Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
+              </motion.p>
+            </div>
           </div>
         </motion.div>
         
