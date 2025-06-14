@@ -10,7 +10,7 @@ import ParticipationSection from '@/components/ParticipationSection';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-alien-space">
+    <div className="min-h-screen bg-alien-space relative">
       {/* Fixed background image with proper opacity */}
       <div className="fixed inset-0 z-0" style={{
         backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
