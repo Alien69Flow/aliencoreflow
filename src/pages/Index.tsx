@@ -10,9 +10,9 @@ import ParticipationSection from '@/components/ParticipationSection';
 
 const Index: React.FC = () => {
   return (
-    <div className="relative min-h-screen">
-      {/* Fixed background image with proper opacity - but lower z-index */}
-      <div className="fixed inset-0 -z-10" style={{
+    <>
+      {/* Fixed background image with proper opacity - behind everything */}
+      <div className="fixed inset-0 -z-20" style={{
         backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       {/* Star background effect */}
       <StarBackground />
       
-      {/* Content sections */}
+      {/* Content sections - no min-h-screen here to allow footer to show */}
       <div className="relative z-10">
         <Hero />
         <div className="container mx-auto text-center px-4 py-8 section-center">
@@ -37,7 +37,7 @@ const Index: React.FC = () => {
           <ParticipationSection />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
