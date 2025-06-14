@@ -7,9 +7,40 @@ import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linked
 const Contact: React.FC = () => {
   return (
     <div className="relative flex flex-col flex-1">
+      {/* Multiple background layers for cosmic effect */}
+      <div 
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/74c23ca3-be80-46d6-9817-d6a5cde81736.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.4,
+          zIndex: -30
+        }}
+      />
+      
+      {/* Second galaxy background layer */}
+      <div 
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/78a366c8-b4ad-4ae7-8358-3aae322b228f.png')`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2,
+          zIndex: -25
+        }}
+      />
+      
+      {/* Star background effect */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -20 }}>
+        <StarBackground />
+      </div>
+
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-4 pb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-nasalization">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-nasalization text-center">Contact Us</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
@@ -18,7 +49,7 @@ const Contact: React.FC = () => {
               </p>
               
               <div className="space-y-4">
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Mail className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -28,7 +59,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Disc className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -38,7 +69,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <X className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -48,7 +79,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Facebook className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -58,7 +89,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Instagram className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -68,7 +99,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Send className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -78,7 +109,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Github className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -88,7 +119,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-alien-space-dark/60 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/80 transition-colors">
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Linkedin className="h-5 w-5 text-alien-space-dark" />
                   </div>
@@ -100,7 +131,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-alien-space-dark/60 p-6 rounded-lg backdrop-blur-md">
+            <div className="bg-alien-space-dark/80 p-6 rounded-lg backdrop-blur-md border border-alien-gold/20">
               <h2 className="text-2xl font-semibold text-alien-green mb-4 font-nasalization">Send us a message</h2>
               <form className="space-y-4">
                 <div>
