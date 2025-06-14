@@ -7,7 +7,7 @@ import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linked
 const Contact: React.FC = () => {
   return (
     <div className="relative flex flex-col flex-1">
-      {/* Multiple background layers for cosmic effect */}
+      {/* First universe background layer */}
       <div 
         className="fixed inset-0 pointer-events-none"
         style={{
@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.4,
+          opacity: 0.6,
           zIndex: -30
         }}
       />
@@ -25,11 +25,12 @@ const Contact: React.FC = () => {
         className="fixed inset-0 pointer-events-none"
         style={{
           backgroundImage: `url('/lovable-uploads/78a366c8-b4ad-4ae7-8358-3aae322b228f.png')`,
-          backgroundSize: 'contain',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.2,
-          zIndex: -25
+          opacity: 0.4,
+          zIndex: -25,
+          mixBlendMode: 'screen'
         }}
       />
       
