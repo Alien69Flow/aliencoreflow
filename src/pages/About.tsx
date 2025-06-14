@@ -1,23 +1,13 @@
 import React from "react";
-import StarBackground from "@/components/StarBackground";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { GraduationCap, Users, Trophy } from "lucide-react";
 
 const About: React.FC = () => {
   return (
-    <div className="relative flex flex-col flex-1 bg-alien-space">
-      {/* Fondo de estrellas */}
-      <StarBackground />
-      {/* Fondo principal: debe ser absolute y -z-10 */}
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
-        }}
-      >
-        <div className="w-full h-full bg-black/50" />
-      </div>
+    <div className="relative flex flex-col flex-1">
       {/* Contenido principal */}
-      <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
+      <main className="relative z-10 flex-grow container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-4 font-nasalization">
             We offer INNOVATIVE SOLUTIONS with cutting-edge
@@ -48,6 +38,7 @@ const About: React.FC = () => {
                 and secure way. [...]
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-alien-space-dark/60 p-6 rounded-lg backdrop-blur-md border border-alien-gold/20">
                 <h3 className="text-xl font-semibold text-alien-gold mb-3 font-nasalization">
@@ -95,6 +86,7 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
+
             <div className="bg-alien-space-dark/60 p-6 rounded-lg backdrop-blur-md border border-alien-gold/20">
               <h3 className="text-2xl font-semibold text-alien-green mb-4 font-nasalization">
                 Our mission
@@ -122,23 +114,29 @@ const About: React.FC = () => {
                 sustainability, and more.
               </p>
             </div>
+
+            {/* Navigation Buttons */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <div className="bg-alien-space-dark/80 p-4 rounded-lg backdrop-blur-md border border-alien-gold/20 text-center w-48">
-                <h4 className="text-alien-gold font-semibold mb-2 font-nasalization">
-                  Academy
-                </h4>
-              </div>
-              <div className="bg-alien-space-dark/80 p-4 rounded-lg backdrop-blur-md border border-alien-gold/20 text-center w-48">
-                <h4 className="text-alien-gold font-semibold mb-2 font-nasalization">
-                  CoNetworking
-                </h4>
-              </div>
-              <div className="bg-alien-space-dark/80 p-4 rounded-lg backdrop-blur-md border border-alien-gold/20 text-center w-48">
-                <h4 className="text-alien-gold font-semibold mb-2 font-nasalization">
-                  Club
-                </h4>
-              </div>
+              <Link to="/academy">
+                <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark p-6 rounded-lg text-center w-48 h-20 flex flex-col items-center justify-center">
+                  <GraduationCap className="h-6 w-6 mb-2" />
+                  <span className="font-semibold font-nasalization">Academy</span>
+                </Button>
+              </Link>
+              <Link to="/conetworking">
+                <Button className="bg-alien-green hover:bg-alien-green-light text-alien-space-dark p-6 rounded-lg text-center w-48 h-20 flex flex-col items-center justify-center">
+                  <Users className="h-6 w-6 mb-2" />
+                  <span className="font-semibold font-nasalization">CoNetworking</span>
+                </Button>
+              </Link>
+              <Link to="/clubs">
+                <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark p-6 rounded-lg text-center w-48 h-20 flex flex-col items-center justify-center">
+                  <Trophy className="h-6 w-6 mb-2" />
+                  <span className="font-semibold font-nasalization">Club</span>
+                </Button>
+              </Link>
             </div>
+
             <div className="bg-alien-space-dark/60 p-6 rounded-lg backdrop-blur-md border border-alien-gold/20">
               <p className="mb-6">
                 Acquire Cryptos, NFTs, Tokens to Associate
