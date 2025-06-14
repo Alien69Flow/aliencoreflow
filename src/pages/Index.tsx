@@ -10,21 +10,27 @@ import ParticipationSection from '@/components/ParticipationSection';
 
 const Index: React.FC = () => {
   return (
-    <>
-      {/* Fixed background image with proper opacity - behind everything */}
-      <div className="fixed inset-0 -z-20" style={{
-        backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        opacity: 0.3
-      }}></div>
+    <div className="relative">
+      {/* Fixed background image - positioned behind everything */}
+      <div 
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/EMWBack.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.3,
+          zIndex: -30
+        }}
+      />
       
-      {/* Star background effect */}
-      <StarBackground />
+      {/* Star background effect - also behind content */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -20 }}>
+        <StarBackground />
+      </div>
       
-      {/* Content sections - no min-h-screen here to allow footer to show */}
-      <div className="relative z-10">
+      {/* Main content - ensure it has proper height and flow */}
+      <div className="relative z-10 min-h-screen">
         <Hero />
         <div className="container mx-auto text-center px-4 py-8 section-center">
           <h2 className="text-4xl md:text-5xl mb-4 text-alien-gold font-nasalization">₿£€$$</h2>
@@ -37,7 +43,7 @@ const Index: React.FC = () => {
           <ParticipationSection />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
