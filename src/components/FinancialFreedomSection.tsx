@@ -23,34 +23,24 @@ const FinancialFreedomSection = () => {
 
   const benefits = [
     {
-      icon: Bitcoin,
-      title: "Impartial Money",
-      description: "Does not discriminate"
-    },
-    {
-      icon: Globe,
-      title: "Decentralized",
-      description: "Global accessibility"
-    },
-    {
       icon: TrendingUp,
-      title: "Scalable & Stable",
-      description: "Growth potential"
+      title: "Scalable Growth",
+      description: "Exponential potential"
     },
     {
       icon: Shield,
-      title: "Safe Reserves",
-      description: "Secure wealth storage"
+      title: "Secure Storage",
+      description: "Protected wealth"
     },
     {
       icon: Zap,
-      title: "Instant Access",
-      description: "Immediate transactions"
+      title: "Instant Transactions",
+      description: "Real-time access"
     },
     {
       icon: Coins,
-      title: "Crypto & NFTs",
-      description: "Digital experiences"
+      title: "Digital Assets",
+      description: "NFTs & tokens"
     }
   ];
 
@@ -97,9 +87,6 @@ const FinancialFreedomSection = () => {
             className="space-y-6"
           >
             <div className="card-border p-8 backdrop-blur-md">
-              <h4 className="text-2xl font-bold text-alien-green mb-4 font-nasalization">
-                Digital Money Advantage
-              </h4>
               <p className="text-lg text-gray-300 font-[Exo] leading-relaxed mb-6">
                 Any Individual or Professional can Understand the Advantage of Digital Money:
               </p>
