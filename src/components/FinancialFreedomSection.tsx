@@ -174,7 +174,7 @@ const FinancialFreedomSection = () => {
               className="text-3xl md:text-4xl font-bold mb-4 text-alien-gold font-nasalization"
             >
               A₿tc <span className="text-sm text-gray-400">(Aurum nostrum non est aurum vulgi)</span>
-            </h3>
+            </motion.h3>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
