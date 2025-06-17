@@ -13,20 +13,10 @@ const FinancialFreedomSection = () => {
     script.async = true;
     document.head.appendChild(script);
 
-    // Load TradingView widget script
-    const tradingViewScript = document.createElement('script');
-    tradingViewScript.type = 'text/javascript';
-    tradingViewScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js';
-    tradingViewScript.async = true;
-    document.head.appendChild(tradingViewScript);
-
     return () => {
       // Cleanup scripts on unmount
       if (document.head.contains(script)) {
         document.head.removeChild(script);
-      }
-      if (document.head.contains(tradingViewScript)) {
-        document.head.removeChild(tradingViewScript);
       }
     };
   }, []);
@@ -60,7 +50,7 @@ const FinancialFreedomSection = () => {
       <div className="absolute inset-0 bg-gradient-radial from-alien-green/5 via-transparent to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header Section - Centered and Balanced */}
+        {/* Header Section - Two Line Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,11 +58,13 @@ const FinancialFreedomSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-block relative mb-8">
-            <h2 className="text-5xl md:text-7xl font-bold mb-4 text-alien-gold text-glow font-nasalization tracking-wider">
-              ₿£€$$ <span className="text-3xl md:text-4xl text-alien-green">Financial Freedom for the Free Earth</span>
+          <div className="space-y-4">
+            <h2 className="text-6xl md:text-8xl font-bold text-alien-gold font-nasalization tracking-wider">
+              ₿£€$$
             </h2>
-            <div className="absolute -inset-4 bg-gradient-to-r from-alien-gold/20 to-alien-green/20 blur-xl rounded-full" />
+            <h3 className="text-3xl md:text-5xl font-bold text-alien-green font-nasalization tracking-wide">
+              Financial Freedom for the Free Earth
+            </h3>
           </div>
         </motion.div>
 
@@ -89,15 +81,15 @@ const FinancialFreedomSection = () => {
               Any individual or professional can understand the advantage of digital Money:
             </p>
             
-            <div className="space-y-6 text-left max-w-3xl mx-auto">
-              <div className="flex items-start gap-4">
+            <div className="space-y-6 text-center max-w-3xl mx-auto">
+              <div className="flex items-center justify-center gap-4">
                 <span className="text-alien-gold text-xl">·</span>
                 <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
                   <span className="text-alien-gold font-semibold">Impartial Money:</span> that does not discriminate.
                 </p>
               </div>
               
-              <div className="flex items-start gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <span className="text-alien-gold text-xl">·</span>
                 <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
                   <span className="text-alien-green font-semibold">Decentralized Currencies:</span> Scalable and Stable with the Volatility for Safe Reserves of Values.
@@ -197,16 +189,15 @@ const FinancialFreedomSection = () => {
               <span className="text-alien-gold font-semibold font-[Exo]">Interoperable</span>
             </motion.div>
 
-            {/* Widgets Section - Side by Side */}
+            {/* CoinMarketCap Widget - Solo este */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+              className="max-w-2xl mx-auto"
             >
-              {/* CoinMarketCap Widget */}
-              <div className="bg-alien-space-dark/50 rounded-lg border border-alien-gold/20 p-4">
+              <div className="bg-alien-space-dark/50 rounded-lg border border-alien-gold/20 p-6">
                 <h4 className="text-lg font-bold text-alien-gold font-nasalization mb-4 text-center">Bitcoin Price</h4>
                 <div 
                   className="coinmarketcap-currency-widget" 
@@ -220,30 +211,6 @@ const FinancialFreedomSection = () => {
                   data-statsticker="true" 
                   data-stats="USD"
                 ></div>
-              </div>
-
-              {/* TradingView Bitcoin Dominance Widget */}
-              <div className="bg-alien-space-dark/50 rounded-lg border border-alien-green/20 p-4">
-                <h4 className="text-lg font-bold text-alien-green font-nasalization mb-4 text-center">Bitcoin Dominance</h4>
-                <div className="tradingview-widget-container h-48">
-                  <div 
-                    className="tradingview-widget-container__widget h-full"
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
-                        {
-                          "symbol": "CRYPTOCAP:BTC.D",
-                          "width": "100%",
-                          "height": "192",
-                          "locale": "en",
-                          "colorTheme": "dark",
-                          "isTransparent": true
-                        }
-                        </script>
-                      `
-                    }}
-                  />
-                </div>
               </div>
             </motion.div>
           </div>
