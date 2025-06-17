@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bitcoin, TrendingUp, Shield } from 'lucide-react';
+import { Bitcoin, TrendingUp, Shield, Coins, Zap, Globe } from 'lucide-react';
 import AnimatedText from './AnimatedText';
 
 const FinancialFreedomSection = () => {
@@ -21,74 +21,208 @@ const FinancialFreedomSection = () => {
     };
   }, []);
 
+  const benefits = [
+    {
+      icon: Bitcoin,
+      title: "Impartial Money",
+      description: "Does not discriminate"
+    },
+    {
+      icon: Globe,
+      title: "Decentralized",
+      description: "Global accessibility"
+    },
+    {
+      icon: TrendingUp,
+      title: "Scalable & Stable",
+      description: "Growth potential"
+    },
+    {
+      icon: Shield,
+      title: "Safe Reserves",
+      description: "Secure wealth storage"
+    },
+    {
+      icon: Zap,
+      title: "Instant Access",
+      description: "Immediate transactions"
+    },
+    {
+      icon: Coins,
+      title: "Crypto & NFTs",
+      description: "Digital experiences"
+    }
+  ];
+
   return (
-    <section className="py-16 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-alien-green/5 via-transparent to-transparent" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-alien-gold text-glow font-nasalization">
-            ₿£€$$
-          </h2>
-          <h3 className="text-3xl font-bold mb-6 text-alien-gold text-glow font-nasalization">
+          <div className="inline-block relative">
+            <h2 className="text-6xl md:text-8xl font-bold mb-4 text-alien-gold text-glow font-nasalization tracking-wider">
+              ₿£€$$
+            </h2>
+            <div className="absolute -inset-4 bg-gradient-to-r from-alien-gold/20 to-alien-green/20 blur-xl rounded-full" />
+          </div>
+          
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-8 text-alien-gold text-glow font-nasalization"
+          >
             Financial Freedom
-          </h3>
-
-          <div className="flex justify-center mb-6 gap-8">
-            <Bitcoin className="text-alien-gold h-12 w-12" />
-            <TrendingUp className="text-alien-green h-12 w-12" />
-            <Shield className="text-alien-gold h-12 w-12" />
-          </div>
-
-          <div className="max-w-5xl mx-auto space-y-4 mb-8">
-            <AnimatedText className="text-lg text-gray-300 font-[Exo] leading-relaxed">
-              Any Individual or Professional can Understand the Advantage of Digital Money:
-            </AnimatedText>
-            <AnimatedText className="text-lg text-gray-300 font-[Exo] leading-relaxed">
-              Impartial Money that does not discriminate, Decentralized Currencies, Scalable and Stable with the Volatility for Safe Reserves of Values, allowing individuals to secure their wealth while enjoying the benefits of a decentralized economy.
-            </AnimatedText>
-            <AnimatedText className="text-lg text-gray-300 font-[Exo] leading-relaxed">
-              Access with Cryptokens and NFTs to Order & Generate All Types of Experiences, Products & Services According to your Demands Instantly...
-            </AnimatedText>
-          </div>
+          </motion.h3>
         </motion.div>
 
-        {/* ABTC Token Highlight */}
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left: Main Description */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div className="card-border p-8 backdrop-blur-md">
+              <h4 className="text-2xl font-bold text-alien-green mb-4 font-nasalization">
+                Digital Money Advantage
+              </h4>
+              <p className="text-lg text-gray-300 font-[Exo] leading-relaxed mb-6">
+                Any Individual or Professional can Understand the Advantage of Digital Money:
+              </p>
+              
+              <div className="space-y-4 text-gray-300 font-[Exo]">
+                <p className="leading-relaxed">
+                  <span className="text-alien-gold font-semibold">Impartial Money</span> that does not discriminate, 
+                  <span className="text-alien-green font-semibold"> Decentralized Currencies</span>, 
+                  Scalable and Stable with the Volatility for Safe Reserves of Values.
+                </p>
+                <p className="leading-relaxed">
+                  Allowing individuals to <span className="text-alien-gold font-semibold">secure their wealth</span> while 
+                  enjoying the benefits of a <span className="text-alien-green font-semibold">decentralized economy</span>.
+                </p>
+                <p className="leading-relaxed">
+                  Access with <span className="text-alien-gold font-semibold">Cryptokens and NFTs</span> to Order & Generate 
+                  All Types of Experiences, Products & Services According to your Demands 
+                  <span className="text-alien-green font-semibold"> Instantly</span>...
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right: Benefits Grid */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 gap-4"
+          >
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                viewport={{ once: true }}
+                className="card-border p-4 text-center hover:scale-105 transition-transform duration-300"
+              >
+                <benefit.icon className="h-8 w-8 text-alien-gold mx-auto mb-2" />
+                <h5 className="font-bold text-sm text-alien-green font-nasalization mb-1">
+                  {benefit.title}
+                </h5>
+                <p className="text-xs text-gray-400 font-[Exo]">
+                  {benefit.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* ABTC Token Highlight - Enhanced */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="card-border p-6 max-w-4xl mx-auto text-center mb-8"
+          className="card-border p-8 max-w-6xl mx-auto text-center relative overflow-hidden"
         >
-          <h3 className="text-2xl font-bold mb-3 text-alien-gold font-nasalization">
-            A₿tc (Aurum nostrum non est aurum vulgi)
-          </h3>
-          <p className="text-gray-300 mb-4 font-[Exo]">
-            Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, providing scalability, stability and growth potential (Φπ)...
-          </p>
-          <div className="inline-block bg-alien-space-dark px-4 py-2 rounded-full text-alien-green border border-alien-green/30 mb-6">
-            • Bitcoin-backed + Interoperable
-          </div>
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 bg-gradient-to-br from-alien-gold/5 via-transparent to-alien-green/5" />
+          <div className="absolute top-0 left-0 w-32 h-32 bg-alien-gold/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-alien-green/10 rounded-full blur-3xl" />
           
-          {/* CoinMarketCap Widget */}
-          <div className="mt-6 flex justify-center">
-            <div 
-              className="coinmarketcap-currency-widget" 
-              data-currencyid="1" 
-              data-base="USD" 
-              data-secondary="BTC" 
-              data-ticker="true" 
-              data-rank="true" 
-              data-marketcap="true" 
-              data-volume="true" 
-              data-statsticker="true" 
-              data-stats="USD"
-            ></div>
+          <div className="relative z-10">
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl font-bold mb-4 text-alien-gold font-nasalization"
+            >
+              A₿tc <span className="text-sm text-gray-400">(Aurum nostrum non est aurum vulgi)</span>
+            </h3>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="text-lg text-gray-300 mb-6 font-[Exo] max-w-3xl mx-auto"
+            >
+              Aurum ₿itoin cryptoken serves as collateral and derivative of Bitcoin and gold, 
+              providing <span className="text-alien-green font-semibold">scalability</span>, 
+              <span className="text-alien-gold font-semibold"> stability</span> and 
+              <span className="text-alien-green font-semibold"> growth potential (Φπ)</span>...
+            </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-alien-space-dark to-alien-space px-6 py-3 rounded-full border border-alien-green/30 mb-8"
+            >
+              <Bitcoin className="h-5 w-5 text-alien-gold" />
+              <span className="text-alien-green font-semibold font-[Exo]">Bitcoin-backed</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-alien-gold font-semibold font-[Exo]">Interoperable</span>
+            </motion.div>
+            
+            {/* CoinMarketCap Widget */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <div 
+                className="coinmarketcap-currency-widget bg-alien-space-dark/50 p-4 rounded-lg border border-alien-gold/20" 
+                data-currencyid="1" 
+                data-base="USD" 
+                data-secondary="BTC" 
+                data-ticker="true" 
+                data-rank="true" 
+                data-marketcap="true" 
+                data-volume="true" 
+                data-statsticker="true" 
+                data-stats="USD"
+              ></div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
