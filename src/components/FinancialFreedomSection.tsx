@@ -55,7 +55,7 @@ const FinancialFreedomSection = () => {
             <h2 className="text-6xl text-alien-gold font-nasalization tracking-wider md:text-5xl font-bold">
               ₿£€$$
             </h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-alien-green font-nasalization tracking-wide">
+            <h3 className="text-3xl font-bold text-alien-green font-nasalization tracking-wide md:text-4xl">
               Financial Freedom for the Free Earth
             </h3>
           </div>
