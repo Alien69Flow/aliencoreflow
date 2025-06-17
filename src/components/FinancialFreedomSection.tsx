@@ -13,10 +13,20 @@ const FinancialFreedomSection = () => {
     script.async = true;
     document.head.appendChild(script);
 
+    // Load TradingView widget script
+    const tradingViewScript = document.createElement('script');
+    tradingViewScript.type = 'text/javascript';
+    tradingViewScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js';
+    tradingViewScript.async = true;
+    document.head.appendChild(tradingViewScript);
+
     return () => {
-      // Cleanup script on unmount
+      // Cleanup scripts on unmount
       if (document.head.contains(script)) {
         document.head.removeChild(script);
+      }
+      if (document.head.contains(tradingViewScript)) {
+        document.head.removeChild(tradingViewScript);
       }
     };
   }, []);
@@ -50,7 +60,7 @@ const FinancialFreedomSection = () => {
       <div className="absolute inset-0 bg-gradient-radial from-alien-green/5 via-transparent to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header Section */}
+        {/* Header Section - Centered and Balanced */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,94 +68,92 @@ const FinancialFreedomSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-block relative">
-            <h2 className="text-6xl md:text-8xl font-bold mb-4 text-alien-gold text-glow font-nasalization tracking-wider">
-              ₿£€$$
+          <div className="inline-block relative mb-8">
+            <h2 className="text-5xl md:text-7xl font-bold mb-4 text-alien-gold text-glow font-nasalization tracking-wider">
+              ₿£€$$ <span className="text-3xl md:text-4xl text-alien-green">for the Free Earth</span>
             </h2>
             <div className="absolute -inset-4 bg-gradient-to-r from-alien-gold/20 to-alien-green/20 blur-xl rounded-full" />
           </div>
-          
-          <motion.h3 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-8 text-alien-gold text-glow font-nasalization"
-          >
-            Financial Freedom
-          </motion.h3>
         </motion.div>
 
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left: Main Description */}
+        {/* Main Content - Centered Layout */}
+        <div className="max-w-4xl mx-auto mb-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="card-border p-8 backdrop-blur-md text-center"
           >
-            <div className="card-border p-8 backdrop-blur-md">
-              <p className="text-lg text-gray-300 font-[Exo] leading-relaxed mb-6">
-                Any Individual or Professional can Understand the Advantage of Digital Money:
-              </p>
+            <p className="text-xl text-gray-300 font-[Exo] leading-relaxed mb-8">
+              Any individual or professional can understand the advantage of digital Money:
+            </p>
+            
+            <div className="space-y-6 text-left max-w-3xl mx-auto">
+              <div className="flex items-start gap-4">
+                <span className="text-alien-gold text-xl">·</span>
+                <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
+                  <span className="text-alien-gold font-semibold">Impartial Money:</span> that does not discriminate.
+                </p>
+              </div>
               
-              <div className="space-y-4 text-gray-300 font-[Exo]">
-                <p className="leading-relaxed">
-                  <span className="text-alien-gold font-semibold">Impartial Money</span> that does not discriminate, 
-                  <span className="text-alien-green font-semibold"> Decentralized Currencies</span>, 
-                  Scalable and Stable with the Volatility for Safe Reserves of Values.
-                </p>
-                <p className="leading-relaxed">
-                  Allowing individuals to <span className="text-alien-gold font-semibold">secure their wealth</span> while 
-                  enjoying the benefits of a <span className="text-alien-green font-semibold">decentralized economy</span>.
-                </p>
-                <p className="leading-relaxed">
-                  Access with <span className="text-alien-gold font-semibold">Cryptokens and NFTs</span> to Order & Generate 
-                  All Types of Experiences, Products & Services According to your Demands 
-                  <span className="text-alien-green font-semibold"> Instantly</span>...
+              <div className="flex items-start gap-4">
+                <span className="text-alien-gold text-xl">·</span>
+                <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
+                  <span className="text-alien-green font-semibold">Decentralized Currencies:</span> Scalable and Stable with the Volatility for Safe Reserves of Values.
                 </p>
               </div>
             </div>
-          </motion.div>
-
-          {/* Right: Benefits Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
-          >
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                viewport={{ once: true }}
-                className="card-border p-4 text-center hover:scale-105 transition-transform duration-300"
-              >
-                <benefit.icon className="h-8 w-8 text-alien-gold mx-auto mb-2" />
-                <h5 className="font-bold text-sm text-alien-green font-nasalization mb-1">
-                  {benefit.title}
-                </h5>
-                <p className="text-xs text-gray-400 font-[Exo]">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
+            
+            <div className="mt-8 space-y-4 text-center">
+              <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
+                Allowing individuals to <span className="text-alien-gold font-semibold">secure their wealth</span> while 
+                enjoying the benefits of a <span className="text-alien-green font-semibold">decentralized economy</span>.
+              </p>
+              <p className="text-lg text-gray-300 font-[Exo] leading-relaxed">
+                Access with <span className="text-alien-gold font-semibold">Cryptokens and NFTs</span> to Order & Generate 
+                All Types of Experiences, Products & Services According to your Demands 
+                <span className="text-alien-green font-semibold"> Instantly</span>...
+              </p>
+            </div>
           </motion.div>
         </div>
 
-        {/* ABTC Token Highlight - Enhanced */}
+        {/* Benefits Grid - Smaller and Complementary */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto"
+        >
+          {benefits.map((benefit, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              className="card-border p-4 text-center hover:scale-105 transition-transform duration-300"
+            >
+              <benefit.icon className="h-6 w-6 text-alien-gold mx-auto mb-2" />
+              <h5 className="font-bold text-xs text-alien-green font-nasalization mb-1">
+                {benefit.title}
+              </h5>
+              <p className="text-xs text-gray-400 font-[Exo]">
+                {benefit.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* ABTC Token Highlight */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="card-border p-8 max-w-6xl mx-auto text-center relative overflow-hidden"
+          className="card-border p-8 max-w-6xl mx-auto text-center relative overflow-hidden mb-12"
         >
           {/* Background decorative elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-alien-gold/5 via-transparent to-alien-green/5" />
@@ -188,28 +196,53 @@ const FinancialFreedomSection = () => {
               <span className="text-gray-400">•</span>
               <span className="text-alien-gold font-semibold font-[Exo]">Interoperable</span>
             </motion.div>
-            
-            {/* CoinMarketCap Widget */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
-              <div 
-                className="coinmarketcap-currency-widget bg-alien-space-dark/50 p-4 rounded-lg border border-alien-gold/20" 
-                data-currencyid="1" 
-                data-base="USD" 
-                data-secondary="BTC" 
-                data-ticker="true" 
-                data-rank="true" 
-                data-marketcap="true" 
-                data-volume="true" 
-                data-statsticker="true" 
-                data-stats="USD"
-              ></div>
-            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Widgets Section - Side by Side */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto"
+        >
+          {/* CoinMarketCap Widget */}
+          <div className="card-border p-4 text-center">
+            <h4 className="text-lg font-bold text-alien-gold font-nasalization mb-4">Bitcoin Price</h4>
+            <div 
+              className="coinmarketcap-currency-widget bg-alien-space-dark/50 rounded-lg" 
+              data-currencyid="1" 
+              data-base="USD" 
+              data-secondary="BTC" 
+              data-ticker="true" 
+              data-rank="true" 
+              data-marketcap="true" 
+              data-volume="true" 
+              data-statsticker="true" 
+              data-stats="USD"
+            ></div>
+          </div>
+
+          {/* TradingView Bitcoin Dominance Widget */}
+          <div className="card-border p-4 text-center">
+            <h4 className="text-lg font-bold text-alien-green font-nasalization mb-4">Bitcoin Dominance</h4>
+            <div className="tradingview-widget-container bg-alien-space-dark/50 rounded-lg overflow-hidden">
+              <div className="tradingview-widget-container__widget"></div>
+              <script type="text/javascript" async>
+              {`
+                new TradingView.widget({
+                  "symbol": "CRYPTOCAP:BTC.D",
+                  "width": "100%",
+                  "height": "200",
+                  "locale": "en",
+                  "colorTheme": "dark",
+                  "isTransparent": true,
+                  "container_id": "tradingview_widget"
+                });
+              `}
+              </script>
+            </div>
           </div>
         </motion.div>
       </div>
