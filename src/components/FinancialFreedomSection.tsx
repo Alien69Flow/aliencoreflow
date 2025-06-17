@@ -70,7 +70,7 @@ const FinancialFreedomSection = () => {
         >
           <div className="inline-block relative mb-8">
             <h2 className="text-5xl md:text-7xl font-bold mb-4 text-alien-gold text-glow font-nasalization tracking-wider">
-              ₿£€$$ <span className="text-3xl md:text-4xl text-alien-green">for the Free Earth</span>
+              ₿£€$$ <span className="text-3xl md:text-4xl text-alien-green">Financial Freedom for the Free Earth</span>
             </h2>
             <div className="absolute -inset-4 bg-gradient-to-r from-alien-gold/20 to-alien-green/20 blur-xl rounded-full" />
           </div>
@@ -196,53 +196,56 @@ const FinancialFreedomSection = () => {
               <span className="text-gray-400">•</span>
               <span className="text-alien-gold font-semibold font-[Exo]">Interoperable</span>
             </motion.div>
-          </div>
-        </motion.div>
 
-        {/* Widgets Section - Side by Side */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto"
-        >
-          {/* CoinMarketCap Widget */}
-          <div className="card-border p-4 text-center">
-            <h4 className="text-lg font-bold text-alien-gold font-nasalization mb-4">Bitcoin Price</h4>
-            <div 
-              className="coinmarketcap-currency-widget bg-alien-space-dark/50 rounded-lg" 
-              data-currencyid="1" 
-              data-base="USD" 
-              data-secondary="BTC" 
-              data-ticker="true" 
-              data-rank="true" 
-              data-marketcap="true" 
-              data-volume="true" 
-              data-statsticker="true" 
-              data-stats="USD"
-            ></div>
-          </div>
+            {/* Widgets Section - Side by Side */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+              className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+            >
+              {/* CoinMarketCap Widget */}
+              <div className="bg-alien-space-dark/50 rounded-lg border border-alien-gold/20 p-4">
+                <h4 className="text-lg font-bold text-alien-gold font-nasalization mb-4 text-center">Bitcoin Price</h4>
+                <div 
+                  className="coinmarketcap-currency-widget" 
+                  data-currencyid="1" 
+                  data-base="USD" 
+                  data-secondary="BTC" 
+                  data-ticker="true" 
+                  data-rank="true" 
+                  data-marketcap="true" 
+                  data-volume="true" 
+                  data-statsticker="true" 
+                  data-stats="USD"
+                ></div>
+              </div>
 
-          {/* TradingView Bitcoin Dominance Widget */}
-          <div className="card-border p-4 text-center">
-            <h4 className="text-lg font-bold text-alien-green font-nasalization mb-4">Bitcoin Dominance</h4>
-            <div className="tradingview-widget-container bg-alien-space-dark/50 rounded-lg overflow-hidden">
-              <div className="tradingview-widget-container__widget"></div>
-              <script type="text/javascript" async>
-              {`
-                new TradingView.widget({
-                  "symbol": "CRYPTOCAP:BTC.D",
-                  "width": "100%",
-                  "height": "200",
-                  "locale": "en",
-                  "colorTheme": "dark",
-                  "isTransparent": true,
-                  "container_id": "tradingview_widget"
-                });
-              `}
-              </script>
-            </div>
+              {/* TradingView Bitcoin Dominance Widget */}
+              <div className="bg-alien-space-dark/50 rounded-lg border border-alien-green/20 p-4">
+                <h4 className="text-lg font-bold text-alien-green font-nasalization mb-4 text-center">Bitcoin Dominance</h4>
+                <div className="tradingview-widget-container h-48">
+                  <div 
+                    className="tradingview-widget-container__widget h-full"
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+                        {
+                          "symbol": "CRYPTOCAP:BTC.D",
+                          "width": "100%",
+                          "height": "192",
+                          "locale": "en",
+                          "colorTheme": "dark",
+                          "isTransparent": true
+                        }
+                        </script>
+                      `
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
