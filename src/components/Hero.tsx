@@ -54,9 +54,7 @@ const Hero = () => {
             }} transition={{
               delay: 0.3,
               duration: 0.8
-            }}>
-                Access & Explore the DAO with Innovative Solutions, Unlock Energy Efficiency & Environmental Sustainability, Uniting: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem.
-              </motion.p>
+            }}>Access the DAO with Innovative Solutions, Unlocks Energy Efficiency &amp; Environmental Sustainability, Exploring: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem united.</motion.p>
             </div>
           </div>
         </motion.div>
