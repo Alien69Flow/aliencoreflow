@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ScrollText, Globe, Orbit } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-16 overflow-hidden">
       <div className="container relative z-10 px-4 mx-auto text-center">
@@ -45,7 +47,7 @@ const Hero = () => {
           
           <div className="star-wars-crawl mb-4">
             <div className="star-wars-content py-2">
-              <motion.p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed" style={{
+              <motion.div className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] text-center leading-relaxed" style={{
               letterSpacing: '0.01em'
             }} initial={{
               opacity: 0
@@ -54,7 +56,10 @@ const Hero = () => {
             }} transition={{
               delay: 0.3,
               duration: 0.8
-            }}>Access the DAO with Innovative Solutions, Unlocks Energy Efficiency &amp; Environmental Sustainability, Exploring: BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi, and TradFi under one cosmic ecosystem united.</motion.p>
+            }}>
+                <p className="mb-2">Access the DAO with Innovative Solutions, Unlocks Energy Efficiency & Environmental Sustainability.</p>
+                <p>Advantages Boosting the BENEFITS, for Connecting you and Raise your QUALITY of LIFE, with Mutual PROFITS…</p>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -90,4 +95,5 @@ const Hero = () => {
       </div>
     </div>;
 };
+
 export default Hero;
