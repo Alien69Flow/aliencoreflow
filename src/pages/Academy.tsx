@@ -2,16 +2,21 @@ import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const CourseCard = ({ title, description, icon, level, duration, color }: {
+const CourseCard = ({
+  title,
+  description,
+  icon,
+  level,
+  duration,
+  color
+}: {
   title: string;
   description: string;
   icon: React.ReactNode;
   level: string;
   duration: string;
   color: string;
-}) => (
-  <div className="bg-alien-space-dark/60 backdrop-blur-md rounded-lg overflow-hidden border border-alien-gold/20 hover:border-alien-gold/50 transition-all hover:transform hover:scale-[1.01]">
+}) => <div className="bg-alien-space-dark/60 backdrop-blur-md rounded-lg overflow-hidden border border-alien-gold/20 hover:border-alien-gold/50 transition-all hover:transform hover:scale-[1.01]">
     <div className={`h-2 ${color}`}></div>
     <div className="p-6">
       <div className="flex items-start justify-between mb-4">
@@ -29,71 +34,60 @@ const CourseCard = ({ title, description, icon, level, duration, color }: {
         Explore Course
       </Button>
     </div>
-  </div>
-);
-
+  </div>;
 const Academy: React.FC = () => {
-  const courses = [
-    {
-      title: "Blockchain Fundamentals",
-      description: "Learn the core concepts of blockchain technology, cryptocurrencies, and decentralized networks.",
-      icon: <BookOpen className="h-6 w-6 text-alien-gold" />,
-      level: "Beginner",
-      duration: "6 hours",
-      color: "bg-green-500"
-    },
-    {
-      title: "DeFi Mastery",
-      description: "Dive deep into decentralized finance protocols, yield farming, and liquidity provision.",
-      icon: <Sparkles className="h-6 w-6 text-alien-gold" />,
-      level: "Intermediate",
-      duration: "12 hours",
-      color: "bg-blue-500"
-    },
-    {
-      title: "Tokenomics Design",
-      description: "Understand how to create sustainable token economies and incentive mechanisms.",
-      icon: <Award className="h-6 w-6 text-alien-gold" />,
-      level: "Advanced",
-      duration: "8 hours",
-      color: "bg-purple-500"
-    },
-    {
-      title: "Smart Contract Development",
-      description: "Learn to code, deploy, and audit secure smart contracts on multiple blockchains.",
-      icon: <BookOpen className="h-6 w-6 text-alien-gold" />,
-      level: "Advanced",
-      duration: "15 hours",
-      color: "bg-red-500"
-    },
-    {
-      title: "DAO Governance",
-      description: "Master the principles of decentralized governance and community coordination.",
-      icon: <Users className="h-6 w-6 text-alien-gold" />,
-      level: "Intermediate",
-      duration: "9 hours",
-      color: "bg-yellow-500"
-    },
-    {
-      title: "Web3 Privacy & Security",
-      description: "Protect your assets and identity in the decentralized ecosystem.",
-      icon: <Video className="h-6 w-6 text-alien-gold" />,
-      level: "All Levels",
-      duration: "7 hours",
-      color: "bg-emerald-500"
-    }
-  ];
-
-  return (
-    <div className="relative flex flex-col flex-1">
+  const courses = [{
+    title: "Blockchain Fundamentals",
+    description: "Learn the core concepts of blockchain technology, cryptocurrencies, and decentralized networks.",
+    icon: <BookOpen className="h-6 w-6 text-alien-gold" />,
+    level: "Beginner",
+    duration: "6 hours",
+    color: "bg-green-500"
+  }, {
+    title: "DeFi Mastery",
+    description: "Dive deep into decentralized finance protocols, yield farming, and liquidity provision.",
+    icon: <Sparkles className="h-6 w-6 text-alien-gold" />,
+    level: "Intermediate",
+    duration: "12 hours",
+    color: "bg-blue-500"
+  }, {
+    title: "Tokenomics Design",
+    description: "Understand how to create sustainable token economies and incentive mechanisms.",
+    icon: <Award className="h-6 w-6 text-alien-gold" />,
+    level: "Advanced",
+    duration: "8 hours",
+    color: "bg-purple-500"
+  }, {
+    title: "Smart Contract Development",
+    description: "Learn to code, deploy, and audit secure smart contracts on multiple blockchains.",
+    icon: <BookOpen className="h-6 w-6 text-alien-gold" />,
+    level: "Advanced",
+    duration: "15 hours",
+    color: "bg-red-500"
+  }, {
+    title: "DAO Governance",
+    description: "Master the principles of decentralized governance and community coordination.",
+    icon: <Users className="h-6 w-6 text-alien-gold" />,
+    level: "Intermediate",
+    duration: "9 hours",
+    color: "bg-yellow-500"
+  }, {
+    title: "Web3 Privacy & Security",
+    description: "Protect your assets and identity in the decentralized ecosystem.",
+    icon: <Video className="h-6 w-6 text-alien-gold" />,
+    level: "All Levels",
+    duration: "7 hours",
+    color: "bg-emerald-500"
+  }];
+  return <div className="relative flex flex-col flex-1">
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-4 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <GraduationCap className="h-12 w-12 text-alien-gold mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">Academy</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
-              Expand your cosmic knowledge and master the principles of decentralized technologies through our immersive learning experiences.
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">Acquiring full attention capacities, to connect discovering expand knowledge and skills, this helps you to evolve and drive you to the optimal experience with the fullness of the flow, as well as increase the benefits of your quality of life, more sustainable profits, with a complete well being, exploring both ancestral techniques and vanguard technologies.
+
+Connect at a deeper level with yourself, your world and this planet, this is our Holistic Health Wealth.</p>
           </div>
 
           {/* Featured Course */}
@@ -132,9 +126,7 @@ const Academy: React.FC = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-alien-gold mb-8 font-nasalization">Featured Courses</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {courses.map((course, index) => (
-                <CourseCard key={index} {...course} />
-              ))}
+              {courses.map((course, index) => <CourseCard key={index} {...course} />)}
             </div>
           </div>
 
@@ -155,8 +147,6 @@ const Academy: React.FC = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Academy;
