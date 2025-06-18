@@ -1,26 +1,22 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { GraduationCap, Users, Trophy } from "lucide-react";
-
 const About: React.FC = () => {
-  return (
-    <div className="relative flex flex-col flex-1 min-h-screen">
+  return <div className="relative flex flex-col flex-1 min-h-screen">
       {/* New cosmic background with improved overlay */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/808e8413-144f-4a4c-834a-cc55fceac706.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          zIndex: -20
-        }}
-      />
+      <div className="fixed inset-0 pointer-events-none" style={{
+      backgroundImage: `url('/lovable-uploads/808e8413-144f-4a4c-834a-cc55fceac706.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      zIndex: -20
+    }} />
       
       {/* Improved overlay for better text readability */}
-      <div className="fixed inset-0 pointer-events-none bg-black/40 backdrop-blur-[1px]" style={{ zIndex: -15 }} />
+      <div className="fixed inset-0 pointer-events-none bg-black/40 backdrop-blur-[1px]" style={{
+      zIndex: -15
+    }} />
 
       {/* Main content */}
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-8 pb-16">
@@ -106,22 +102,16 @@ const About: React.FC = () => {
                   Our Mission
                 </h3>
                 <div className="w-32 h-1 bg-gradient-to-r from-alien-green to-alien-gold mx-auto mb-6"></div>
-                <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-                  Create the best experiences and synergies that generate greater value for the planet and its beings, implementing environmentally friendly solutions.
-                </p>
+                <p className="text-lg leading-relaxed max-w-3xl mx-auto">We are dedicated to creating the best experiences and synergies that generate greater value for the planet and its beings, implementing eficiency and environmentally sustainable friendly solutions. We strive for continuous improvement, overcoming challenges to offer our best every day through our actions.</p>
               </div>
               
               <div className="text-center">
-                <h3 className="text-3xl font-semibold text-alien-gold mb-4 font-nasalization text-glow">
-                  Our Values
-                </h3>
+                <h3 className="text-3xl font-semibold text-alien-gold mb-4 font-nasalization text-glow">Our Values and Vision</h3>
                 <div className="w-32 h-1 bg-gradient-to-r from-alien-gold to-alien-green mx-auto mb-6"></div>
-                <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-6">
-                  Create the best experiences and synergies that generate greater value for the planet and its beings, implementing environmentally friendly solutions.
-                </p>
-                <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-                  Our main objective is to disseminate knowledge to provide a greater understanding of wisdom in different fields and concepts, such as digitalization, efficiency, sustainability, and more.
-                </p>
+                <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-6">Our vision is to help business professionals adapt and thrive in an ever-evolving digital and hybrid world by offering innovative solutions that optimize energy efficiency and promote environmental sustainability, improving and transforming the way they work and their workflows.</p>
+                <p className="text-lg leading-relaxed max-w-3xl mx-auto">Our main objective is to disseminate knowledge to provide a greater understanding of wisdom in different fields and concepts, such as digitalization, efficiency, sustainability, and, of course, transcendent topics. We promote sustainable growth, the development of the environment and its beings, so that they can achieve a lifestyle in harmony with the cosmos and its nature.
+
+Here you will learn to interpret and improve your quality of life, as well as generate greater benefits with your finances. We offer an academy to learn and delve into the most relevant topics, clubs to meet and connect with other like-minded beings and exchange experiences, fully customizable products and services, as well as CoNetWorking spaces and tools to establish lasting collaborations and make the best business deals.</p>
               </div>
             </div>
 
@@ -142,16 +132,19 @@ const About: React.FC = () => {
               <Link to="/conetworking">
                 <Button className="bg-gradient-to-br from-alien-gold to-alien-gold-light hover:from-alien-gold-light hover:to-alien-gold text-alien-space-dark p-8 rounded-2xl text-center w-56 h-24 flex flex-col items-center justify-center shadow-2xl hover:shadow-alien-gold/30 transition-all duration-300 hover:transform hover:scale-110">
                   <Users className="h-8 w-8 mb-2" />
-                  <span className="font-semibold text-lg font-nasalization">CoNetworking</span>
+                  <span className="font-semibold text-lg font-nasalization">CoNetWorKing</span>
                 </Button>
               </Link>
             </div>
 
             {/* DAO Information section with enhanced design */}
             <div className="bg-alien-space-dark/80 p-8 rounded-2xl backdrop-blur-lg border border-alien-gold/30 shadow-2xl">
-              <p className="text-lg leading-relaxed mb-8 text-center">
-                Acquire Cryptos, NFTs, Tokens to Associate and participate in Advantages, Benefits, Profits… in the DAO… + We also collaborate with Big Brands & International organizations.
-              </p>
+              <p className="text-lg leading-relaxed mb-8 text-center">Acquire Cryptos, NFTs, tokens to associate and participate in Advantajes, Benefits, Profits in the DAO.
+
++ We also collaborate with big brands &amp; international platforms from affiliate programs, referral marketing, on demand suppliers… 
++ Join a growing ecosystem of affiliations, applications, associations and decentralized platforms that support each other by collaborating and in addition to promoting energy efficiency &amp; environmental sustainability on the planet.
+
+· We serve a wide range of clients; including artists, creators, developers, entrepreneurs, companies, farmers, investors, researchers, scientists and users…</p>
               
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-semibold text-alien-green mb-4 font-nasalization">
@@ -216,8 +209,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
