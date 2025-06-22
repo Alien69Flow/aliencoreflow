@@ -1,7 +1,6 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers } from 'lucide-react';
+import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Quantum, Leaf, Building, Users, Landmark } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -65,6 +64,60 @@ const CoNetWorKing: React.FC = () => {
       description: "Earn by staying active! Our Staking system allows you to earn rewards by keeping your cryptocurrencies with our CoNetWorKing.",
       icon: <Coins className="h-8 w-8 text-white" />,
       color: "bg-gradient-to-br from-red-500 to-pink-400"
+    },
+    {
+      title: "BioFi",
+      description: "Revolutionize biotechnology funding through decentralized finance. Support and invest in groundbreaking biological research and medical innovations.",
+      icon: <Dna className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-teal-500 to-blue-400"
+    },
+    {
+      title: "DeSci (Decentralized Science)",
+      description: "Transform scientific research through blockchain technology. Enable transparent, collaborative, and incentivized scientific discoveries.",
+      icon: <FlaskConical className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-indigo-500 to-purple-400"
+    },
+    {
+      title: "GameFi",
+      description: "Play to earn in the new gaming economy. Combine gaming entertainment with financial rewards through blockchain-based gaming platforms.",
+      icon: <Gamepad2 className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-violet-500 to-fuchsia-400"
+    },
+    {
+      title: "IPFS",
+      description: "Store and share data in a distributed file system. Access decentralized storage solutions that ensure data permanence and censorship resistance.",
+      icon: <Database className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-slate-500 to-gray-400"
+    },
+    {
+      title: "QFS (Quantum Financial System)",
+      description: "Experience next-generation quantum-secured financial transactions. Benefit from quantum-resistant cryptography and ultra-fast processing.",
+      icon: <Quantum className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-emerald-500 to-teal-400"
+    },
+    {
+      title: "ReFi (Regenerative Finance)",
+      description: "Finance that heals the planet. Invest in projects that create positive environmental and social impact while generating sustainable returns.",
+      icon: <Leaf className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-green-600 to-lime-400"
+    },
+    {
+      title: "RWA (Real World Assets)",
+      description: "Tokenize real-world assets on the blockchain. Bridge traditional assets with digital finance for enhanced liquidity and accessibility.",
+      icon: <Building className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-amber-500 to-orange-400"
+    },
+    {
+      title: "SocialFi",
+      description: "Monetize your social interactions and content creation. Earn rewards for engaging with communities and creating valuable social connections.",
+      icon: <Users className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-pink-500 to-rose-400"
+    },
+    {
+      title: "TradFi",
+      description: "Bridge traditional finance with decentralized systems. Integrate conventional financial services with blockchain technology for enhanced efficiency.",
+      icon: <Landmark className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-blue-600 to-indigo-400"
     }
   ];
 
