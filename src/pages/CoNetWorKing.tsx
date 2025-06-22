@@ -142,13 +142,13 @@ const CoNetWorKing: React.FC = () => {
   const communityMembers = [
     {
       name: "Sophia Chen",
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=150&h=150&auto=format&fit=crop",
+      avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=150&h=150&auto=format&fit=crop",
       role: "DeFi Strategist",
       location: "Singapore"
     },
     {
       name: "Aria Nakamura",
-      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=150&h=150&auto=format&fit=crop",
+      avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=150&h=150&auto=format&fit=crop",
       role: "Blockchain Developer",
       location: "Tokyo"
     },
@@ -166,23 +166,23 @@ const CoNetWorKing: React.FC = () => {
     },
     {
       name: "Isabella Kim",
-      avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=150&h=150&auto=format&fit=crop",
+      avatar: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?q=80&w=150&h=150&auto=format&fit=crop",
       role: "GameFi Designer",
       location: "Seoul"
     },
     {
-      name: "Amara Okafor",
-      avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=150&h=150&auto=format&fit=crop",
+      name: "Amara Singh",
+      avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=150&h=150&auto=format&fit=crop",
       role: "ReFi Advocate",
-      location: "Lagos"
+      location: "Mumbai"
     }
   ];
 
   const networkStats = [
-    { label: "Active Users", value: "2,847,392", change: "+12.5%" },
-    { label: "Total Volume", value: "$1.2B", change: "+8.3%" },
-    { label: "Countries", value: "127", change: "+3" },
-    { label: "Transactions/sec", value: "15,847", change: "+24.7%" }
+    { label: "Active Nodes", value: "47,293", change: "+2.8%", icon: Network },
+    { label: "BTC Volume", value: "$3.7B", change: "+15.2%", icon: Coins },
+    { label: "Global Reach", value: "189", change: "+7 countries", icon: Globe },
+    { label: "TPS Network", value: "28,459", change: "+31.4%", icon: Zap }
   ];
 
   return (
@@ -259,7 +259,7 @@ const CoNetWorKing: React.FC = () => {
             </div>
           </div>
 
-          {/* Community Members Section */}
+          {/* Global Community Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
               Global Community
@@ -295,22 +295,25 @@ const CoNetWorKing: React.FC = () => {
               Live Network Stats
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {networkStats.map((stat, index) => (
-                <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300">
-                  <CardContent className="p-6 text-center">
-                    <Globe className="h-8 w-8 text-alien-green mx-auto mb-4 animate-pulse" />
-                    <div className="text-2xl font-bold text-alien-gold font-[Atomic Age] mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-gray-300 font-[Exo] text-sm mb-2">
-                      {stat.label}
-                    </div>
-                    <div className="text-alien-green font-[Exo] text-xs">
-                      {stat.change}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              {networkStats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:scale-105">
+                    <CardContent className="p-6 text-center">
+                      <IconComponent className="h-8 w-8 text-alien-green mx-auto mb-4 animate-pulse" />
+                      <div className="text-2xl font-bold text-alien-gold font-[Atomic Age] mb-2">
+                        {stat.value}
+                      </div>
+                      <div className="text-gray-300 font-[Exo] text-sm mb-2">
+                        {stat.label}
+                      </div>
+                      <div className="text-alien-green font-[Exo] text-xs">
+                        {stat.change}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
           
