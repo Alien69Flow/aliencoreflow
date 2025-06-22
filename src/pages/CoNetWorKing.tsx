@@ -1,9 +1,9 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Zap, Leaf, Building, Users, Landmark } from 'lucide-react';
+import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Zap, Leaf, Building, Users, Landmark, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 type ServiceProps = {
   title: string;
@@ -37,10 +37,22 @@ const CoNetWorKing: React.FC = () => {
       color: "bg-gradient-to-br from-blue-500 to-cyan-400"
     },
     {
+      title: "BioFi",
+      description: "Revolutionize biotechnology funding through decentralized finance. Support and invest in groundbreaking biological research and medical innovations.",
+      icon: <Dna className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-teal-500 to-blue-400"
+    },
+    {
       title: "DeFi (Decentralized Finance)",
       description: "Explore a new financial approach. Access financial services without depending on traditional institutions, with your own private keys and without exposing sensitive data.",
       icon: <Shield className="h-8 w-8 text-white" />,
       color: "bg-gradient-to-br from-purple-500 to-pink-400"
+    },
+    {
+      title: "DeSci (Decentralized Science)",
+      description: "Transform scientific research through blockchain technology. Enable transparent, collaborative, and incentivized scientific discoveries.",
+      icon: <FlaskConical className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-indigo-500 to-purple-400"
     },
     {
       title: "Dual Investment",
@@ -53,30 +65,6 @@ const CoNetWorKing: React.FC = () => {
       description: "Sow and reap your rewards. Our permaculture farming system allows you to earn more cryptocurrencies by actively participating in the network.",
       icon: <Sprout className="h-8 w-8 text-white" />,
       color: "bg-gradient-to-br from-lime-500 to-green-400"
-    },
-    {
-      title: "Mining",
-      description: "Mine cryptocurrencies easily. With our Mining system, you can contribute to the network and be rewarded for it.",
-      icon: <Pickaxe className="h-8 w-8 text-white" />,
-      color: "bg-gradient-to-br from-orange-500 to-yellow-400"
-    },
-    {
-      title: "Staking",
-      description: "Earn by staying active! Our Staking system allows you to earn rewards by keeping your cryptocurrencies with our CoNetWorKing.",
-      icon: <Coins className="h-8 w-8 text-white" />,
-      color: "bg-gradient-to-br from-red-500 to-pink-400"
-    },
-    {
-      title: "BioFi",
-      description: "Revolutionize biotechnology funding through decentralized finance. Support and invest in groundbreaking biological research and medical innovations.",
-      icon: <Dna className="h-8 w-8 text-white" />,
-      color: "bg-gradient-to-br from-teal-500 to-blue-400"
-    },
-    {
-      title: "DeSci (Decentralized Science)",
-      description: "Transform scientific research through blockchain technology. Enable transparent, collaborative, and incentivized scientific discoveries.",
-      icon: <FlaskConical className="h-8 w-8 text-white" />,
-      color: "bg-gradient-to-br from-indigo-500 to-purple-400"
     },
     {
       title: "GameFi",
@@ -115,6 +103,12 @@ const CoNetWorKing: React.FC = () => {
       color: "bg-gradient-to-br from-pink-500 to-rose-400"
     },
     {
+      title: "Staking",
+      description: "Earn by staying active! Our Staking system allows you to earn rewards by keeping your cryptocurrencies with our CoNetWorKing.",
+      icon: <Coins className="h-8 w-8 text-white" />,
+      color: "bg-gradient-to-br from-red-500 to-pink-400"
+    },
+    {
       title: "TradFi",
       description: "Bridge traditional finance with decentralized systems. Integrate conventional financial services with blockchain technology for enhanced efficiency.",
       icon: <Landmark className="h-8 w-8 text-white" />,
@@ -143,6 +137,52 @@ const CoNetWorKing: React.FC = () => {
       logo: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=150&h=150&auto=format&fit=crop",
       description: "Advanced AI trading algorithms"
     }
+  ];
+
+  const communityMembers = [
+    {
+      name: "Sophia Chen",
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "DeFi Strategist",
+      location: "Singapore"
+    },
+    {
+      name: "Aria Nakamura",
+      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "Blockchain Developer",
+      location: "Tokyo"
+    },
+    {
+      name: "Luna Rodriguez",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "NFT Artist",
+      location: "Barcelona"
+    },
+    {
+      name: "Zara Al-Rashid",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "Crypto Analyst",
+      location: "Dubai"
+    },
+    {
+      name: "Isabella Kim",
+      avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "GameFi Designer",
+      location: "Seoul"
+    },
+    {
+      name: "Amara Okafor",
+      avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=150&h=150&auto=format&fit=crop",
+      role: "ReFi Advocate",
+      location: "Lagos"
+    }
+  ];
+
+  const networkStats = [
+    { label: "Active Users", value: "2,847,392", change: "+12.5%" },
+    { label: "Total Volume", value: "$1.2B", change: "+8.3%" },
+    { label: "Countries", value: "127", change: "+3" },
+    { label: "Transactions/sec", value: "15,847", change: "+24.7%" }
   ];
 
   return (
@@ -190,7 +230,7 @@ const CoNetWorKing: React.FC = () => {
           </div>
 
           {/* Partners Section */}
-          <div className="mb-16">
+          <div className="mb-20">
             <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
               Our Partners
             </h2>
@@ -213,6 +253,61 @@ const CoNetWorKing: React.FC = () => {
                     <CardDescription className="text-gray-300 font-[Exo] text-center text-sm">
                       {partner.description}
                     </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Community Members Section */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
+              Global Community
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {communityMembers.map((member, index) => (
+                <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:scale-105">
+                  <CardHeader className="text-center">
+                    <Avatar className="mx-auto mb-4 w-20 h-20 border-2 border-alien-gold">
+                      <AvatarImage src={member.avatar} alt={member.name} />
+                      <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    </Avatar>
+                    <CardTitle className="text-alien-gold font-[Atomic Age] text-lg">
+                      {member.name}
+                    </CardTitle>
+                    <CardDescription className="text-alien-green font-[Exo]">
+                      {member.role}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center pt-0">
+                    <p className="text-gray-300 font-[Exo] text-sm">
+                      📍 {member.location}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Real-time Network Stats */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
+              Live Network Stats
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {networkStats.map((stat, index) => (
+                <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <Globe className="h-8 w-8 text-alien-green mx-auto mb-4 animate-pulse" />
+                    <div className="text-2xl font-bold text-alien-gold font-[Atomic Age] mb-2">
+                      {stat.value}
+                    </div>
+                    <div className="text-gray-300 font-[Exo] text-sm mb-2">
+                      {stat.label}
+                    </div>
+                    <div className="text-alien-green font-[Exo] text-xs">
+                      {stat.change}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
