@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { Button } from '@/components/ui/button';
@@ -7,20 +6,7 @@ import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linked
 const Contact: React.FC = () => {
   return (
     <div className="relative flex flex-col flex-1">
-      {/* First universe background layer */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/74c23ca3-be80-46d6-9817-d6a5cde81736.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.6,
-          zIndex: -30
-        }}
-      />
-      
-      {/* Second galaxy background layer */}
+      {/* Galaxy background */}
       <div 
         className="fixed inset-0 pointer-events-none"
         style={{
@@ -28,9 +14,8 @@ const Contact: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.4,
-          zIndex: -25,
-          mixBlendMode: 'screen'
+          opacity: 0.6,
+          zIndex: -30
         }}
       />
       

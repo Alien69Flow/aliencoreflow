@@ -3,6 +3,7 @@ import StarBackground from '@/components/StarBackground';
 import { Rocket, Star, Clock, ScrollText, BookOpen, PieChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+
 const AlienTrip: React.FC = () => {
   const roadmapEvents = [{
     quarter: "Q3 2025",
@@ -60,14 +61,26 @@ const AlienTrip: React.FC = () => {
     value: 10,
     color: "#E91E63"
   }];
-  return <div className="relative flex flex-col flex-1 bg-alien-space">
-      <StarBackground />
-      <div className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat pointer-events-none" style={{
-      backgroundImage: `url('/lovable-uploads/EMWBack.png')`
-    }}>
-        <div className="w-full h-full bg-black/50" />
-      </div>
+  return (
+    <div className="relative flex flex-col flex-1">
+      {/* Cosmic microwave background radiation */}
+      <div 
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url('/lovable-uploads/74c23ca3-be80-46d6-9817-d6a5cde81736.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.7,
+          zIndex: -30
+        }}
+      />
       
+      {/* Star background effect */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -20 }}>
+        <StarBackground />
+      </div>
+
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
@@ -255,6 +268,8 @@ const AlienTrip: React.FC = () => {
           </div>
         </div>
       </main>
-    </div>;
+    </div>
+  );
 };
+
 export default AlienTrip;
