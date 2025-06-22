@@ -1,6 +1,7 @@
+
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
-import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Quantum, Leaf, Building, Users, Landmark } from 'lucide-react';
+import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Zap, Leaf, Building, Users, Landmark } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -92,7 +93,7 @@ const CoNetWorKing: React.FC = () => {
     {
       title: "QFS (Quantum Financial System)",
       description: "Experience next-generation quantum-secured financial transactions. Benefit from quantum-resistant cryptography and ultra-fast processing.",
-      icon: <Quantum className="h-8 w-8 text-white" />,
+      icon: <Zap className="h-8 w-8 text-white" />,
       color: "bg-gradient-to-br from-emerald-500 to-teal-400"
     },
     {
