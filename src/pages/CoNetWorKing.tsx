@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import StarBackground from '@/components/StarBackground';
 import { Network, TrendingUp, Shield, Coins, Sprout, Pickaxe, Layers, Dna, FlaskConical, Gamepad2, Database, Zap, Leaf, Building, Users, Landmark, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,6 +29,21 @@ const ServiceCard = ({ service }: { service: ServiceProps }) => (
 );
 
 const CoNetWorKing: React.FC = () => {
+  useEffect(() => {
+    // Load CoinMarketCap widget script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://files.coinmarketcap.com/static/widget/currency.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+
   const services: ServiceProps[] = [
     {
       title: "AMM (Automated Market Maker)",
@@ -229,6 +244,61 @@ const CoNetWorKing: React.FC = () => {
             </div>
           </div>
 
+          {/* Real-time Network Stats with Bitcoin Widget */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
+              Live Network & Market Data
+            </h2>
+            
+            {/* Bitcoin Price Widget */}
+            <div className="mb-12 max-w-4xl mx-auto">
+              <Card className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-alien-gold font-[Atomic Age] text-2xl flex items-center justify-center gap-3">
+                    <Coins className="h-8 w-8" />
+                    Bitcoin Real-Time Price
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="coinmarketcap-currency-widget" 
+                       data-currencyid="1" 
+                       data-base="USD" 
+                       data-secondary="BTC" 
+                       data-ticker="true" 
+                       data-rank="true" 
+                       data-marketcap="true" 
+                       data-volume="true" 
+                       data-statsticker="true" 
+                       data-stats="USD">
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Network Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {networkStats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:scale-105">
+                    <CardContent className="p-6 text-center">
+                      <IconComponent className="h-8 w-8 text-alien-green mx-auto mb-4 animate-pulse" />
+                      <div className="text-2xl font-bold text-alien-gold font-[Atomic Age] mb-2">
+                        {stat.value}
+                      </div>
+                      <div className="text-gray-300 font-[Exo] text-sm mb-2">
+                        {stat.label}
+                      </div>
+                      <div className="text-alien-green font-[Exo] text-xs">
+                        {stat.change}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+
           {/* Partners Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
@@ -286,34 +356,6 @@ const CoNetWorKing: React.FC = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
-
-          {/* Real-time Network Stats */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-alien-gold mb-12 text-center font-[Atomic Age]">
-              Live Network Stats
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {networkStats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <Card key={index} className="bg-alien-space-dark/70 backdrop-blur-md border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:scale-105">
-                    <CardContent className="p-6 text-center">
-                      <IconComponent className="h-8 w-8 text-alien-green mx-auto mb-4 animate-pulse" />
-                      <div className="text-2xl font-bold text-alien-gold font-[Atomic Age] mb-2">
-                        {stat.value}
-                      </div>
-                      <div className="text-gray-300 font-[Exo] text-sm mb-2">
-                        {stat.label}
-                      </div>
-                      <div className="text-alien-green font-[Exo] text-xs">
-                        {stat.change}
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
             </div>
           </div>
           
