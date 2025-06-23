@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { X, Facebook, Instagram, Mail, Disc, Send, Github, Linkedin } from 'lucide-react';
+import { X, Facebook, Instagram, Mail, Disc, Send, Github, Linkedin, MessageSquare, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -26,14 +26,16 @@ const Footer = () => {
             </p>
             <div className="flex gap-2 pt-1 flex-wrap">
               {[
-                { href: "https://x.com/alien69flow", icon: X, label: "X (Twitter)", color: "#1DA1F2" },
-                { href: "https://www.facebook.com/Alien69Flow", icon: Facebook, label: "Facebook", color: "#1877F2" },
-                { href: "https://www.instagram.com/alien69flow/", icon: Instagram, label: "Instagram", color: "#E4405F" },
                 { href: "https://discord.gg/alienflowspace", icon: Disc, label: "Discord", color: "#5865F2" },
                 { href: "mailto:info@alienflow.space", icon: Mail, label: "Email", color: "#F0D882" },
-                { href: "https://t.me/AlienFlow", icon: Send, label: "Telegram", color: "#0088CC" },
+                { href: "https://www.facebook.com/Alien69Flow", icon: Facebook, label: "Facebook", color: "#1877F2" },
+                { href: "https://alienflowspace.gitbook.io/DAO", icon: BookOpen, label: "GitBook", color: "#22C55E" },
                 { href: "https://github.com/AlienFlowSpaceDAO", icon: Github, label: "Github", color: "#22C55E" },
-                { href: "https://linkedin.com/in/alienflow", icon: Linkedin, label: "LinkedIn", color: "#0A66C2" }
+                { href: "https://www.instagram.com/alien69flow/", icon: Instagram, label: "Instagram", color: "#E4405F" },
+                { href: "https://linkedin.com/in/alienflow", icon: Linkedin, label: "LinkedIn", color: "#0A66C2" },
+                { href: "https://t.me/AlienFlow", icon: Send, label: "Telegram", color: "#0088CC" },
+                { href: "https://threads.net/@alien69flow", icon: MessageSquare, label: "Threads", color: "#000" },
+                { href: "https://x.com/alien69flow", icon: X, label: "X (Twitter)", color: "#1DA1F2" }
               ].map((social, index) => (
                 <a 
                   key={index}

@@ -15,23 +15,29 @@ const AlienTrip: React.FC = () => {
   }, {
     quarter: "Q4 2025",
     title: "Ecosystem Integration Phase I",
-    description: "First wave of ecosystem partners onboarded and interconnected within the network. Collaborate with organizations focused on BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi and TradFi, forming strategic alliances.",
+    description: "First wave of ecosystem partners onboarded and interconnected within the network. Collaborate with organizations focused on BioFi, DeFi, DePin, DeSci, IPFS, QFS, ReFi, RWA, SocialFi and TradFi, forming strategic alliances. Address environmental emergencies and partner with UNESCO to protect land and marine ecosystems, conserve and expand natural heritage.",
     completed: false,
     icon: <Star className="h-5 w-5" />
   }, {
     quarter: "Q1 2026",
-    title: "CoNetWorKing Mainnet",
-    description: "Launch of our distributed networking infrastructure connecting all ecosystems.",
+    title: "Ecosystem Integration Phase II",
+    description: "Advance Communication Bioecosystem, improve the Endocannabinoid System in biological systems, enhance energy efficiency & explore entropy sources. Research energy-efficient particles and neutral energy sources.",
     completed: false,
     icon: <Star className="h-5 w-5" />
   }, {
-    quarter: "Q2 2026",
+    quarter: "Q2 2027",
+    title: "CoNetWorKing Mainnet",
+    description: "Launch of our distributed networking infrastructure connecting all ecosystems. Distribute CrypTokens & NFTs, launch airdrops with valuable CrypTokens and exclusive NFTs, and utilize tokens for liquidity pools to fund sustainable initiatives.",
+    completed: false,
+    icon: <Star className="h-5 w-5" />
+  }, {
+    quarter: "Q3 2028",
     title: "Cross-Ecosystem Governance",
     description: "Implementation of universal governance mechanics for collaborative decision-making.",
     completed: false,
     icon: <Star className="h-5 w-5" />
   }, {
-    quarter: "Q3 2026",
+    quarter: "Q1 2030",
     title: "Interplanetary Expansion",
     description: "Extension of AlienFlowSpace DAO to additional layer 1 blockchains and ecosystems.",
     completed: false,
@@ -139,29 +145,30 @@ const AlienTrip: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-alien-space-dark/50 rounded-lg p-6 backdrop-blur-md border border-alien-gold/20">
-              <h2 className="text-2xl font-bold text-alien-green mb-4 font-nasalization">Crypto Mint NFT</h2>
-              <p className="mb-6 font-[Exo] text-alien-gold">
+            {/* Crypto Mint NFT - Compact design */}
+            <div className="bg-alien-space-dark/50 rounded-lg p-4 backdrop-blur-md border border-alien-gold/20 h-fit">
+              <h2 className="text-xl font-bold text-alien-green mb-3 font-nasalization">Crypto Mint NFT</h2>
+              <p className="mb-4 font-[Exo] text-alien-gold text-sm">
                 Secure your place in our cosmic ecosystem by minting an ΔlieπFlΦw $pac€ DAO Passport, granting you early access to all present and future features and governance rights.
               </p>
-              <div className="bg-alien-space-light rounded-lg p-4 mb-6">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold font-[Exo]">Mint Price</span>
-                  <span className="text-alien-green font-semibold font-[Exo]">0.08 ₿TC</span>
+              <div className="bg-alien-space-light rounded-lg p-3 mb-4">
+                <div className="flex justify-between items-center mb-1.5">
+                  <span className="text-alien-gold font-[Exo] text-sm">Mint Price</span>
+                  <span className="text-alien-green font-semibold font-[Exo] text-sm">0.08 ₿TC</span>
+                </div>
+                <div className="flex justify-between items-center mb-1.5">
+                  <span className="text-alien-gold font-[Exo] text-sm">Total Supply</span>
+                  <span className="text-alien-green font-semibold font-[Exo] text-sm">1,618.034</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold font-[Exo]">Total Supply</span>
-                  <span className="text-alien-green font-semibold font-[Exo]">1,618.034</span>
+                  <span className="text-alien-gold font-[Exo] text-sm">Minted</span>
+                  <span className="text-alien-green font-semibold font-[Exo] text-sm">314.159 / 1,618.034</span>
                 </div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-alien-gold font-[Exo]">Minted</span>
-                  <span className="text-alien-green font-semibold font-[Exo]">314.159 / 1,618.034</span>
-                </div>
-                <div className="w-full bg-alien-space-dark rounded-full h-2.5 mb-2">
-                  <div className="bg-alien-gold h-2.5 rounded-full" style={{ width: '72%' }}></div>
+                <div className="w-full bg-alien-space-dark rounded-full h-2 mb-2">
+                  <div className="bg-alien-gold h-2 rounded-full" style={{ width: '19.4%' }}></div>
                 </div>
               </div>
-              <Button className="w-full bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-nasalization">
+              <Button className="w-full bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-nasalization text-sm">
                 Crypto Mint NFT Passport
               </Button>
             </div>
@@ -291,14 +298,16 @@ const AlienTrip: React.FC = () => {
                           index === 1 ? 'border-red-300/20' : 
                           index === 2 ? 'border-green-300/20' : 
                           index === 3 ? 'border-yellow-300/20' : 
-                          'border-purple-300/20'
+                          index === 4 ? 'border-purple-300/20' :
+                          'border-cyan-300/20'
                         } opacity-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}></div>
                         <div className={`w-20 h-20 rounded-full ${
                           index === 0 ? 'bg-blue-900/10' : 
                           index === 1 ? 'bg-red-900/10' : 
                           index === 2 ? 'bg-green-900/10' : 
                           index === 3 ? 'bg-yellow-900/10' : 
-                          'bg-purple-900/10'
+                          index === 4 ? 'bg-purple-900/10' :
+                          'bg-cyan-900/10'
                         } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}></div>
                       </div>
                     </div>

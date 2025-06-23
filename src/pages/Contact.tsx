@@ -2,7 +2,7 @@
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { Button } from '@/components/ui/button';
-import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linkedin } from 'lucide-react';
+import { Send, Mail, MessageSquare, X, Facebook, Instagram, Disc, Github, Linkedin, BookOpen } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -39,16 +39,6 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
-                    <Mail className="h-5 w-5 text-alien-space-dark" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">Email</h3>
-                    <a href="mailto:info@alienflow.space" className="text-gray-300 font-[Exo] hover:text-alien-green">info@alienflow.space</a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
-                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Disc className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
@@ -59,11 +49,11 @@ const Contact: React.FC = () => {
                 
                 <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
-                    <X className="h-5 w-5 text-alien-space-dark" />
+                    <Mail className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
-                    <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">Email</h3>
+                    <a href="mailto:info@alienflow.space" className="text-gray-300 font-[Exo] hover:text-alien-green">info@alienflow.space</a>
                   </div>
                 </div>
                 
@@ -79,21 +69,11 @@ const Contact: React.FC = () => {
                 
                 <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
-                    <Instagram className="h-5 w-5 text-alien-space-dark" />
+                    <BookOpen className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">Instagram</h3>
-                    <a href="https://www.instagram.com/alien69flow/" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
-                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
-                    <Send className="h-5 w-5 text-alien-space-dark" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-alien-gold font-[Exo]">Telegram</h3>
-                    <a href="https://T.Me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">t.me/AlienFlow</a>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">GitBook</h3>
+                    <a href="https://alienflowspace.gitbook.io/DAO" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">alienflowspace.gitbook.io</a>
                   </div>
                 </div>
                 
@@ -109,11 +89,51 @@ const Contact: React.FC = () => {
                 
                 <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
+                    <Instagram className="h-5 w-5 text-alien-space-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">Instagram</h3>
+                    <a href="https://www.instagram.com/alien69flow/" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
+                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Linkedin className="h-5 w-5 text-alien-space-dark" />
                   </div>
                   <div>
                     <h3 className="font-medium text-alien-gold font-[Exo]">LinkedIn</h3>
                     <a href="https://linkedin.com/in/alienflow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">linkedin.com/in/alienflow</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
+                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
+                    <Send className="h-5 w-5 text-alien-space-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">Telegram</h3>
+                    <a href="https://T.Me/AlienFlow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">t.me/AlienFlow</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
+                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
+                    <MessageSquare className="h-5 w-5 text-alien-space-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">Threads</h3>
+                    <a href="https://threads.net/@alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
+                  <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
+                    <X className="h-5 w-5 text-alien-space-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-alien-gold font-[Exo]">X</h3>
+                    <a href="https://x.com/alien69flow" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-[Exo] hover:text-alien-green">@alien69flow</a>
                   </div>
                 </div>
               </div>
