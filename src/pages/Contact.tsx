@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { Button } from '@/components/ui/button';
@@ -25,16 +26,17 @@ const Contact: React.FC = () => {
       </div>
 
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-4 pb-16">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-8 font-nasalization text-center">Contact Us</h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="space-y-6">
-              <p className="text-xl text-gray-300 font-[Exo]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Contact Methods - Takes 2/3 of the space on large screens */}
+            <div className="lg:col-span-2 space-y-6">
+              <p className="text-xl text-gray-300 font-[Exo] mb-6">
                 Have questions or want to join the AlienFlowSpace DAO? Reach out through any of these cosmic channels:
               </p>
               
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center p-4 bg-alien-space-dark/80 rounded-lg backdrop-blur-md hover:bg-alien-space-dark/90 transition-colors border border-alien-gold/20">
                   <div className="w-10 h-10 rounded-full bg-alien-green flex items-center justify-center mr-4">
                     <Mail className="h-5 w-5 text-alien-space-dark" />
@@ -117,15 +119,16 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-alien-space-dark/80 p-6 rounded-lg backdrop-blur-md border border-alien-gold/20">
-              <h2 className="text-2xl font-semibold text-alien-green mb-4 font-nasalization">Send us a message</h2>
-              <form className="space-y-4">
+            {/* Contact Form - Takes 1/3 of the space on large screens, compact design */}
+            <div className="bg-alien-space-dark/80 p-5 rounded-lg backdrop-blur-md border border-alien-gold/20 h-fit">
+              <h2 className="text-xl font-semibold text-alien-green mb-4 font-nasalization">Send us a message</h2>
+              <form className="space-y-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-400 mb-1 font-[Exo]" htmlFor="name">Name</label>
                   <input 
                     type="text" 
                     id="name"
-                    className="w-full px-4 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo]"
+                    className="w-full px-3 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo] text-sm"
                     placeholder="Your name"
                   />
                 </div>
@@ -135,7 +138,7 @@ const Contact: React.FC = () => {
                   <input 
                     type="email" 
                     id="email"
-                    className="w-full px-4 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo]"
+                    className="w-full px-3 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo] text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -144,14 +147,14 @@ const Contact: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-400 mb-1 font-[Exo]" htmlFor="message">Message</label>
                   <textarea 
                     id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo]"
+                    rows={3}
+                    className="w-full px-3 py-2 bg-alien-space-light/50 rounded-md border border-gray-600 text-gray-200 focus:border-alien-gold focus:outline-none font-[Exo] text-sm resize-none"
                     placeholder="Your message"
                   ></textarea>
                 </div>
                 
-                <Button className="w-full bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-[Exo]">
-                  <Send size={18} className="mr-2" /> Send Message
+                <Button className="w-full bg-alien-green hover:bg-alien-green-light text-alien-space-dark font-[Exo] mt-4">
+                  <Send size={16} className="mr-2" /> Send Message
                 </Button>
               </form>
             </div>
