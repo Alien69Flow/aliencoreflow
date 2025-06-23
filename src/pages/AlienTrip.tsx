@@ -3,7 +3,6 @@ import StarBackground from '@/components/StarBackground';
 import { Rocket, Star, Clock, ScrollText, BookOpen, PieChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-
 const AlienTrip: React.FC = () => {
   const roadmapEvents = [{
     quarter: "Q3 2025",
@@ -61,23 +60,21 @@ const AlienTrip: React.FC = () => {
     value: 10,
     color: "#E91E63"
   }];
-  return (
-    <div className="relative flex flex-col flex-1">
+  return <div className="relative flex flex-col flex-1">
       {/* Cosmic microwave background radiation */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `url('/lovable-uploads/74c23ca3-be80-46d6-9817-d6a5cde81736.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: 0.7,
-          zIndex: -30
-        }}
-      />
+      <div className="fixed inset-0 pointer-events-none" style={{
+      backgroundImage: `url('/lovable-uploads/74c23ca3-be80-46d6-9817-d6a5cde81736.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      opacity: 0.7,
+      zIndex: -30
+    }} />
       
       {/* Star background effect */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -20 }}>
+      <div className="fixed inset-0 pointer-events-none" style={{
+      zIndex: -20
+    }}>
         <StarBackground />
       </div>
 
@@ -114,7 +111,7 @@ const AlienTrip: React.FC = () => {
             </div>
             <div className="bg-alien-space-dark/50 rounded-lg p-6 backdrop-blur-md">
               <h2 className="text-2xl font-bold text-alien-green mb-4 font-nasalization">Crypto Mint NFT</h2>
-              <p className="text-gray-300 mb-6 font-[Exo]">
+              <p className="mb-6 font-[Exo] text-alien-gold">
                 Secure your place in our cosmic ecosystem by minting an ΔlieπFlΦw $pac€ DAO Passport, granting you early access to all present and future features and governance rights.
               </p>
               <div className="bg-alien-space-light rounded-lg p-4 mb-6">
@@ -268,8 +265,6 @@ const AlienTrip: React.FC = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default AlienTrip;
