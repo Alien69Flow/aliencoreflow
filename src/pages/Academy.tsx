@@ -25,7 +25,7 @@ const CourseCard = ({
           {icon}
         </div>
         <div className="flex space-x-2">
-          <span className="px-2 py-1 text-xs bg-alien-space-light/50 rounded-full text-alien-green">{modules.length} módulos</span>
+          <span className="px-2 py-1 text-xs bg-alien-space-light/50 rounded-full text-alien-green">{modules.length} modules</span>
         </div>
       </div>
       <h3 className="text-xl font-semibold mb-2 text-alien-gold font-nasalization">{title}</h3>
@@ -49,7 +49,7 @@ const CourseCard = ({
       </div>
       
       <Button variant="outline" className="w-full border-alien-gold/30 text-alien-gold hover:bg-alien-gold/10">
-        Explorar Curso
+        Explore Course
       </Button>
     </div>
   </div>
@@ -58,95 +58,97 @@ const CourseCard = ({
 const Academy: React.FC = () => {
   const courses = [
     {
-      title: "Abundancia & Libertad",
-      description: "Domina los fundamentos de la economía digital, blockchain y sistemas financieros sostenibles para crear abundancia y libertad financiera.",
+      title: "Abundance & Freedom",
+      description: "Master the fundamentals of digital economy, blockchain and sustainable financial systems to create abundance and financial freedom.",
       icon: <Coins className="h-6 w-6 text-alien-gold" />,
       color: "bg-green-500",
       modules: [
         {
           name: "EcoFinTech",
           topics: [
-            "Circularidad + Criterios ESG + Eficiencia & Sostenibilidad + Crecimiento & Desarrollo",
-            "Dinámica de Sistemas (Complejo / Dinámico)",
-            "Digitalización + Dinero & Sistemas de Pago + Diseño Iterativo & Metodologías",
-            "Economía & Finanzas Macro General & Micro Particular + Teoría de Juegos"
+            "Circularity + ESG Criteria + Efficiency & Sustainability + Growth & Development",
+            "Systems Dynamics (Complex / Dynamic) [Critical Degrowth | Theories]",
+            "Digitalization + Money & Payment Systems + Iterative Design & Methodologies (Agile / Lean / Manufacturing / Startups)",
+            "Economy & Finance - Macro General & Micro Particular - Production / Productivity - Tangible / Intangible + Game Theory"
           ]
         },
         {
           name: "Ecommerce",
           topics: [
-            "Características fundamentales",
-            "Fundamentos e Infraestructura",
-            "Ventajas & Usos",
-            "Formas & Tipos"
+            "Characteristics",
+            "Fundamentals and Infrastructure", 
+            "Advantages & Uses",
+            "Forms & Types"
           ]
         },
         {
-          name: "Blockchain & Criptografía",
+          name: "Blockchain & Cryptography",
           topics: [
-            "Activos Digitales (Crypto + Tokens, Bitcoin, Altcoins, Stablecoins, memecoins)",
-            "Propiedades Digitales (NFTs + Smart Contracts)",
-            "Aplicaciones & Finanzas Descentralizadas"
+            "Digital Assets (Crypto + Tokens, Bitcoin, Altcoins, Stablecoins, memecoins, shitcoins)",
+            "Digital Properties (NFTs + Smart Contracts)",
+            "Applications & Decentralized Finance"
           ]
         }
       ]
     },
     {
-      title: "Autogestión & Sostenibilidad",
-      description: "Aprende a gestionar tu vida de manera sostenible integrando ecología, permacultura y gestión consciente de energía, espacio y tiempo.",
+      title: "Self-Management & Sustainability",
+      description: "Learn to manage your life sustainably by integrating ecology, permaculture and conscious management of energy, space and time.",
       icon: <Leaf className="h-6 w-6 text-alien-gold" />,
       color: "bg-emerald-500",
       modules: [
         {
-          name: "Módulo Único Integrado",
+          name: "Integrated Module",
           topics: [
-            "Ecología + Permacultura + Sostenibilidad",
-            "Life + Live (Vida y Vivir)",
-            "Energy + Space + Time (Energía, Espacio y Tiempo)"
+            "Ecology + Permaculture + Sustainability",
+            "Life + Live",
+            "Energy + Space + Time"
           ]
         }
       ]
     },
     {
-      title: "Armonía & Trascendencia",
-      description: "Explora las dimensiones más profundas del ser a través de conciencia, meditación, alquimia filosófica y alimentación sagrada.",
+      title: "Harmony & Transcendence",
+      description: "Explore the deepest dimensions of being through consciousness, meditation, philosophical alchemy and sacred nutrition.",
       icon: <Brain className="h-6 w-6 text-alien-gold" />,
       color: "bg-purple-500",
       modules: [
         {
-          name: "Conciencia & Energía (Focusing Mindfulness)",
+          name: "Consciousness & Energy (Focusing Mindfulness)",
           topics: [
-            "Atención & Concentración (Actitud | Aptitud)",
-            "Conciencia | Consciencia (Inconsciencia | Preconciencia | Subconsciente)",
-            "Ecuanimidad | Plenitud | Enfoque | Percepción",
-            "Determinación | Intención | Propósito | Sentido | Voluntad | Entidad | Ser"
+            "Attention & Concentration - Attitude | Aptitude",
+            "Awareness | Consciousness (Unconsciousness | Preconsciousness | Subconscious)",
+            "Equanimity | Fullness - Focus | Perception",
+            "Determination | Intention | Purpose | Meaning | Will - Entity | Being"
           ]
         },
         {
-          name: "Meditaciones & Yoga",
+          name: "Meditations & Yoga",
           topics: [
-            "Técnicas de meditación avanzadas",
-            "Práctica de yoga integral",
-            "Integración cuerpo-mente-espíritu"
+            "Advanced meditation techniques",
+            "Integral yoga practice",
+            "Body-mind-spirit integration"
           ]
         },
         {
-          name: "Alkymia & Filosofía",
+          name: "Alkymia & Philosophy",
           topics: [
-            "Alkymia: Auto trascendencia | Trascendencia",
-            "Artes Liberales (Trivium + Quadrivium)",
-            "Hermenéutica | Heurística",
-            "Axis Mundi | Chackras | Dyed | Kábbalah | Kundalini | Qi",
-            "Filosofía: Iluminación Espiritual e Intelectual | Propedéutica"
+            "Alkymia: Self-transcendence | Transcendence",
+            "Liberal Arts (Trivium + Quadrivium)",
+            "Hermeneutics | Heuristics",
+            "Axis Mundi | Chakras | Djed | Kabbalah | Kundalini | Qi",
+            "Asclepius | Caduceus | Cup of Hygieia",
+            "Corpus Hermeticum | Kybalion | Opus Magnum | Emerald Tablet",
+            "Philosophy: Spiritual and Intellectual Illumination | Propaedeutics (Axiology | Epistemology | Gnoseology | Ontology)"
           ]
         },
         {
-          name: "Alimento & Bebida Sagrada",
+          name: "Sacred Food & Drink",
           topics: [
-            "Ayurveda práctica",
-            "Ambar | Ambrosia | Amrita | Kundalini",
+            "Ayurveda practice",
+            "Amber | Ambrosia | Amrita | Kundalini",
             "Haoma | Soma",
-            "Nutrición consciente y sagrada"
+            "Conscious and sacred nutrition"
           ]
         }
       ]
@@ -161,10 +163,10 @@ const Academy: React.FC = () => {
             <GraduationCap className="h-12 w-12 text-alien-gold mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">Academy</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-[Exo]">
-              Adquiere capacidades completas de atención para conectar, descubrir y expandir conocimientos y habilidades. 
-              Esto te ayuda a evolucionar y te impulsa hacia la experiencia óptima con la plenitud del flujo, 
-              así como aumentar los beneficios de tu calidad de vida y ganancias más sostenibles, con un bienestar completo, 
-              explorando tanto técnicas ancestrales como tecnologías de vanguardia.
+              Acquire complete attention capabilities to connect, discover and expand knowledge and skills. 
+              This helps you evolve and propels you towards optimal experience with flow fullness, 
+              as well as increase the benefits of your quality of life and more sustainable gains, with complete well-being, 
+              exploring both ancestral techniques and cutting-edge technologies.
             </p>
           </div>
 
@@ -172,30 +174,30 @@ const Academy: React.FC = () => {
           <div className="mb-12 bg-alien-space-dark/60 rounded-xl overflow-hidden backdrop-blur-md border border-alien-gold/30">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Programa Master de Certificación</h2>
+                <h2 className="text-3xl font-bold text-alien-gold mb-4 font-nasalization">Master Certification Program</h2>
                 <p className="text-gray-300 mb-6 font-[Exo]">
-                  Conviértete en un Explorador y Navegador certificado del ΔlieπFlΦw $pac€ y desbloquea oportunidades exclusivas en nuestro ecosistema cósmico en expansión.
+                  Become a certified Explorer and Navigator of the ΔlieπFlΦw $pac€ and unlock exclusive opportunities in our expanding cosmic ecosystem.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">3 Cursos principales integrados</p>
+                    <p className="text-alien-green">3 integrated main courses</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">8 Módulos especializados</p>
+                    <p className="text-alien-green">8 specialized modules</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">Bootcamps con sesiones de mentoría en vivo</p>
+                    <p className="text-alien-green">Bootcamps with live mentoring sessions</p>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-alien-green rounded-full mr-2"></div>
-                    <p className="text-alien-green">Credencial NFT on-chain</p>
+                    <p className="text-alien-green">On-chain NFT credential</p>
                   </div>
                 </div>
                 <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-[Exo]">
-                  Unirse a Lista de Espera
+                  Join Waitlist
                 </Button>
               </div>
               <div className="bg-gradient-to-tr from-alien-green/20 to-alien-gold/20 p-8 flex items-center justify-center">
@@ -206,7 +208,7 @@ const Academy: React.FC = () => {
 
           {/* Course Grid */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-alien-gold mb-8 font-nasalization">Cursos Principales</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-8 font-nasalization">Main Courses</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {courses.map((course, index) => (
                 <CourseCard key={index} {...course} />
@@ -216,16 +218,16 @@ const Academy: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center bg-alien-space-dark/60 rounded-xl p-8 backdrop-blur-md border border-alien-gold/20">
-            <h2 className="text-2xl font-bold text-alien-gold mb-4 font-nasalization">¿Listo para Expandir tu Conocimiento Cósmico?</h2>
+            <h2 className="text-2xl font-bold text-alien-gold mb-4 font-nasalization">Ready to Expand Your Cosmic Knowledge?</h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto font-[Exo]">
-              Únete a miles de navegadores espaciales en su viaje para dominar los principios del multiverso descentralizado.
+              Join thousands of space navigators on their journey to master the principles of the decentralized multiverse.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-alien-gold hover:bg-alien-gold-light text-alien-space-dark font-[Exo]">
-                Explorar Todos los Cursos
+                Explore All Courses
               </Button>
               <Button variant="outline" className="border-alien-green text-alien-green hover:bg-alien-green/20 font-[Exo]">
-                Unirse a la Comunidad
+                Join the Community
               </Button>
             </div>
           </div>
