@@ -74,20 +74,25 @@ const PartnerCard = ({ name, url, logo }: { name: string; url: string; logo?: st
     href={url} 
     target="_blank" 
     rel="noopener noreferrer"
-    className="bg-alien-space-dark/60 backdrop-blur-md rounded-lg p-4 border border-alien-gold/20 hover:border-alien-gold/50 transition-all duration-300 hover:transform hover:scale-105 group flex items-center justify-center min-h-[80px]"
+    className="bg-alien-space-dark/80 backdrop-blur-md rounded-xl p-6 border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:transform hover:scale-105 group flex items-center justify-center min-h-[120px] relative overflow-hidden"
   >
-    <div className="text-center">
-      {logo && (
+    <div className="absolute inset-0 bg-gradient-to-br from-alien-gold/5 to-alien-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div className="text-center relative z-10">
+      {logo ? (
         <img 
           src={logo} 
           alt={name} 
-          className="w-8 h-8 mx-auto mb-2 object-contain"
+          className="w-12 h-12 mx-auto mb-3 object-contain group-hover:scale-110 transition-transform duration-300"
         />
+      ) : (
+        <div className="w-12 h-12 mx-auto mb-3 bg-alien-gold/20 rounded-lg flex items-center justify-center border border-alien-gold/30">
+          <span className="text-alien-gold font-bold text-lg">{name.charAt(0)}</span>
+        </div>
       )}
-      <h3 className="text-alien-gold font-semibold text-sm group-hover:text-alien-gold-light transition-colors">
+      <h3 className="text-alien-gold font-semibold text-sm group-hover:text-alien-gold-light transition-colors font-[Exo] mb-1">
         {name}
       </h3>
-      <ExternalLink className="w-3 h-3 text-alien-green mx-auto mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <ExternalLink className="w-3 h-3 text-alien-green mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
   </a>
 );
@@ -210,20 +215,76 @@ const Academy: React.FC = () => {
   ];
 
   const partners = [
-    { name: "Alchemy", url: "https://www.alchemy.com/" },
-    { name: "AulaFacil", url: "https://www.aulafacil.com/" },
-    { name: "Explore", url: "https://www.explore.org/" },
-    { name: "OEGlobal", url: "https://www.oeglobal.org/" },
-    { name: "OpenupEd", url: "https://www.openuped.eu/" },
-    { name: "UNSSC", url: "https://www.unssc.org/" },
-    { name: "EdX", url: "https://www.edx.org/" },
-    { name: "Google", url: "https://edu.google.com/" },
-    { name: "MOOC", url: "https://www.mooc.org/" },
-    { name: "Khan Academy", url: "https://www.khanacademy.org/" },
-    { name: "Hotmart", url: "https://www.hotmart.com/" },
-    { name: "Udemy", url: "https://www.udemy.com/" },
-    { name: "Unity Learn", url: "https://learn.unity.com/" },
-    { name: "Unreal Engine", url: "https://www.unrealengine.com/en-US/learn" }
+    { 
+      name: "Alchemy", 
+      url: "https://www.alchemy.com/",
+      logo: "https://docs.alchemy.com/img/logo.svg"
+    },
+    { 
+      name: "AulaFacil", 
+      url: "https://www.aulafacil.com/",
+      logo: "https://www.aulafacil.com/favicon.ico"
+    },
+    { 
+      name: "Explore", 
+      url: "https://www.explore.org/",
+      logo: "https://www.explore.org/favicon.ico"
+    },
+    { 
+      name: "OEGlobal", 
+      url: "https://www.oeglobal.org/",
+      logo: "https://www.oeglobal.org/wp-content/uploads/2019/04/cropped-OEGlobal-logo-only-scaled-32x32.png"
+    },
+    { 
+      name: "OpenupEd", 
+      url: "https://www.openuped.eu/",
+      logo: "https://www.openuped.eu/images/openuped_logo.png"
+    },
+    { 
+      name: "UNSSC", 
+      url: "https://www.unssc.org/",
+      logo: "https://www.unssc.org/sites/unssc/files/favicon_0.ico"
+    },
+    { 
+      name: "EdX", 
+      url: "https://www.edx.org/",
+      logo: "https://www.edx.org/favicon.ico"
+    },
+    { 
+      name: "Google", 
+      url: "https://edu.google.com/",
+      logo: "https://www.google.com/favicon.ico"
+    },
+    { 
+      name: "MOOC", 
+      url: "https://www.mooc.org/",
+      logo: "https://www.mooc.org/favicon.ico"
+    },
+    { 
+      name: "Khan Academy", 
+      url: "https://www.khanacademy.org/",
+      logo: "https://www.khanacademy.org/favicon.ico"
+    },
+    { 
+      name: "Hotmart", 
+      url: "https://www.hotmart.com/",
+      logo: "https://static.hotmart.com/favicon.ico"
+    },
+    { 
+      name: "Udemy", 
+      url: "https://www.udemy.com/",
+      logo: "https://www.udemy.com/staticx/udemy/images/v7/favicon.ico"
+    },
+    { 
+      name: "Unity Learn", 
+      url: "https://learn.unity.com/",
+      logo: "https://unity.com/favicon.ico"
+    },
+    { 
+      name: "Unreal Engine", 
+      url: "https://www.unrealengine.com/en-US/learn",
+      logo: "https://www.unrealengine.com/favicon.ico"
+    }
   ];
 
   return (
@@ -244,14 +305,14 @@ const Academy: React.FC = () => {
       <main className="relative z-10 flex-grow container mx-auto px-4 pt-4 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-alien-gold/20 rounded-full mb-6 border-2 border-alien-gold/30">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-alien-gold/20 rounded-full mb-6 border-2 border-alien-gold/40 backdrop-blur-md">
               <img 
                 src="/lovable-uploads/bdb8277c-dc0f-4a67-8159-804f77ad3567.png" 
                 alt="Academy Logo" 
                 className="h-12 w-12 object-contain"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization">
+            <h1 className="text-4xl md:text-5xl font-bold text-alien-gold mb-6 font-nasalization text-glow">
               Academy
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto font-[Exo] leading-relaxed">
@@ -302,7 +363,7 @@ const Academy: React.FC = () => {
 
           {/* Course Grid */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-alien-gold mb-2 font-nasalization text-center">
+            <h2 className="text-3xl font-bold text-alien-gold mb-2 font-nasalization text-center text-glow">
               Main Courses
             </h2>
             <p className="text-gray-300 text-center mb-12 font-[Exo]">
@@ -315,15 +376,15 @@ const Academy: React.FC = () => {
             </div>
           </div>
 
-          {/* Partners Section */}
+          {/* Enhanced Partners Section */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-alien-gold mb-2 font-nasalization text-center">
+            <h2 className="text-3xl font-bold text-alien-gold mb-2 font-nasalization text-center text-glow">
               Educational Partners
             </h2>
             <p className="text-gray-300 text-center mb-12 font-[Exo]">
               We collaborate with the world's best educational platforms
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
               {partners.map((partner, index) => (
                 <PartnerCard key={index} {...partner} />
               ))}
