@@ -6,6 +6,13 @@ import { ScrollText, Globe, Orbit } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const scrollToSpaces = () => {
+    const spacesSection = document.querySelector('[data-section="explore-spaces"]');
+    if (spacesSection) {
+      spacesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center py-16 overflow-hidden">
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div initial={{
@@ -86,11 +93,12 @@ const Hero = () => {
             </Button>
           </Link>
 
-          <Link to="/contact">
-            <Button className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base rounded-full transition-colors">
-              <Globe className="mr-2 h-4 w-4" /> Contact & Join
-            </Button>
-          </Link>
+          <Button 
+            onClick={scrollToSpaces}
+            className="bg-alien-green text-alien-gold hover:bg-alien-gold hover:text-alien-green font-nasalization px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base rounded-full transition-colors"
+          >
+            <Globe className="mr-2 h-4 w-4" /> Join the Journey
+          </Button>
         </motion.div>
       </div>
     </div>;
