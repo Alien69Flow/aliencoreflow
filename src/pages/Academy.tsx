@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles, Leaf, Brain, Coins, ShoppingCart, Heart, Lightbulb, ExternalLink } from 'lucide-react';
@@ -83,7 +82,7 @@ const PartnerCard = ({ name, url, logoUrl }: { name: string; url: string; logoUr
           <img 
             src={logoUrl} 
             alt={`${name} logo`} 
-            className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300 filter brightness-0 invert"
+            className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
@@ -228,7 +227,7 @@ const Academy: React.FC = () => {
     { 
       name: "Alchemy", 
       url: "https://www.alchemy.com/",
-      logoUrl: "https://www.alchemy.com/favicon.ico"
+      logoUrl: "https://docs.alchemy.com/img/logo-dark.svg"
     },
     { 
       name: "AulaFacil", 
@@ -238,17 +237,17 @@ const Academy: React.FC = () => {
     { 
       name: "Coursera", 
       url: "https://www.coursera.org/",
-      logoUrl: "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/fa/03c4c0f94c11e8ab9e23fc5d3b8282/coursera-logo-blue.png"
+      logoUrl: "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-194x194.png"
     },
     { 
       name: "edX", 
       url: "https://www.edx.org/",
-      logoUrl: "https://www.edx.org/favicon.ico"
+      logoUrl: "https://www.edx.org/images/logos/edx-logo-elm.svg"
     },
     { 
       name: "Explore", 
       url: "https://www.explore.org/",
-      logoUrl: "https://www.explore.org/favicon.ico"
+      logoUrl: "https://www.explore.org/sites/default/files/styles/large/public/explore_logo_stacked_black.png"
     },
     { 
       name: "FutureLearn", 
@@ -258,17 +257,17 @@ const Academy: React.FC = () => {
     { 
       name: "Google for Education", 
       url: "https://edu.google.com/",
-      logoUrl: "https://www.google.com/favicon.ico"
+      logoUrl: "https://www.google.com/images/branding/product/ico/googleg_lodp.ico"
     },
     { 
       name: "Hotmart", 
       url: "https://www.hotmart.com/",
-      logoUrl: "https://www.hotmart.com/favicon.ico"
+      logoUrl: "https://static.hotmart.com/img/new-hotmart-logo.svg"
     },
     { 
       name: "Khan Academy", 
       url: "https://www.khanacademy.org/",
-      logoUrl: "https://www.khanacademy.org/favicon.ico"
+      logoUrl: "https://cdn.kastatic.org/images/khan-logo-dark-background.png"
     },
     { 
       name: "MasterClass", 
@@ -278,22 +277,22 @@ const Academy: React.FC = () => {
     { 
       name: "MOOC", 
       url: "https://www.mooc.org/",
-      logoUrl: "https://www.mooc.org/favicon.ico"
+      logoUrl: "https://www.mooc.org/hubfs/mooc-logo-blue.svg"
     },
     { 
       name: "OEGlobal", 
       url: "https://www.oeglobal.org/",
-      logoUrl: "https://www.oeglobal.org/favicon.ico"
+      logoUrl: "https://www.oeglobal.org/wp-content/themes/oeglobal2017/images/oeg-logo.png"
     },
     { 
       name: "OpenupEd", 
       url: "https://www.openuped.eu/",
-      logoUrl: "https://www.openuped.eu/favicon.ico"
+      logoUrl: "https://www.openuped.eu/images/logo.png"
     },
     { 
       name: "Skillshare", 
       url: "https://www.skillshare.com/",
-      logoUrl: "https://www.skillshare.com/favicon.ico"
+      logoUrl: "https://static.skillshare.com/assets/images/header/skillshare-logo.svg"
     },
     { 
       name: "Udacity", 
@@ -303,22 +302,22 @@ const Academy: React.FC = () => {
     { 
       name: "Udemy", 
       url: "https://www.udemy.com/",
-      logoUrl: "https://www.udemy.com/favicon.ico"
+      logoUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
     },
     { 
       name: "Unity Learn", 
       url: "https://learn.unity.com/",
-      logoUrl: "https://unity.com/favicon.ico"
+      logoUrl: "https://unity.com/logo-unity-web.png"
     },
     { 
       name: "Unreal Engine", 
       url: "https://www.unrealengine.com/en-US/learn",
-      logoUrl: "https://www.unrealengine.com/favicon.ico"
+      logoUrl: "https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png"
     },
     { 
       name: "UNSSC", 
       url: "https://www.unssc.org/",
-      logoUrl: "https://www.unssc.org/favicon.ico"
+      logoUrl: "https://www.unssc.org/sites/unssc/files/logo_0.png"
     }
   ];
 
