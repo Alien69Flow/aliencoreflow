@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles, Leaf, Brain, Coins, ShoppingCart, Heart, Lightbulb, ExternalLink } from 'lucide-react';
@@ -82,9 +83,8 @@ const PartnerCard = ({ name, url, logoUrl }: { name: string; url: string; logoUr
           <img 
             src={logoUrl} 
             alt={`${name} logo`} 
-            className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+            className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300 filter brightness-0 invert"
             onError={(e) => {
-              // Fallback to letter icon if image fails to load
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
               target.nextElementSibling?.classList.remove('hidden');
@@ -228,67 +228,97 @@ const Academy: React.FC = () => {
     { 
       name: "Alchemy", 
       url: "https://www.alchemy.com/",
-      logoUrl: "https://assets-global.website-files.com/618b0aafa4afde65f2fe38fe/618b0aafa4afde7888fe3a17_logo_mark.svg"
+      logoUrl: "https://www.alchemy.com/favicon.ico"
     },
     { 
       name: "AulaFacil", 
       url: "https://www.aulafacil.com/",
-      logoUrl: "https://www.aulafacil.com/images/af-logo-header.png"
+      logoUrl: "https://www.aulafacil.com/favicon.ico"
+    },
+    { 
+      name: "Coursera", 
+      url: "https://www.coursera.org/",
+      logoUrl: "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/fa/03c4c0f94c11e8ab9e23fc5d3b8282/coursera-logo-blue.png"
+    },
+    { 
+      name: "edX", 
+      url: "https://www.edx.org/",
+      logoUrl: "https://www.edx.org/favicon.ico"
     },
     { 
       name: "Explore", 
       url: "https://www.explore.org/",
-      logoUrl: "https://cdn.explore.org/logo-full-white.png"
+      logoUrl: "https://www.explore.org/favicon.ico"
     },
     { 
-      name: "OEGlobal", 
-      url: "https://www.oeglobal.org/",
-      logoUrl: "https://www.oeglobal.org/wp-content/uploads/2019/04/OEGlobal-logo-only-1024x1024.png"
-    },
-    { 
-      name: "OpenupEd", 
-      url: "https://www.openuped.eu/",
-      logoUrl: "https://www.openuped.eu/images/OuE-logo.png"
-    },
-    { 
-      name: "UNSSC", 
-      url: "https://www.unssc.org/",
-      logoUrl: "https://www.unssc.org/sites/unssc/files/logo.png"
-    },
-    { 
-      name: "EdX", 
-      url: "https://www.edx.org/",
-      logoUrl: "https://d2o2utebsixu4k.cloudfront.net/Logos%20for%20Web-02.svg"
+      name: "FutureLearn", 
+      url: "https://www.futurelearn.com/",
+      logoUrl: "https://www.futurelearn.com/favicon.ico"
     },
     { 
       name: "Google for Education", 
       url: "https://edu.google.com/",
-      logoUrl: "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
-    },
-    { 
-      name: "Khan Academy", 
-      url: "https://www.khanacademy.org/",
-      logoUrl: "https://cdn.kastatic.org/images/khan-logo-dark-background.png"
+      logoUrl: "https://www.google.com/favicon.ico"
     },
     { 
       name: "Hotmart", 
       url: "https://www.hotmart.com/",
-      logoUrl: "https://static.hotmart.com/img/hotmart-logo.svg"
+      logoUrl: "https://www.hotmart.com/favicon.ico"
+    },
+    { 
+      name: "Khan Academy", 
+      url: "https://www.khanacademy.org/",
+      logoUrl: "https://www.khanacademy.org/favicon.ico"
+    },
+    { 
+      name: "MasterClass", 
+      url: "https://www.masterclass.com/",
+      logoUrl: "https://www.masterclass.com/favicon.ico"
+    },
+    { 
+      name: "MOOC", 
+      url: "https://www.mooc.org/",
+      logoUrl: "https://www.mooc.org/favicon.ico"
+    },
+    { 
+      name: "OEGlobal", 
+      url: "https://www.oeglobal.org/",
+      logoUrl: "https://www.oeglobal.org/favicon.ico"
+    },
+    { 
+      name: "OpenupEd", 
+      url: "https://www.openuped.eu/",
+      logoUrl: "https://www.openuped.eu/favicon.ico"
+    },
+    { 
+      name: "Skillshare", 
+      url: "https://www.skillshare.com/",
+      logoUrl: "https://www.skillshare.com/favicon.ico"
+    },
+    { 
+      name: "Udacity", 
+      url: "https://www.udacity.com/",
+      logoUrl: "https://www.udacity.com/favicon.ico"
     },
     { 
       name: "Udemy", 
       url: "https://www.udemy.com/",
-      logoUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+      logoUrl: "https://www.udemy.com/favicon.ico"
     },
     { 
       name: "Unity Learn", 
       url: "https://learn.unity.com/",
-      logoUrl: "https://unity.com/logo/unity-logo-293w-white.png"
+      logoUrl: "https://unity.com/favicon.ico"
     },
     { 
       name: "Unreal Engine", 
       url: "https://www.unrealengine.com/en-US/learn",
-      logoUrl: "https://cdn2.unrealengine.com/ue-logo-stacked-white-530x680-d09f1b91cadc.svg"
+      logoUrl: "https://www.unrealengine.com/favicon.ico"
+    },
+    { 
+      name: "UNSSC", 
+      url: "https://www.unssc.org/",
+      logoUrl: "https://www.unssc.org/favicon.ico"
     }
   ];
 
