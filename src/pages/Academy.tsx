@@ -1,3 +1,4 @@
+
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles, Leaf, Brain, Coins, ShoppingCart, Heart, Lightbulb, ExternalLink } from 'lucide-react';
@@ -227,7 +228,7 @@ const Academy: React.FC = () => {
     { 
       name: "Alchemy", 
       url: "https://www.alchemy.com/",
-      logoUrl: "https://docs.alchemy.com/img/logo-dark.svg"
+      logoUrl: "https://avatars.githubusercontent.com/u/66799054?s=200&v=4"
     },
     { 
       name: "AulaFacil", 
@@ -237,17 +238,17 @@ const Academy: React.FC = () => {
     { 
       name: "Coursera", 
       url: "https://www.coursera.org/",
-      logoUrl: "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-194x194.png"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg"
     },
     { 
       name: "edX", 
       url: "https://www.edx.org/",
-      logoUrl: "https://www.edx.org/images/logos/edx-logo-elm.svg"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cd/EdX_logo.png"
     },
     { 
       name: "Explore", 
       url: "https://www.explore.org/",
-      logoUrl: "https://www.explore.org/sites/default/files/styles/large/public/explore_logo_stacked_black.png"
+      logoUrl: "https://images.squarespace-cdn.com/content/v1/5c87be8689c17256b8b91495/1558550176068-ZKPRRBMGQXGZ6NWBMJW9/explore-logo-green.png"
     },
     { 
       name: "FutureLearn", 
@@ -257,67 +258,67 @@ const Academy: React.FC = () => {
     { 
       name: "Google for Education", 
       url: "https://edu.google.com/",
-      logoUrl: "https://www.google.com/images/branding/product/ico/googleg_lodp.ico"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
     },
     { 
       name: "Hotmart", 
       url: "https://www.hotmart.com/",
-      logoUrl: "https://static.hotmart.com/img/new-hotmart-logo.svg"
+      logoUrl: "https://seeklogo.com/images/H/hotmart-logo-AE90F727A5-seeklogo.com.png"
     },
     { 
       name: "Khan Academy", 
       url: "https://www.khanacademy.org/",
-      logoUrl: "https://cdn.kastatic.org/images/khan-logo-dark-background.png"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Khan_Academy_logo_2018.svg"
     },
     { 
       name: "MasterClass", 
       url: "https://www.masterclass.com/",
-      logoUrl: "https://www.masterclass.com/favicon.ico"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/MasterClass_Logo.svg"
     },
     { 
       name: "MOOC", 
       url: "https://www.mooc.org/",
-      logoUrl: "https://www.mooc.org/hubfs/mooc-logo-blue.svg"
+      logoUrl: "https://images.squarespace-cdn.com/content/v1/5dd3b9b78d1b9b0001d8b346/1574275257748-VXJF2RW6YMD4IGGDGZFB/MOOC+List+Logo.png"
     },
     { 
       name: "OEGlobal", 
       url: "https://www.oeglobal.org/",
-      logoUrl: "https://www.oeglobal.org/wp-content/themes/oeglobal2017/images/oeg-logo.png"
+      logoUrl: "https://www.oeglobal.org/wp-content/uploads/2017/10/oeg-logo-200x200.png"
     },
     { 
       name: "OpenupEd", 
       url: "https://www.openuped.eu/",
-      logoUrl: "https://www.openuped.eu/images/logo.png"
+      logoUrl: "https://www.openuped.eu/images/openuped-logo.png"
     },
     { 
       name: "Skillshare", 
       url: "https://www.skillshare.com/",
-      logoUrl: "https://static.skillshare.com/assets/images/header/skillshare-logo.svg"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Skillshare_logo_2020.svg"
     },
     { 
       name: "Udacity", 
       url: "https://www.udacity.com/",
-      logoUrl: "https://www.udacity.com/favicon.ico"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Udacity_logo.png"
     },
     { 
       name: "Udemy", 
       url: "https://www.udemy.com/",
-      logoUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg"
     },
     { 
       name: "Unity Learn", 
       url: "https://learn.unity.com/",
-      logoUrl: "https://unity.com/logo-unity-web.png"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Unity_Technologies_logo.svg"
     },
     { 
       name: "Unreal Engine", 
       url: "https://www.unrealengine.com/en-US/learn",
-      logoUrl: "https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png"
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/d/da/Unreal_Engine_Logo.svg"
     },
     { 
       name: "UNSSC", 
       url: "https://www.unssc.org/",
-      logoUrl: "https://www.unssc.org/sites/unssc/files/logo_0.png"
+      logoUrl: "https://www.unssc.org/sites/unssc/files/unssc_logo_blue_0.png"
     }
   ];
 
