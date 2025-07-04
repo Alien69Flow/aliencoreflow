@@ -1,4 +1,3 @@
-
 import React from 'react';
 import StarBackground from '@/components/StarBackground';
 import { GraduationCap, BookOpen, Video, Users, Award, Sparkles, Leaf, Brain, Coins, ShoppingCart, Heart, Lightbulb, ExternalLink } from 'lucide-react';
@@ -69,27 +68,38 @@ const CourseCard = ({
   </Card>
 );
 
-const PartnerCard = ({ name, url, logo }: { name: string; url: string; logo?: string }) => (
+const PartnerCard = ({ name, url, logoUrl }: { name: string; url: string; logoUrl?: string }) => (
   <a 
     href={url} 
     target="_blank" 
     rel="noopener noreferrer"
-    className="bg-alien-space-dark/80 backdrop-blur-md rounded-xl p-6 border border-alien-gold/30 hover:border-alien-gold/60 transition-all duration-300 hover:transform hover:scale-105 group flex items-center justify-center min-h-[120px] relative overflow-hidden"
+    className="bg-alien-space-dark/70 backdrop-blur-md rounded-xl p-4 border border-alien-gold/20 hover:border-alien-gold/50 transition-all duration-300 hover:transform hover:scale-105 group flex items-center justify-center min-h-[100px] relative overflow-hidden"
   >
     <div className="absolute inset-0 bg-gradient-to-br from-alien-gold/5 to-alien-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     <div className="text-center relative z-10">
-      {logo ? (
-        <img 
-          src={logo} 
-          alt={name} 
-          className="w-12 h-12 mx-auto mb-3 object-contain group-hover:scale-110 transition-transform duration-300"
-        />
+      {logoUrl ? (
+        <div className="w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+          <img 
+            src={logoUrl} 
+            alt={`${name} logo`} 
+            className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+            onError={(e) => {
+              // Fallback to letter icon if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          <div className="w-10 h-10 bg-alien-gold/20 rounded-lg items-center justify-center border border-alien-gold/30 hidden">
+            <span className="text-alien-gold font-bold text-sm">{name.charAt(0)}</span>
+          </div>
+        </div>
       ) : (
-        <div className="w-12 h-12 mx-auto mb-3 bg-alien-gold/20 rounded-lg flex items-center justify-center border border-alien-gold/30">
+        <div className="w-12 h-12 mx-auto mb-2 bg-alien-gold/20 rounded-lg flex items-center justify-center border border-alien-gold/30">
           <span className="text-alien-gold font-bold text-lg">{name.charAt(0)}</span>
         </div>
       )}
-      <h3 className="text-alien-gold font-semibold text-sm group-hover:text-alien-gold-light transition-colors font-[Exo] mb-1">
+      <h3 className="text-alien-gold font-semibold text-xs group-hover:text-alien-gold-light transition-colors font-[Exo] mb-1">
         {name}
       </h3>
       <ExternalLink className="w-3 h-3 text-alien-green mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -218,72 +228,67 @@ const Academy: React.FC = () => {
     { 
       name: "Alchemy", 
       url: "https://www.alchemy.com/",
-      logo: "https://docs.alchemy.com/img/logo.svg"
+      logoUrl: "https://assets-global.website-files.com/618b0aafa4afde65f2fe38fe/618b0aafa4afde7888fe3a17_logo_mark.svg"
     },
     { 
       name: "AulaFacil", 
       url: "https://www.aulafacil.com/",
-      logo: "https://www.aulafacil.com/favicon.ico"
+      logoUrl: "https://www.aulafacil.com/images/af-logo-header.png"
     },
     { 
       name: "Explore", 
       url: "https://www.explore.org/",
-      logo: "https://www.explore.org/favicon.ico"
+      logoUrl: "https://cdn.explore.org/logo-full-white.png"
     },
     { 
       name: "OEGlobal", 
       url: "https://www.oeglobal.org/",
-      logo: "https://www.oeglobal.org/wp-content/uploads/2019/04/cropped-OEGlobal-logo-only-scaled-32x32.png"
+      logoUrl: "https://www.oeglobal.org/wp-content/uploads/2019/04/OEGlobal-logo-only-1024x1024.png"
     },
     { 
       name: "OpenupEd", 
       url: "https://www.openuped.eu/",
-      logo: "https://www.openuped.eu/images/openuped_logo.png"
+      logoUrl: "https://www.openuped.eu/images/OuE-logo.png"
     },
     { 
       name: "UNSSC", 
       url: "https://www.unssc.org/",
-      logo: "https://www.unssc.org/sites/unssc/files/favicon_0.ico"
+      logoUrl: "https://www.unssc.org/sites/unssc/files/logo.png"
     },
     { 
       name: "EdX", 
       url: "https://www.edx.org/",
-      logo: "https://www.edx.org/favicon.ico"
+      logoUrl: "https://d2o2utebsixu4k.cloudfront.net/Logos%20for%20Web-02.svg"
     },
     { 
-      name: "Google", 
+      name: "Google for Education", 
       url: "https://edu.google.com/",
-      logo: "https://www.google.com/favicon.ico"
-    },
-    { 
-      name: "MOOC", 
-      url: "https://www.mooc.org/",
-      logo: "https://www.mooc.org/favicon.ico"
+      logoUrl: "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
     },
     { 
       name: "Khan Academy", 
       url: "https://www.khanacademy.org/",
-      logo: "https://www.khanacademy.org/favicon.ico"
+      logoUrl: "https://cdn.kastatic.org/images/khan-logo-dark-background.png"
     },
     { 
       name: "Hotmart", 
       url: "https://www.hotmart.com/",
-      logo: "https://static.hotmart.com/favicon.ico"
+      logoUrl: "https://static.hotmart.com/img/hotmart-logo.svg"
     },
     { 
       name: "Udemy", 
       url: "https://www.udemy.com/",
-      logo: "https://www.udemy.com/staticx/udemy/images/v7/favicon.ico"
+      logoUrl: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
     },
     { 
       name: "Unity Learn", 
       url: "https://learn.unity.com/",
-      logo: "https://unity.com/favicon.ico"
+      logoUrl: "https://unity.com/logo/unity-logo-293w-white.png"
     },
     { 
       name: "Unreal Engine", 
       url: "https://www.unrealengine.com/en-US/learn",
-      logo: "https://www.unrealengine.com/favicon.ico"
+      logoUrl: "https://cdn2.unrealengine.com/ue-logo-stacked-white-530x680-d09f1b91cadc.svg"
     }
   ];
 
@@ -384,7 +389,7 @@ const Academy: React.FC = () => {
             <p className="text-gray-300 text-center mb-12 font-[Exo]">
               We collaborate with the world's best educational platforms
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4">
               {partners.map((partner, index) => (
                 <PartnerCard key={index} {...partner} />
               ))}
